@@ -1,5 +1,12 @@
 
-const escapeCSV = (value: any) => {
+/**
+ * Escapes a value for use in a CSV file.
+ * If the value contains a comma, double quote, or newline, it will be enclosed in double quotes.
+ * Existing double quotes will be escaped by doubling them.
+ * @param {any} value - The value to escape.
+ * @returns {string} The escaped value.
+ */
+const escapeCSV = (value: any): string => {
     if (value == null) {
         return '';
     }
@@ -11,7 +18,12 @@ const escapeCSV = (value: any) => {
     return stringValue;
 };
 
-export const downloadCSV = (data: any[], filename: string) => {
+/**
+ * Converts an array of objects to a CSV string and triggers a download.
+ * @param {any[]} data - The array of objects to convert.
+ * @param {string} filename - The desired filename for the downloaded CSV file.
+ */
+export const downloadCSV = (data: any[], filename: string): void => {
     if (data.length === 0) return;
 
     const headers = Object.keys(data[0]);
@@ -35,7 +47,12 @@ export const downloadCSV = (data: any[], filename: string) => {
 };
 
 
-export const downloadJSON = (data: object, filename: string) => {
+/**
+ * Converts a JavaScript object to a JSON string and triggers a download.
+ * @param {object} data - The object to convert to JSON.
+ * @param {string} filename - The desired filename for the downloaded JSON file.
+ */
+export const downloadJSON = (data: object, filename: string): void => {
   const jsonString = JSON.stringify(data, null, 2);
   const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8;' });
   const link = document.createElement('a');

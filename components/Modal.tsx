@@ -1,15 +1,31 @@
 import React, { useEffect } from 'react';
 
+/**
+ * @interface ModalProps
+ * @description The props for the Modal component.
+ */
 interface ModalProps {
+  /** Whether the modal is open. */
   isOpen: boolean;
+  /** A function to call when the modal is closed. */
   onClose: () => void;
+  /** A function to call when the confirm button is clicked. */
   onConfirm: () => void;
+  /** The title of the modal. */
   title: string;
+  /** The content of the modal. */
   children: React.ReactNode;
+  /** The text for the confirm button. */
   confirmText?: string;
+  /** The text for the cancel button. */
   cancelText?: string;
 }
 
+/**
+ * A reusable modal component.
+ * @param {ModalProps} props - The props for the component.
+ * @returns {React.FC<ModalProps> | null} The rendered modal component, or null if it is not open.
+ */
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onConfirm, title, children, confirmText = 'Confirm', cancelText = 'Cancel' }) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {

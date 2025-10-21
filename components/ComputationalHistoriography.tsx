@@ -55,7 +55,13 @@ const mockTrace: ReasoningStep = {
   ],
 };
 
-
+/**
+ * A component that recursively renders a single node in the reasoning trace.
+ * @param {{ node: ReasoningStep; level: number }} props - The props for the component.
+ * @param {ReasoningStep} props.node - The reasoning step to render.
+ * @param {number} props.level - The indentation level for the node.
+ * @returns {React.FC} The rendered reasoning node.
+ */
 const ReasoningNode: React.FC<{ node: ReasoningStep; level: number }> = ({ node, level }) => {
     const typeClasses = {
         premise: 'border-blue-500 bg-blue-500/10 text-blue-300',
@@ -87,7 +93,11 @@ const ReasoningNode: React.FC<{ node: ReasoningStep; level: number }> = ({ node,
     );
 };
 
-
+/**
+ * A component that displays the computational historiography view.
+ * This view allows users to trace an AI agent's reasoning pathways.
+ * @returns {React.FC} The rendered component.
+ */
 const ComputationalHistoriography: React.FC = () => {
 
   const handleExport = () => {

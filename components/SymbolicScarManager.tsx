@@ -42,7 +42,11 @@ const severityTooltips = {
     High: "A critical failure that violates core principles. Requires immediate review and potential architectural changes.",
 };
 
-
+/**
+ * A badge that displays the severity of a symbolic scar.
+ * @param {{ severity: 'Low' | 'Medium' | 'High' }} props - The props for the component.
+ * @returns {React.FC} The rendered severity badge.
+ */
 const SeverityBadge: React.FC<{ severity: 'Low' | 'Medium' | 'High' }> = ({ severity }) => {
     const colorClasses = {
         Low: 'bg-green-500/20 text-green-400',
@@ -56,6 +60,11 @@ const SeverityBadge: React.FC<{ severity: 'Low' | 'Medium' | 'High' }> = ({ seve
     );
 }
 
+/**
+ * Formats a duration in milliseconds into a human-readable string.
+ * @param {number} ms - The duration in milliseconds.
+ * @returns {string} The formatted duration string.
+ */
 const formatDuration = (ms: number): string => {
     if (ms <= 0) return "0s";
     const totalSeconds = Math.floor(ms / 1000);
@@ -75,6 +84,11 @@ const formatDuration = (ms: number): string => {
     return result.trim() || '0s';
 };
 
+/**
+ * A component that displays the decay progress of a symbolic scar.
+ * @param {{ scar: SymbolicScar; now: number; onClear: () => void }} props - The props for the component.
+ * @returns {React.FC | null} The rendered component, or null if the scar is not decaying.
+ */
 const DecayProgress: React.FC<{ scar: SymbolicScar; now: number; onClear: () => void }> = ({ scar, now, onClear }) => {
     if (!scar.decayDays || !scar.decaySetAt) return null;
 
@@ -113,7 +127,10 @@ const DecayProgress: React.FC<{ scar: SymbolicScar; now: number; onClear: () => 
     );
 };
 
-
+/**
+ * A component for managing symbolic scars.
+ * @returns {React.FC} The rendered component.
+ */
 const SymbolicScarManager: React.FC = () => {
     const [scars, setScars] = useState<SymbolicScar[]>(initialScars);
     const [decayInputs, setDecayInputs] = useState<{ [key: string]: string }>({});

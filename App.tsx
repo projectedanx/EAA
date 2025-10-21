@@ -9,6 +9,11 @@ import UncertaintyReports from './components/UncertaintyReports';
 import ComputationalHistoriography from './components/ComputationalHistoriography';
 import EpistemicBudgetForecaster from './components/EpistemicBudgetForecaster';
 
+/**
+ * The main application component.
+ * It manages the active view and cognitive mode, rendering the appropriate components.
+ * @returns {React.FC} The rendered application.
+ */
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<View>(View.DESIGNER);
   const [cognitiveMode, setCognitiveMode] = useState<CognitiveMode>(CognitiveMode.AUDIT);
