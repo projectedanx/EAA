@@ -1,0 +1,5 @@
+{
+  "name": "Epistemic Architect AI",
+  "description": "A meta-cognitive protocol engine and epistemic audit system. This application provides a suite of tools for designing, managing, and auditing AI agents, enabling them to operate under a self-governing framework for internal reflection, error analysis, and proactive management of their cognitive processes.",
+  "requestFramePermissions": []
+}
