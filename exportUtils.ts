@@ -6,7 +6,7 @@
  * @param {any} value - The value to escape.
  * @returns {string} The escaped value.
  */
-const escapeCSV = (value: any): string => {
+export const escapeCSV = (value: any): string => {
     if (value == null) {
         return '';
     }
