@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 
+/**
+ * A component that provides a real-time forecast of the cognitive cost and potential for error for a given query.
+ * @returns {React.FC} The rendered component.
+ */
 const EpistemicBudgetForecaster: React.FC = () => {
     const [query, setQuery] = useState('');
     const [forecast, setForecast] = useState<{ cost: string; friction: string; rationale: string } | null>(null);

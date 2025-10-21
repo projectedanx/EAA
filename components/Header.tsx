@@ -3,11 +3,23 @@ import React, { useState, useRef, useEffect } from 'react';
 import { CognitiveMode } from '../types';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 
+/**
+ * @interface HeaderProps
+ * @description The props for the Header component.
+ */
 interface HeaderProps {
+  /** The current cognitive mode. */
   cognitiveMode: CognitiveMode;
+  /** A function to set the cognitive mode. */
   setCognitiveMode: (mode: CognitiveMode) => void;
 }
 
+/**
+ * The header component for the application.
+ * It displays the application title and a dropdown to select the cognitive mode.
+ * @param {HeaderProps} props - The props for the component.
+ * @returns {React.FC<HeaderProps>} The rendered header component.
+ */
 const Header: React.FC<HeaderProps> = ({ cognitiveMode, setCognitiveMode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);

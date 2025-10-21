@@ -14,6 +14,16 @@ interface SidebarProps {
   setActiveView: (view: View) => void;
 }
 
+/**
+ * A navigation item in the sidebar.
+ * @param {object} props - The props for the component.
+ * @param {View} props.view - The view that this item navigates to.
+ * @param {View} props.activeView - The currently active view.
+ * @param {(view: View) => void} props.setActiveView - A function to set the active view.
+ * @param {React.ReactNode} props.icon - The icon for the navigation item.
+ * @param {string} props.label - The label for the navigation item.
+ * @returns {React.FC} The rendered navigation item.
+ */
 const NavItem: React.FC<{
   view: View;
   activeView: View;
@@ -37,7 +47,11 @@ const NavItem: React.FC<{
   );
 };
 
-
+/**
+ * The sidebar component for the application.
+ * @param {SidebarProps} props - The props for the component.
+ * @returns {React.FC<SidebarProps>} The rendered sidebar component.
+ */
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
   return (
     <aside className="w-64 bg-slate-800/50 border-r border-slate-700/50 flex-shrink-0 p-4 flex flex-col">

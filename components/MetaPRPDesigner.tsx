@@ -14,6 +14,10 @@ const DEFAULT_CONFIG = {
   goals: '- Improve response relevance by 15% quarterly.\n- Reduce instances of justified uncertainty by 10%.\n- Optimize epistemic budget for complex queries.',
 };
 
+/**
+ * A component for designing and managing Meta-Product-Requirements Prompts (Meta-PRPs).
+ * @returns {React.FC} The rendered component.
+ */
 const MetaPRPDesigner: React.FC = () => {
   const [configs, setConfigs] = useState<AgentConfig[]>([]);
   const [activeConfigId, setActiveConfigId] = useState<string | null>(null);

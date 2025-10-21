@@ -35,13 +35,22 @@ const mockReports: UncertaintyReport[] = [
     },
 ];
 
+/**
+ * A component that displays a progress bar to represent an uncertainty level.
+ * @param {{ value: number }} props - The props for the component.
+ * @param {number} props.value - The uncertainty value (0-100).
+ * @returns {React.FC} The rendered uncertainty bar.
+ */
 const UncertaintyBar: React.FC<{ value: number }> = ({ value }) => (
     <div className="w-full bg-slate-700 rounded-full h-2.5">
         <div className="bg-yellow-500 h-2.5 rounded-full" style={{ width: `${value}%` }}></div>
     </div>
 );
 
-
+/**
+ * A component that displays a list of uncertainty reports.
+ * @returns {React.FC} The rendered component.
+ */
 const UncertaintyReports: React.FC = () => {
 
     const handleExport = () => {

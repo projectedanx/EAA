@@ -1,11 +1,23 @@
 import React from 'react';
 
+/**
+ * @interface TooltipProps
+ * @description The props for the Tooltip component.
+ */
 interface TooltipProps {
+  /** The text to display in the tooltip. */
   content: string;
+  /** The element to which the tooltip is attached. */
   children: React.ReactNode;
+  /** The position of the tooltip relative to the child element. */
   position?: 'top' | 'bottom' | 'left' | 'right';
 }
 
+/**
+ * A reusable tooltip component.
+ * @param {TooltipProps} props - The props for the component.
+ * @returns {React.FC<TooltipProps>} The rendered tooltip component.
+ */
 const Tooltip: React.FC<TooltipProps> = ({ content, children, position = 'top' }) => {
   const positionClasses = {
     top: 'bottom-full left-1/2 -translate-x-1/2 mb-2',
