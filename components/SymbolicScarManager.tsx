@@ -114,7 +114,6 @@ const DecayProgress: React.FC<{ scar: SymbolicScar; now: number; onClear: () => 
                 <span className="text-xs font-medium text-slate-300">Decay Progress</span>
                 <span className="text-xs font-mono text-cyan-400">{formatDuration(timeLeft)} left</span>
             </div>
-             {/* FIX: Changed `100 - progress.toFixed(0)` to `(100 - progress).toFixed(0)` to perform arithmetic on numbers before converting to a string. */}
              <Tooltip content={`This scar's influence is at ${(100 - progress).toFixed(0)}% of its original strength.`}>
                 <div className="w-full bg-slate-700 rounded-full h-2 shadow-inner">
                     <div className="bg-cyan-500 h-2 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
