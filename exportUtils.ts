@@ -10,11 +10,21 @@ export const escapeCSV = (value: any): string => {
     if (value == null) {
         return '';
     }
-    const stringValue = String(value);
+
+    let stringValue = String(value);
+    const isString = typeof value === 'string';
+
+    // Prepend a single quote if the value starts with a trigger character to prevent CSV formula injection.
+    // This is only applied to string types to avoid breaking negative numbers.
+    if (isString && ['=', '+', '-', '@'].some(char => stringValue.startsWith(char))) {
+        stringValue = `'${stringValue}`;
+    }
+
     if (stringValue.includes(',') || stringValue.includes('"') || stringValue.includes('\n')) {
         // Enclose in double quotes and escape existing double quotes by doubling them
         return `"${stringValue.replace(/"/g, '""')}"`;
     }
+
     return stringValue;
 };
 

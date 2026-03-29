@@ -28,6 +28,22 @@ describe('exportUtils', () => {
     it('should handle a combination of special characters', () => {
       expect(escapeCSV('hello,"world"\nfoo')).toBe('"hello,""world""\nfoo"');
     });
+
+    it('should prepend a single quote to strings starting with =, +, -, or @ to prevent CSV injection', () => {
+      expect(escapeCSV('=1+2')).toBe("'=1+2");
+      expect(escapeCSV('+1+2')).toBe("'+1+2");
+      expect(escapeCSV('-1+2')).toBe("'-1+2");
+      expect(escapeCSV('@SUM(A1:A2)')).toBe("'@SUM(A1:A2)");
+    });
+
+    it('should handle special characters and formula injection together (single quote inside double quotes)', () => {
+      expect(escapeCSV('=A1,B2')).toBe('"\'=A1,B2"');
+    });
+
+    it('should NOT prepend a single quote to numeric values', () => {
+      expect(escapeCSV(-100)).toBe('-100');
+      expect(escapeCSV(123)).toBe('123');
+    });
   });
 
   describe('downloadCSV', () => {
