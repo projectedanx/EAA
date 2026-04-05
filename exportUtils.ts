@@ -3,10 +3,10 @@
  * Escapes a value for use in a CSV file.
  * If the value contains a comma, double quote, or newline, it will be enclosed in double quotes.
  * Existing double quotes will be escaped by doubling them.
- * @param {any} value - The value to escape.
+ * @param {unknown} value - The value to escape.
  * @returns {string} The escaped value.
  */
-export const escapeCSV = (value: any): string => {
+export const escapeCSV = (value: unknown): string => {
     if (value == null) {
         return '';
     }
@@ -30,17 +30,17 @@ export const escapeCSV = (value: any): string => {
 
 /**
  * Converts an array of objects to a CSV string and triggers a download.
- * @param {any[]} data - The array of objects to convert.
+ * @param {T[]} data - The array of objects to convert.
  * @param {string} filename - The desired filename for the downloaded CSV file.
  */
-export const downloadCSV = (data: any[], filename: string): void => {
+export const downloadCSV = <T extends object>(data: T[], filename: string): void => {
     if (data.length === 0) return;
 
     const headers = Object.keys(data[0]);
     const csvRows = [
         headers.join(','),
         ...data.map(row => 
-            headers.map(fieldName => escapeCSV(row[fieldName])).join(',')
+            headers.map(fieldName => escapeCSV(row[fieldName as keyof T])).join(',')
         )
     ];
 
