@@ -206,7 +206,7 @@ const SymbolicScarManager: React.FC = () => {
             <Card title="Active Scars Log" actions={exportButton}>
                 <div className="space-y-4">
                     {scars.map(scar => (
-                        <div key={scar.id} className="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+                        <div key={scar.id} data-testid="scar-card" className="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
                             <div className="flex justify-between items-start">
                                 <div>
                                     <p className="font-semibold text-slate-200">{scar.description}</p>

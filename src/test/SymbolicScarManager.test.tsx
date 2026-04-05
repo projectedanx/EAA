@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, act } from '@testing-library/react';
+import { render, screen, fireEvent, act, within } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import SymbolicScarManager from '../../components/SymbolicScarManager';
 
@@ -18,18 +18,18 @@ describe('SymbolicScarManager Decay Progress', () => {
 
     // Find a scar that doesn't have a timer yet (scar-001)
     const scar1 = screen.getByText('Misinterpreted sarcasm in user query leading to an inappropriate response.');
-    const container = scar1.closest('div');
+    const container = scar1.closest('.bg-slate-900\\/50') as HTMLElement;
 
     // Find the decay input and set it to 10 days
-    const input = container?.querySelector('input[type="number"]') as HTMLInputElement;
+    const input = within(container).getByPlaceholderText('Decay (days)') as HTMLInputElement;
     fireEvent.change(input, { target: { value: '10' } });
 
     // Click "Set Timer"
-    const setTimerButton = screen.getByText('Set Timer');
+    const setTimerButton = within(container).getByRole('button', { name: 'Set Timer' }) as HTMLButtonElement;
     fireEvent.click(setTimerButton);
 
     // Initial state: 0% progress, 100% influence
-    expect(screen.getByText('10d 0h 0m 0s left')).toBeDefined();
+    expect(screen.getByText('10d left')).toBeDefined();
     let tooltip = screen.getByText(/This scar's influence is at 100% of its original strength./);
     expect(tooltip).toBeDefined();
 
@@ -38,7 +38,7 @@ describe('SymbolicScarManager Decay Progress', () => {
       vi.advanceTimersByTime(5 * 24 * 60 * 60 * 1000);
     });
 
-    expect(screen.getByText('5d 0h 0m 0s left')).toBeDefined();
+    expect(screen.getByText('5d left')).toBeDefined();
     tooltip = screen.getByText(/This scar's influence is at 50% of its original strength./);
     expect(tooltip).toBeDefined();
 
@@ -47,7 +47,7 @@ describe('SymbolicScarManager Decay Progress', () => {
       vi.advanceTimersByTime(2.5 * 24 * 60 * 60 * 1000);
     });
 
-    expect(screen.getByText('2d 12h 0m 0s left')).toBeDefined();
+    expect(screen.getByText('2d 12h left')).toBeDefined();
     tooltip = screen.getByText(/This scar's influence is at 25% of its original strength./, { exact: false });
     expect(tooltip).toBeDefined();
 
