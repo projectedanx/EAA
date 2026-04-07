@@ -3,6 +3,11 @@ import { render, screen, fireEvent, act, within } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import SymbolicScarManager from '../../components/SymbolicScarManager';
 
+import * as exportUtils from '../../exportUtils';
+vi.mock('../../exportUtils', () => ({
+  downloadCSV: vi.fn(),
+}));
+
 describe('SymbolicScarManager Decay Progress', () => {
   beforeEach(() => {
     vi.useFakeTimers();
@@ -54,5 +59,68 @@ describe('SymbolicScarManager Decay Progress', () => {
     // Verify specific text to ensure precedence was correct (no "100 - 75.0000%" etc)
     // If precedence was wrong (100 - progress.toFixed(0)), 100 - "75" would be 25 (number),
     // but the test confirms it's behaving as expected with the current fix.
+    });
+
+  it('calls downloadCSV when Export CSV button is clicked', () => {
+    render(<SymbolicScarManager />);
+    const exportButton = screen.getByRole('button', { name: 'Export CSV' });
+    fireEvent.click(exportButton);
+    expect(exportUtils.downloadCSV).toHaveBeenCalledTimes(1);
+    expect(exportUtils.downloadCSV).toHaveBeenCalledWith(expect.any(Array), 'symbolic-scars.csv');
+  });
+
+  it('can set a decay timer and then clear it', () => {
+    render(<SymbolicScarManager />);
+
+    // Find scar-002
+    const scar2 = screen.getByText('Violated a governance parameter by providing speculative financial advice.');
+    const container = scar2.closest('.bg-slate-900\\/50') as HTMLElement;
+
+    // Set a timer
+    const input = within(container).getByPlaceholderText('Decay (days)') as HTMLInputElement;
+    fireEvent.change(input, { target: { value: '5' } });
+    const setTimerButton = within(container).getByRole('button', { name: 'Set Timer' }) as HTMLButtonElement;
+    fireEvent.click(setTimerButton);
+
+    // Verify decay progress appears
+    expect(screen.getByText('5d left')).toBeDefined();
+
+    // Click "Clear Timer"
+    const clearTimerButton = screen.getByRole('button', { name: 'Clear Timer' });
+    fireEvent.click(clearTimerButton);
+
+    // Modal should appear
+    expect(screen.getByText('Confirm Clear Timer')).toBeDefined();
+
+    // Click "Yes, Clear Timer"
+    const confirmButton = screen.getByRole('button', { name: 'Yes, Clear Timer' });
+    fireEvent.click(confirmButton);
+
+    // Decay progress should be gone, "Set Timer" button should be back
+    expect(screen.queryByText('5d left')).toBeNull();
+    const newSetTimerButton = within(container).getByRole('button', { name: 'Set Timer' });
+    expect(newSetTimerButton).toBeDefined();
+  });
+
+  it('can override a scar', () => {
+    render(<SymbolicScarManager />);
+
+    // Find scar-003
+    const scar3 = screen.getByText('Failed to recognize a multi-part question, only answering the first part.');
+    const container = scar3.closest('.bg-slate-900\\/50') as HTMLElement;
+
+    // Click "Override Scar"
+    const overrideButton = within(container).getByRole('button', { name: 'Override Scar' });
+    fireEvent.click(overrideButton);
+
+    // Modal should appear
+    expect(screen.getByText('Confirm Scar Override')).toBeDefined();
+
+    // Click "Yes, Override"
+    const confirmButton = screen.getByRole('button', { name: 'Yes, Override' });
+    fireEvent.click(confirmButton);
+
+    // Modal should close (no specific visual indicator changes on the scar card yet)
+    expect(screen.queryByText('Confirm Scar Override')).toBeNull();
   });
 });
