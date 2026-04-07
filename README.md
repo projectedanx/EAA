@@ -12,6 +12,12 @@ CognitiveOS Core is a web-based application for auditing and managing the cognit
 - [Components](#components)
 - [Types](#types)
 
+
+## Documentation
+
+- [Forward-Thinking Features](./docs/forward-thinking-features.md): Product planning and requirement decomposition for future features.
+- [Lessons Learned](./docs/lessons-learned.md): Insights from the product planning phase.
+
 ## Features
 
 - **Meta-PRP Designer**: A tool for designing and managing Meta-Product-Requirements Prompts (Meta-PRPs).
