@@ -35,7 +35,19 @@ const MetaPRPDesigner: React.FC = () => {
     try {
       const savedConfigsRaw = localStorage.getItem(LOCAL_STORAGE_KEY_LIST);
       if (savedConfigsRaw) {
-        loadedConfigs = JSON.parse(savedConfigsRaw);
+        const parsed = JSON.parse(savedConfigsRaw);
+        if (Array.isArray(parsed)) {
+          loadedConfigs = parsed.filter(
+            (item: any) =>
+              item &&
+              typeof item === 'object' &&
+              typeof item.id === 'string' &&
+              typeof item.name === 'string' &&
+              typeof item.mission === 'string' &&
+              typeof item.governance === 'string' &&
+              typeof item.goals === 'string'
+          ) as AgentConfig[];
+        }
       }
     } catch (error) {
       console.error("Failed to parse MetaPRP configs from localStorage", error);
