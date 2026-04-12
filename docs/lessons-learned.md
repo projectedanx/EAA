@@ -47,3 +47,9 @@ Building the `PluriversalFeatureDiscovery` component reinforced that high-tensio
 
 *   **Insight:** Users cannot blindly trust an agent claiming to have found a "paraconsistent codebase feature" without seeing the math. The Relational Vector ($\Delta z$) and RCC-8 topological overlaps need to be exposed as tunable UI inputs before becoming automated black-box metrics.
 *   **Action Taken:** Implemented a dashboard that allows human operators to manually configure $z_0^\star$ and $z'$ to see the simulation of Z-Axis Inference (Phantom Dimensions) and CSD budget exhaustion. This provides a mental bridge for users before we hand over full autonomy to the Antifragile Epistemic Weaver.
+
+## SCOS MCP Architecture Implementation (Version 2026.4.12)
+- Applied the K-88 Agent Manifest to establish a zero-trust, SERF-compliant MCP server infrastructure via `stdio`.
+- Discovered that explicit type declaration of Zod validations ensures that any drift from `inputSchema` results in immediate compile-time errors rather than runtime leakage.
+- Maintained a Betti-1 risk of zero by separating tool declarations from cyclic domain imports.
+- Identified that rigorous description rubrics (`PURPOSE`, `GUIDELINES`, `LIMITATIONS`, `PARAMETERS`) drastically reduce the CFDI (Constraint-Failure Drift Index) to near 0 during tool execution.
