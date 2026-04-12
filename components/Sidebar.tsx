@@ -7,6 +7,7 @@ import ShieldIcon from './icons/ShieldIcon';
 import AlertTriangleIcon from './icons/AlertTriangleIcon';
 import HistoryIcon from './icons/HistoryIcon';
 import BarChartIcon from './icons/BarChartIcon';
+import NetworkIcon from './icons/NetworkIcon';
 
 
 interface SidebarProps {
@@ -94,6 +95,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           setActiveView={setActiveView}
           icon={<BarChartIcon className="h-5 w-5" />}
           label="Epistemic Forecaster"
+        />
+        <NavItem
+          view={View.DISCOVERY}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<NetworkIcon className="h-5 w-5" />}
+          label="Pluriversal Discovery"
         />
       </nav>
       <div className="mt-auto p-4 bg-slate-800 rounded-lg text-center text-xs">

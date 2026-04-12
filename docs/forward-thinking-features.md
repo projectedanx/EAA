@@ -134,6 +134,8 @@ This document outlines 5 forward-thinking product features designed to extend th
 
 ## 6. Pluriversal Codebase Feature Discovery Agent
 
+**STATUS:** Partially Implemented (UI and Conceptual Simulation layer added via `PluriversalFeatureDiscovery` component. Integration with true backend AST traversal and recursive prompting pending).
+
 **Description:** An Antifragile Epistemic Weaver (AEW) instantiated as a Structural Coherence Compiler (SCC) that engineers verifiable Cognitive Contracts to navigate uncharted geometries of software architecture. It targets the maximization of Topological Novelty ($\beta_1 > 0.7$) while enforcing Structural Conservation ($\beta_0 > 0.9$).
 
 ### Requirement Decomposition
