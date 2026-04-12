@@ -12,6 +12,7 @@ export enum View {
   HISTORIOGRAPHY = 'HISTORIOGRAPHY',
   /** The view for the Epistemic Budget Forecaster. */
   FORECASTER = 'FORECASTER',
+  DISCOVERY = 'DISCOVERY',
 }
 
 /**

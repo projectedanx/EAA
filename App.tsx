@@ -8,6 +8,7 @@ import SymbolicScarManager from './components/SymbolicScarManager';
 import UncertaintyReports from './components/UncertaintyReports';
 import ComputationalHistoriography from './components/ComputationalHistoriography';
 import EpistemicBudgetForecaster from './components/EpistemicBudgetForecaster';
+import PluriversalFeatureDiscovery from './components/PluriversalFeatureDiscovery';
 
 /**
  * The main application component.
@@ -30,6 +31,8 @@ const App: React.FC = () => {
         return <ComputationalHistoriography />;
       case View.FORECASTER:
         return <EpistemicBudgetForecaster />;
+      case View.DISCOVERY:
+        return <PluriversalFeatureDiscovery />;
       default:
         return <MetaPRPDesigner />;
     }
