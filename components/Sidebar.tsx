@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View } from '../types';
 import BrainCircuitIcon from './icons/BrainCircuitIcon';
@@ -8,6 +7,7 @@ import AlertTriangleIcon from './icons/AlertTriangleIcon';
 import HistoryIcon from './icons/HistoryIcon';
 import BarChartIcon from './icons/BarChartIcon';
 import NetworkIcon from './icons/NetworkIcon';
+import ActivityIcon from './icons/ActivityIcon';
 
 
 interface SidebarProps {
@@ -102,6 +102,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           setActiveView={setActiveView}
           icon={<NetworkIcon className="h-5 w-5" />}
           label="Pluriversal Discovery"
+        />
+        <NavItem
+          view={View.TELEMETRY}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<ActivityIcon className="h-5 w-5" />}
+          label="Decoding Telemetry"
         />
       </nav>
       <div className="mt-auto p-4 bg-slate-800 rounded-lg text-center text-xs">

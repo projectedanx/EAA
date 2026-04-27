@@ -13,6 +13,7 @@ export enum View {
   /** The view for the Epistemic Budget Forecaster. */
   FORECASTER = 'FORECASTER',
   DISCOVERY = 'DISCOVERY',
+  TELEMETRY = 'TELEMETRY',
 }
 
 /**
