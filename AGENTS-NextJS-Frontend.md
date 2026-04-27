@@ -132,7 +132,7 @@ model_spec: "gpt-4o:2025-01"  # Fallback: gpt-3.5-turbo (less capable but cost-e
         "properties": {
           "doc_id": { "type": "string" },
           "doc_title": { "type": "string" },
-          "url": { "type": "string", "pattern": "^https?" },
+          "url": { "type": "string", "format": "uri" },
           "text_snippet": { "type": "string", "maxLength": 200 },
           "relevance_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
         }
