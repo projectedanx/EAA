@@ -175,7 +175,7 @@ input:
   properties:
     query: { type: string }
     collection: { type: string, enum: [knowledge_base, support_docs, product_guides, custom_data] }
-    top_k: { type: integer, minimum: 1, maximum: 50 }
+    top_k: { type: integer, minimum: 1, maximum: 20 }
     min_score: { type: number, minimum: 0.0, maximum: 1.0 }
 output:
   type: object
