@@ -232,7 +232,7 @@ input:
     user_id: { type: string }
     query: { type: string }
     answer: { type: string }
-    timestamp: { type: "ISO8601" }
+    timestamp: { type: string, format: date-time }
     feedback_score: { type: integer, minimum: 1, maximum: 5, description: "Optional user feedback" }
 output:
   type: object
