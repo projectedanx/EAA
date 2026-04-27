@@ -9,6 +9,7 @@ import UncertaintyReports from './components/UncertaintyReports';
 import ComputationalHistoriography from './components/ComputationalHistoriography';
 import EpistemicBudgetForecaster from './components/EpistemicBudgetForecaster';
 import PluriversalFeatureDiscovery from './components/PluriversalFeatureDiscovery';
+import ContrastiveDecodingDashboard from './components/ContrastiveDecodingDashboard';
 
 /**
  * The main application component.
@@ -33,6 +34,8 @@ const App: React.FC = () => {
         return <EpistemicBudgetForecaster />;
       case View.DISCOVERY:
         return <PluriversalFeatureDiscovery />;
+      case View.TELEMETRY:
+        return <ContrastiveDecodingDashboard />;
       default:
         return <MetaPRPDesigner />;
     }
