@@ -57,3 +57,8 @@ Building the `PluriversalFeatureDiscovery` component reinforced that high-tensio
 ### Lesson 7: DRP-LEXICON-992 Integration
 - Adopted the `DRP-LEXICON-992` cognitive bytecode standard, formally integrating the vocabulary and operational patterns for high-tension epistemic evaluation.
 - Developed the `Contrastive Decoding Telemetry Dashboard` to provide live tracking of the Contrastive Delta `log(Expert) - alpha * log(Amateur)`, demonstrating our capability to visualize the suppression of amateur impulses and track abstract metrics directly on the UI as specified in the lexicon.
+
+### Lesson 8: Next.js Frontend Agent Integration & Epistemic Escrow
+- **Integration Profile**: Successfully instantiated a `Reflector + ToolUser` hybrid agent designed for Next.js frontend RAG operations, connected to a Firestore vector store.
+- **Simulation Efficacy**: Utilized a Chain-of-Code (CoC) enactment via a localized Python script to validate core constraints (e.g., SLA latency < 500ms, retrieval accuracy F1 > 0.85). The simulated telemetry yielded positive adherence (p99 latency 412.28 ms, F1 0.912) before structural commitment.
+- **Epistemic Vulnerability Management**: Identified and documented core vulnerabilities (Hallucination Risk, Vector Search Decay, Firestore Cost limits, Stale Context) directly within the agent's definition file `AGENTS-NextJS-Frontend.md`. These vulnerabilities are treated not merely as bugs, but as structural tension nodes to be monitored via "Reflexive Notes" and governed by the system's larger Martensite logic (e.g. tracking hallucination rates).
