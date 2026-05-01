@@ -118,6 +118,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           icon={<ActivityIcon className="h-5 w-5" />}
           label="Metabolism Mapper"
         />
+              <NavItem
+          view={View.TWINNING_ENGINE}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<NetworkIcon className="h-5 w-5" />}
+          label="Twinning Engine"
+        />
       </nav>
       <div className="mt-auto p-4 bg-slate-800 rounded-lg text-center text-xs">
           <p className="font-semibold text-slate-300">Epistemic Architect AI</p>

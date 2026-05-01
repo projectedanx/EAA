@@ -11,6 +11,7 @@ import EpistemicBudgetForecaster from './components/EpistemicBudgetForecaster';
 import PluriversalFeatureDiscovery from './components/PluriversalFeatureDiscovery';
 import ContrastiveDecodingDashboard from './components/ContrastiveDecodingDashboard';
 import OperationalMetabolismMapper from './components/OperationalMetabolismMapper';
+import SymbolicScarTwinningEngine from './components/SymbolicScarTwinningEngine';
 
 /**
  * The main application component.
@@ -39,6 +40,8 @@ const App: React.FC = () => {
         return <ContrastiveDecodingDashboard />;
       case View.METABOLISM:
         return <OperationalMetabolismMapper />;
+            case View.TWINNING_ENGINE:
+        return <SymbolicScarTwinningEngine />;
       default:
         return <MetaPRPDesigner />;
     }
