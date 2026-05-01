@@ -75,3 +75,9 @@ Building the `PluriversalFeatureDiscovery` component reinforced that high-tensio
 *   **Structure is King:** Use strict schemas (like JSON-LD or PD&T Hard Metrology YAML) to enforce the boundaries of the AI's reasoning.
 *   **Reframe the Problem:** Don't just ask "what is the solution?" Ask "what is the topological strain and metabolic cost of forcing this solution onto these conflicting constraints?"
 *   **Human-AI Complementarity:** Humans provide the dense, often paradoxical intent; the AI provides the deterministic, mathematically bounded extrusion.
+
+
+### Lesson 10: Aesthetic Tension and the necessity of Twinning
+*   **Context:** While implementing the Martensite Stabilizer, we identified that purely logical or geometrically precise AI outputs can fail when presented to human stakeholders because they lack "social consensus."
+*   **Observation:** Aesthetic Tension calculation models the divergence between raw AI logic and human expectations. When tension exceeds 0.85, the risk of legitimacy collapse is high.
+*   **Action Taken:** We implemented the Symbolic Scar Twinning Engine to physically soften the logic and calculate a stabilized tension, recording any concession as a Symbolic Scar.
