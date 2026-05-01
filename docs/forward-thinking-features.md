@@ -158,3 +158,32 @@ This document outlines 5 forward-thinking product features designed to extend th
 *   **Architectural Strategy:** Enforces a paradigm where structural contradictions are embraced as engines of growth (Topological Novelty) rather than bugs to be squashed.
 *   **Risk & Governance:** Ensures safety via the Mandatory Grounding Pre-Validation Layer (MGPL) and Thermodynamic Restoration (reversion to $z_0^\star$).
 *   **Continuous Discovery:** Employs Controlled Scar Annealing (CSAP) to forget low-utility traumas, optimizing cognitive plasticity.
+
+---
+
+## 7. Operational Metabolism Mapper (Topological Causal Sculpting)
+
+**STATUS:** Partially Implemented (UI and Conceptual Simulation layer added via `OperationalMetabolismMapper` component. Integration with true backend topological mapping pending).
+
+**Description:** An output synthesis engine that maps the metabolic cost and topological strain between conflicting operational directives. It utilizes Continuous SDF interference modeling (DE-9IM proxy) to deterministically predict the precise "hydraulic press-fit force" (cognitive load) required to maintain persona stability without Boolean collapse.
+
+### Requirement Decomposition
+*   **Epic Breakdown:** Implement Vector Cosine Alignment, Topological Strain Calculation, Metabolic Cost Mapping (in Joules), and CFDI (Confidence-Fidelity Divergence Index) monitoring.
+*   **Dependency Mapping:** Integrates tightly with Epistemic Escrow Agent (EEA) for logging Resolution Collapses.
+*   **Priority Alignment:** High priority for empirical site planning workflows.
+*   **Complexity Assessment:** High complexity; relies on paraconsistent logic (PAL2v) and continuous mathematical fields (SDFs) rather than discrete polygons.
+
+### User Stories
+*   *As a Systems Governor, I want to see the calculated metabolic cost of holding contradictory site constraints, so that I can proactively allocate sufficient computational tokens before the persona fractures.*
+*   *As an Epistemic Auditor, I want to monitor the CFDI during spatial bounding, so that I can catch Resolution Collapses ($ge 1e^{-6}$) where the algorithm "cheats" by stepping over a zero-boundary collision.*
+
+### Acceptance Criteria
+*   The system must calculate a Metabolic Cost based on the non-linear dimensional strain between operational vectors.
+*   The system must calculate a Confidence-Fidelity Divergence Index (CFDI) utilizing the Epsilon-Tolerance ($epsilon$) boundary.
+*   A Resolution Collapse must be flagged in the UI when the CFDI exceeds the defined threshold.
+*   The system must correctly parse and align $n$-dimensional vectors representing high-density tacit knowledge.
+
+### Stakeholder Perspective Analysis
+*   **Operational Grounding:** Validates that abstract AI reasoning remains bounded by the physical and energetic realities of industrial site planning.
+*   **Risk Management:** Prevents the "Sycophantic Attractor" by objectively measuring when an AI is forced to hallucinate a compromise to appease conflicting human demands.
+*   **Human-AI Synergy:** Expresses the unique value proposition: humans provide the contradictory "what matters," the AI provides the "Topological Causal Sculpting" to bind them securely.

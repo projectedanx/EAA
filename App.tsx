@@ -10,6 +10,7 @@ import ComputationalHistoriography from './components/ComputationalHistoriograph
 import EpistemicBudgetForecaster from './components/EpistemicBudgetForecaster';
 import PluriversalFeatureDiscovery from './components/PluriversalFeatureDiscovery';
 import ContrastiveDecodingDashboard from './components/ContrastiveDecodingDashboard';
+import OperationalMetabolismMapper from './components/OperationalMetabolismMapper';
 
 /**
  * The main application component.
@@ -36,6 +37,8 @@ const App: React.FC = () => {
         return <PluriversalFeatureDiscovery />;
       case View.TELEMETRY:
         return <ContrastiveDecodingDashboard />;
+      case View.METABOLISM:
+        return <OperationalMetabolismMapper />;
       default:
         return <MetaPRPDesigner />;
     }
