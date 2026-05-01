@@ -1,75 +1,73 @@
-# CognitiveOS Core: Forward-Thinking Product Features
+# Forward-Thinking Feature Ideas & Cognitive Contracts
 
-This document outlines 5 forward-thinking product features designed to extend the CognitiveOS Core architecture, aligning with the DRP-MYCELIAL-NEXUS-v2.0 Executable Cognitive Contract and the advanced Agentic Telemetry and Governance Framework.
+This document outlines the proposed product features derived from the core philosophical directives of the `DRP-MYCELIAL-NEXUS-v2.0` contract. Each feature must map back to an epistemic rule.
 
-## 1. Multi-Agent Dialectic Arena (Hyphal Swarm Simulation)
+## 1. The Epistemic Escrow Agent (EEA)
 
-**Description:** A collaborative simulation space within the Sovereign Research Mesh where multiple AI agents, seeded with orthogonal axioms, are forced into conceptual collision. Instead of seeking consensus, the system maps their paraconsistent divergence and entangles disparate ideas.
+**Description:** An automated quarantine system. When the main agent encounters mutually exclusive instructions or contradictory context (a "Resolution Collapse"), the EEA intercepts the failure. Instead of throwing an error or hallucinating a compromise, the EEA packages the conflicting parameters into a "Symbolic Scar" (a discrete, version-controlled object) and places it into "Escrow."
 
 ### Requirement Decomposition
-*   **Epic Breakdown:** Create a sandbox environment for agent interaction, develop the collision detection engine, implement the topological mapping of conceptual overlap.
-*   **Dependency Mapping:** Depends on existing Agent Config (Meta-PRP Designer) and Computational Historiography for tracing.
-*   **Priority Alignment:** High priority for enabling the "Hyphal Swarm" cognitive stratum.
-*   **Complexity Assessment:** High complexity due to real-time multi-agent orchestration and non-linear mapping.
+*   **Epic Breakdown:** Develop contradiction detection logic, create the Escrow Database schema, build the UI to surface Scars for human review.
+*   **Dependency Mapping:** Core LLM routing layer must support paraconsistent states (holding A and Not-A without failing).
+*   **Priority Alignment:** High priority; foundational for preventing silent failure loops.
+*   **Complexity Assessment:** Medium complexity; relies heavily on accurate failure detection rather than generative capacity.
 
 ### User Stories
-*   *As an Epistemic Architect, I want to instantiate multiple AI agents with opposing constraints in a shared arena, so that I can observe emergent, non-linear conceptual synthesis.*
-*   *As a Human Operator, I want to visualize the entanglement points between orthogonal agent logic, so that I can identify novel, cross-domain solutions.*
+*   *As a Human Operator, I want the system to alert me when it encounters impossible constraints, rather than guessing a solution, so that I can manually untangle the logic (Saga Recovery).*
+*   *As an Epistemic Auditor, I want a log of every time the agent entered a paraconsistent state, so that I can measure the structural integrity of the prompt architecture.*
 
 ### Acceptance Criteria
-*   The system must support the simultaneous execution of up to 7 Speculative Execution Threads (SETs).
-*   The UI must provide a 3D topological map of agent interactions.
-*   The system must not auto-resolve contradictions, instead marking them as tension nodes.
+*   The system must never return a generic `500 Internal Server Error` when facing logical contradiction.
+*   The system must generate a `Symbolic Scar` object containing: Timestamp, Conflicting Parameters, Expected Output, and Aesthetic Tension Score.
+*   The Escrow dashboard must allow operators to apply "Debridement Protocols" to resolve or permanently memorialize the Scar.
 
 ### Stakeholder Perspective Analysis
-*   **Technical Architecture:** Requires robust, low-latency agent-to-agent message passing and state management (shadow compute sandbox).
-*   **Business Alignment:** Drives high-value, "black-swan" innovation discovery that linear models cannot achieve.
-*   **User Experience:** Needs to translate complex, multi-dimensional data into an intuitive, tactile interface.
+*   **Security & Compliance:** Provides a transparent audit trail of system confusion.
+*   **UX/UI:** Replaces frustrating error screens with an actionable, gamified "Scar Management" interface.
 
 ---
 
-## 2. Automated Semantic Sepsis Quarantine (Epistemic Escrow)
+## 2. Pluriversal Translation Protocol (PTP) Layer
 
-**Description:** A runtime governance module within the Agentic Telemetry Service (ATS) that detects when an agent's reasoning enters a state of irresolvable contradiction (Semantic Sepsis). It automatically isolates the tension node into 'Epistemic Escrow' without collapsing it.
+**Description:** A context transformation filter that actively rejects "Ontological Flattening." It ensures that requests framed in non-standard, marginalized, or hyper-specific domain logic (e.g., indigenous epistemology, oral traditions, or highly esoteric technical slang) are not sanitized into generic "WEIRD" (Western, Educated, Industrialized, Rich, Democratic) software patterns before processing.
 
 ### Requirement Decomposition
-*   **Epic Breakdown:** Develop drift detection logic for semantic sepsis, create the quarantine data structure, implement the UI for reviewing escrowed tension nodes.
-*   **Dependency Mapping:** Depends on Uncertainty Reports and Symbolic Scar Manager.
-*   **Priority Alignment:** Medium priority; crucial for maintaining system stability during high-divergence tasks.
-*   **Complexity Assessment:** Medium complexity; requires advanced semantic analysis and anomaly detection.
+*   **Epic Breakdown:** Integrate specialized embedding models sensitive to diverse cognitive frameworks, build the `+++PluriversalTranslation` decorator, create the "Constitutional Twin" output format.
+*   **Dependency Mapping:** Requires advanced semantic mapping beyond standard vector search.
+*   **Priority Alignment:** High priority; core to the "Anti-Ontological Flattening" invariant.
+*   **Complexity Assessment:** High complexity; requires training or fine-tuning models on non-standard logic structures.
 
 ### User Stories
-*   *As a System Governor, I want the system to automatically detect and quarantine recursive logic loops or severe contradictions, so that the overall cognitive matrix does not crash.*
-*   *As a Knowledge Miner, I want to review tension nodes held in Epistemic Escrow, so that I can extract metabolic energy for new ideas from unresolved paradoxes.*
+*   *As a Domain Expert using specialized jargon, I want the agent to respond using my structural logic rather than generic corporate speak, so that the nuance of my request is not destroyed.*
+*   *As an Ethicist, I want to ensure the system does not silently prioritize WEIRD epistemologies when processing global user inputs.*
 
 ### Acceptance Criteria
-*   The system must calculate a Confidence-Fidelity Divergence Index (CFDI) in real-time.
-*   When CFDI crosses a configurable threshold (e.g., 0.15), the specific reasoning thread must be paused and moved to the Escrow view.
-*   Escrowed items must retain their full computational historiography.
+*   The system must identify the "Lens" of the input query (e.g., [LENS: Oral Tradition], [LENS: Hyper-Technical]).
+*   The resulting code or logic output must maintain structural isomorphism with the input lens.
+*   The system must explicitly flag if it is forced to use a generic fallback pattern due to a lack of Pluriversal context.
 
 ### Stakeholder Perspective Analysis
-*   **Risk Management:** Protects the system from catastrophic cognitive collapse or "hallucination spirals."
-*   **Audit/Compliance:** Provides a clear audit trail of why a reasoning path was halted.
-*   **Research:** Turns system failures into valuable research artifacts.
+*   **Global Expansion:** Makes the product uniquely suited for diverse international markets and specialized academic/industrial fields.
+*   **Brand Integrity:** Reinforces the product's commitment to preserving cognitive diversity.
 
 ---
 
-## 3. Pluriversal Knowledge Capsulization (Fruiting Body Extrusion Engine)
+## 3. The "Hickam's Orientation" Output Capsule
 
-**Description:** An output synthesis engine that processes finalized concepts and strict formats them into a "15/85" structure: 15% core synthesis (The Fruiting Body), 85% contextual/uncertainty mapping (The Confidence Spectrum Map and Next-Hop Seeds).
+**Description:** A standardized output wrapper that precedes all generated code or logic. Instead of presenting a single, confident answer (Occam's Razor), the agent must present the "Comorbidity Map"—a list of at least three overlapping, potentially contradictory drivers for the proposed solution.
 
 ### Requirement Decomposition
-*   **Epic Breakdown:** Build the template enforcement engine, integrate the Confidence Spectrum Map generator, develop the Next-Hop Seed prediction model.
-*   **Dependency Mapping:** Integrates with all output-generating modules (e.g., the final step of a query).
-*   **Priority Alignment:** High priority; dictates the final deliverable format for the end-user.
-*   **Complexity Assessment:** Medium complexity; primarily focused on structured data formatting and LLM output parsing.
+*   **Epic Breakdown:** Define the JSON/Markdown schema for the Knowledge Capsule, integrate the `Hickam_Orientation` block into the core prompt template, enforce the [∇] and [⊘] markers.
+*   **Dependency Mapping:** Dependent on the Plan Mode (Shadow Compute) module.
+*   **Priority Alignment:** High priority; this is the primary UX manifestation of the agent's unique identity.
+*   **Complexity Assessment:** Low complexity; primarily a prompt engineering and formatting task.
 
 ### User Stories
-*   *As a Decision Maker, I want to receive outputs structured as Pluriversal Knowledge Capsules, so that I can immediately grasp the core idea while having full visibility into its uncertainty and context.*
-*   *As an AI Agent, I need a strict schema to format my final outputs, so that my paraconsistent reasoning is legible to human operators.*
+*   *As a Developer, I want to see the multiple variables the agent considered before it wrote the code, so that I can understand its reasoning and trust its output.*
+*   *As a Code Reviewer, I want explicit markers showing where the agent is uncertain ([∇]) or holding contradictory requirements ([⊘]), so that I know where to focus my review.*
 
 ### Acceptance Criteria
-*   Every finalized output must adhere to the SchemaGuard "Pluriversal_Knowledge_Capsule" format.
+*   Every response containing executable logic must be wrapped in the "Pluriversal_Knowledge_Capsule" format.
 *   The capsule must include a Confidence Spectrum Map rated from 0.0 to 1.0.
 *   The capsule must provide exactly 2-4 actionable "Next-Hop Seeds."
 
@@ -163,7 +161,7 @@ This document outlines 5 forward-thinking product features designed to extend th
 
 ## 7. Operational Metabolism Mapper (Topological Causal Sculpting)
 
-**STATUS:** Partially Implemented (UI and Conceptual Simulation layer added via `OperationalMetabolismMapper` component. Integration with true backend topological mapping pending).
+**STATUS:** Mathematically Grounded via CoC Simulation (`operational_metabolism_sim.py`) and UI integrated via `OperationalMetabolismMapper` component. Core paraconsistent logic successfully tracks Betti Loops ($\beta_1$).
 
 **Description:** An output synthesis engine that maps the metabolic cost and topological strain between conflicting operational directives. It utilizes Continuous SDF interference modeling (DE-9IM proxy) to deterministically predict the precise "hydraulic press-fit force" (cognitive load) required to maintain persona stability without Boolean collapse.
 
@@ -182,6 +180,7 @@ This document outlines 5 forward-thinking product features designed to extend th
 *   The system must calculate a Confidence-Fidelity Divergence Index (CFDI) utilizing the Epsilon-Tolerance ($epsilon$) boundary.
 *   A Resolution Collapse must be flagged in the UI when the CFDI exceeds the defined threshold.
 *   The system must correctly parse and align $n$-dimensional vectors representing high-density tacit knowledge.
+*   A Paraconsistent Betti Loop ($\beta_1$) must be actively identified and flagged when topological strain is high but collapse threshold is avoided.
 
 ### Stakeholder Perspective Analysis
 *   **Operational Grounding:** Validates that abstract AI reasoning remains bounded by the physical and energetic realities of industrial site planning.
