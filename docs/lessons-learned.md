@@ -62,3 +62,16 @@ Building the `PluriversalFeatureDiscovery` component reinforced that high-tensio
 - **Integration Profile**: Successfully instantiated a `Reflector + ToolUser` hybrid agent designed for Next.js frontend RAG operations, connected to a Firestore vector store.
 - **Simulation Efficacy**: Utilized a Chain-of-Code (CoC) enactment via a localized Python script to validate core constraints (e.g., SLA latency < 500ms, retrieval accuracy F1 > 0.85). The simulated telemetry yielded positive adherence (p99 latency 412.28 ms, F1 0.912) before structural commitment.
 - **Epistemic Vulnerability Management**: Identified and documented core vulnerabilities (Hallucination Risk, Vector Search Decay, Firestore Cost limits, Stale Context) directly within the agent's definition file `AGENTS-NextJS-Frontend.md`. These vulnerabilities are treated not merely as bugs, but as structural tension nodes to be monitored via "Reflexive Notes" and governed by the system's larger Martensite logic (e.g. tracking hallucination rates).
+
+---
+
+### Lesson 5: Integrating Specialized Specification Blocks and Non-Obvious Analytical Lenses
+
+**Context:** The architecture of the system needs to process deeply technical, domain-specific requirements (like industrial site planning telemetry) while simultaneously evaluating them for epistemic vulnerabilities.
+
+**Insight:** Relying purely on unstructured natural language ("Prompt Engineering") fails when dealing with continuous mathematical constraints or contradictory operational directives. The system must utilize **Specialized Specification Blocks** (e.g., Prompt Dimensioning & Tolerancing - PD&T) to rigidly constrain outputs into predictable formats. These blocks are most effective when viewed through **Non-Obvious Analytical Lenses**, such as applying Thermodynamic Expenditure Curves to measure the "Metabolic Cost" of resolving operational friction (as implemented in the `OperationalMetabolismMapper`).
+
+**Actionable Takeaway:**
+*   **Structure is King:** Use strict schemas (like JSON-LD or PD&T Hard Metrology YAML) to enforce the boundaries of the AI's reasoning.
+*   **Reframe the Problem:** Don't just ask "what is the solution?" Ask "what is the topological strain and metabolic cost of forcing this solution onto these conflicting constraints?"
+*   **Human-AI Complementarity:** Humans provide the dense, often paradoxical intent; the AI provides the deterministic, mathematically bounded extrusion.

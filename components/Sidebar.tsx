@@ -8,6 +8,7 @@ import HistoryIcon from './icons/HistoryIcon';
 import BarChartIcon from './icons/BarChartIcon';
 import NetworkIcon from './icons/NetworkIcon';
 import ActivityIcon from './icons/ActivityIcon';
+import TestTubeIcon from './icons/TestTubeIcon';
 
 
 interface SidebarProps {
@@ -107,8 +108,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           view={View.TELEMETRY}
           activeView={activeView}
           setActiveView={setActiveView}
-          icon={<ActivityIcon className="h-5 w-5" />}
+          icon={<TestTubeIcon className="h-5 w-5" />}
           label="Decoding Telemetry"
+        />
+        <NavItem
+          view={View.METABOLISM}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<ActivityIcon className="h-5 w-5" />}
+          label="Metabolism Mapper"
         />
       </nav>
       <div className="mt-auto p-4 bg-slate-800 rounded-lg text-center text-xs">
