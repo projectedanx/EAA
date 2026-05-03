@@ -12,6 +12,7 @@ import PluriversalFeatureDiscovery from './components/PluriversalFeatureDiscover
 import ContrastiveDecodingDashboard from './components/ContrastiveDecodingDashboard';
 import OperationalMetabolismMapper from './components/OperationalMetabolismMapper';
 import SymbolicScarTwinningEngine from './components/SymbolicScarTwinningEngine';
+import AgenticInversionEngine from './components/AgenticInversionEngine';
 
 /**
  * The main application component.
@@ -42,6 +43,8 @@ const App: React.FC = () => {
         return <OperationalMetabolismMapper />;
             case View.TWINNING_ENGINE:
         return <SymbolicScarTwinningEngine />;
+      case View.INVERSION:
+        return <AgenticInversionEngine />;
       default:
         return <MetaPRPDesigner />;
     }
