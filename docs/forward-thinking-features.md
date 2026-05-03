@@ -207,3 +207,27 @@ This document outlines the proposed product features derived from the core philo
 ### Feature 5.4: Cross-Modal Perceptual Fusion (MSI to Quantum Dot)
 *   **Description:** The integration of Multispectral Imaging (MSI) data into the input conditioning layer to optimize outputs specifically for Quantum Dot display targets.
 *   **Acceptance Criteria:** The generated hyper-spectral HDRi must exhibit narrow-band spectral peaks corresponding to "purer monochromatic red, green, and blue light," verified against theoretical hardware-agnostic rendering specifications.
+
+---
+
+## 8. Agentic Inversion Engine (Z-Axis Sculpting)
+
+**STATUS:** Partially Implemented (UI and Mathematical Simulation layer added via `AgenticInversionEngine` component. Full integration with backend AST traversal pending).
+
+**Description:** A feature that acts as a "Contradiction Harvester," explicitly taking mutually exclusive human constraints and utilizing Z-Axis Inference to calculate a higher-dimensional emergent node. This prevents standard Boolean collapse and average-seeking behavior, acting as the primary engine for "Topological Causal Sculpting."
+
+### Requirement Decomposition
+*   **Epic Breakdown:** Implement the Contradiction Harvester UI, calculate Euclidean collapse metrics vs. Paraconsistent Z-Axis emergence ($\Phi = 1.618$), and integrate visualization.
+*   **Dependency Mapping:** Interacts with the Symbolic Scar Manager (to log unresolvable tensions) and the Pluriversal Feature Discovery agent.
+*   **Priority Alignment:** High; central to demonstrating the unique "Human + AI" value proposition defined in the Mycelial Nexus.
+*   **Complexity Assessment:** Moderate UI complexity; high mathematical/epistemic complexity.
+
+### User Stories
+*   *As a Human Operator, I want to input conflicting operational constraints without the AI trying to 'fix' them via averaging, so that we can discover novel architectural structures.*
+*   *As an Epistemic Auditor, I want to see the difference in "Fidelity Distance" between a standard Euclidean compromise and a paraconsistent Z-Axis projection, to objectively measure the structural value the AI provides.*
+
+### Acceptance Criteria
+*   The system must allow input of at least two mutually exclusive constraint values.
+*   The system must calculate and display the resulting node if standard boolean collapse (averaging) were used.
+*   The system must project the tension into the Z-axis, calculating an emergent node that is strictly equidistant from the conflicting constraints, thereby maintaining a Paraconsistent Betti Loop ($\beta_1$).
+*   The component must include protective schema guards (e.g., `+++DCCDSchemaGuard`) to govern the non-linear calculation.
