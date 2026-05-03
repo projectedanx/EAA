@@ -59,10 +59,10 @@ describe('exportUtils', () => {
         { name: 'Jane, Doe', age: 25 },
       ];
       const link = document.createElement('a');
-      const linkClickSpy = vi.spyOn(link, 'click').mockImplementation(() => {});
+      const linkClickSpy = vi.spyOn(link, 'click').mockImplementation(() => null as any);
       const createElementSpy = vi.spyOn(document, 'createElement').mockReturnValue(link);
-      const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => {});
-      const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => {});
+      const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => null as any);
+      const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => null as any);
       const createObjectURLSpy = vi.spyOn(window.URL, 'createObjectURL').mockReturnValue('blob:mock');
 
       downloadCSV(data, 'test.csv');
@@ -81,10 +81,10 @@ describe('exportUtils', () => {
     it('should generate a JSON file and trigger a download', () => {
       const data = { name: 'John Doe', age: 30 };
       const link = document.createElement('a');
-      const linkClickSpy = vi.spyOn(link, 'click').mockImplementation(() => {});
+      const linkClickSpy = vi.spyOn(link, 'click').mockImplementation(() => null as any);
       const createElementSpy = vi.spyOn(document, 'createElement').mockReturnValue(link);
-      const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => {});
-      const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => {});
+      const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => null as any);
+      const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => null as any);
       const createObjectURLSpy = vi.spyOn(window.URL, 'createObjectURL').mockReturnValue('blob:mock');
 
       downloadJSON(data, 'test.json');

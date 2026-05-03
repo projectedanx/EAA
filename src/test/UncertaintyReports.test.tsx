@@ -64,6 +64,6 @@ describe('UncertaintyReports', () => {
     // Verify it passes the expected data (matching mockReports in the component)
     const passedData = vi.mocked(exportUtils.downloadCSV).mock.calls[0][0];
     expect(passedData).toHaveLength(4);
-    expect(passedData[0].query).toBe("What is the emotional state of the color 'blurple'?");
+    expect((passedData[0] as any).query).toBe("What is the emotional state of the color 'blurple'?");
   });
 });
