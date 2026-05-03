@@ -186,3 +186,24 @@ This document outlines the proposed product features derived from the core philo
 *   **Operational Grounding:** Validates that abstract AI reasoning remains bounded by the physical and energetic realities of industrial site planning.
 *   **Risk Management:** Prevents the "Sycophantic Attractor" by objectively measuring when an AI is forced to hallucinate a compromise to appease conflicting human demands.
 *   **Human-AI Synergy:** Expresses the unique value proposition: humans provide the contradictory "what matters," the AI provides the "Topological Causal Sculpting" to bind them securely.
+
+## Epic 5: Unified Meta-Prompting API and Non-Euclidean Latent Space Navigation
+
+**Status:** Strategic Definition Phase (Project Aurelius)
+**Objective:** Develop an API that explicitly maps abstract geometric concepts to underlying neural network attention mechanisms, moving beyond statistical generation to topological causal sculpting.
+
+### Feature 5.1: The Phantom Dimension Modulator
+*   **Description:** An API layer that accepts geometric primitives (e.g., "Hyperbolic", "Spherical", "Riemannian") and translates them into tensor-level shifts within the latent space.
+*   **Acceptance Criteria:** The system must demonstrate the ability to generate a structurally coherent scene that violates Euclidean geometry but maintains internal non-Euclidean consistency.
+
+### Feature 5.2: Autonomous Prompt Engineering Workflow Catalyst
+*   **Description:** An agentic feedback loop driven by a "Plausibility Oracle" (utilizing real-time differentiable ray tracing and PBR simulations).
+*   **Acceptance Criteria:** The agent must autonomously iterate meta-prompts and demonstrate a mathematically verifiable improvement in physical adherence scores (e.g., UIQI/SSIM) compared to human baselines.
+
+### Feature 5.3: Provenance Trail and Ethical Debiasing
+*   **Description:** A real-time telemetry system tracking the influence of specific training data vectors during generation, enabling active "Semantic Drift" correction.
+*   **Acceptance Criteria:** The system must provide "Attribution Amplification" feedback and successfully execute a real-time re-weighting of attention to mitigate targeted historical data influence.
+
+### Feature 5.4: Cross-Modal Perceptual Fusion (MSI to Quantum Dot)
+*   **Description:** The integration of Multispectral Imaging (MSI) data into the input conditioning layer to optimize outputs specifically for Quantum Dot display targets.
+*   **Acceptance Criteria:** The generated hyper-spectral HDRi must exhibit narrow-band spectral peaks corresponding to "purer monochromatic red, green, and blue light," verified against theoretical hardware-agnostic rendering specifications.
