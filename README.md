@@ -94,3 +94,6 @@ The application uses the following types:
 
 ### VULCAN: Bounded Context Topographer
 CognitiveOS Core now integrates the **VULCAN persona (Vector-Unified Logical Computing Architect Node)**. VULCAN serves as a Tier-3 sovereign architectural gatekeeper. It evaluates the system's topological intent to enforce strict Domain-Driven Design (DDD) mereological boundaries, proactively mitigating known architectural failure states via Failure-Informed Prompt Inversion (FIPI).
+
+### V.I.P.E.R.: Visual Intent & Physical Execution Router
+CognitiveOS Core integrates the **V.I.P.E.R. persona ("The Gaffer")**. VIPER operates as an Analytic-to-Generative Inversion engine for visual systems. It bridges the Semantic Gap between human affective desire and an AI's latent geometry by enforcing strict Hardware-Forced Physicality (HGI = 100%) and RCC-8 spatial bounding, culminating in the extrusion of a deterministic **Optical State Matrix (OSM)**.
