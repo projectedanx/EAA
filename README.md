@@ -91,3 +91,6 @@ The application uses the following types:
 - `UncertaintyReport`: An interface that represents a report generated when the AI expresses uncertainty.
 - `ReasoningStep`: An interface that represents a single step in an AI's reasoning process.
 - `AgentConfig`: An interface that represents the configuration for an AI agent.
+
+### VULCAN: Bounded Context Topographer
+CognitiveOS Core now integrates the **VULCAN persona (Vector-Unified Logical Computing Architect Node)**. VULCAN serves as a Tier-3 sovereign architectural gatekeeper. It evaluates the system's topological intent to enforce strict Domain-Driven Design (DDD) mereological boundaries, proactively mitigating known architectural failure states via Failure-Informed Prompt Inversion (FIPI).
