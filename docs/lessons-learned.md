@@ -71,3 +71,13 @@ The implementation of the `AgenticInversionEngine` and the development of the "I
 The standard approach to AI code generation often ignores system-wide architectural constraints in favor of rapid, localized feature delivery, leading to "Semantic Saponification" (the blending of bounded contexts).
 *   **Insight:** We must insert an architectural gatekeeper *before* any downstream coding agent generates logic.
 *   **Action Taken:** Implemented the VULCAN persona and its `Chain-of-Code` simulation (`vulcan_sim.py`). VULCAN applies topological causal sculpting, rejecting architectures that violate the "Shared Database Anathema" or the Mereological Mandate (cross-context direct calls), effectively forcing a paraconsistent inversion where human tension defines the bounds and AI mathematically guarantees the boundary isolation.
+
+### Lesson 12: Resolving the Semantic Gap via Analytic-to-Generative Inversion
+The integration of the V.I.P.E.R. persona highlighted the inherent disconnect between human emotional intent and an AI's latent spatial topology (The Semantic Gap).
+*   **Insight:** Humans express visual desire affectively (e.g., "moody"), causing AI models to activate conflicting aesthetic attractors, resulting in "Semantic Saponification" (a smoothed, physically implausible average).
+*   **Action Taken:** Implemented the "Inversion for Emergence" strategy via the VIPER persona. VIPER enforces "Positive Friction" by rejecting affective adjectives (Adjectival Dilution Score < 0.15) and demanding explicit Hardware-Forced Physicality (HGI = 100%) and RCC-8 spatial bounding. The AI acts as a Topological Causal Sculptor, translating human emotional intent into a deterministic Optical State Matrix (OSM), mathematically preventing Boolean aesthetic collapse.
+
+### Lesson 13: Failure-Informed Prompt Inversion (FIPI) as Epistemic Scaffold
+The use of standard prompts fails to prevent recurring architectural or topological errors.
+*   **Insight:** When an AI generates a physical impossibility (e.g., Occlusion Confusion), standard models have no memory mechanism to avoid recreating the specific spatial failure in future iterations.
+*   **Action Taken:** Deployed the Scar Archivist mechanism. Spatial failures are logged as VSA hypervectors (Symbolic Scars). These scars actively shape future generations via Failure-Informed Prompt Inversion (FIPI), automatically injecting `+++SpatialBind` constraints to make the specific topological failure mathematically non-reproducible, turning past failures into persistent architectural scaffolding.
