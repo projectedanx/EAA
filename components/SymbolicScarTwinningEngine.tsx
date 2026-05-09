@@ -10,6 +10,10 @@ const calculateAestheticTension = (aiLogicDensity: number, humanConsensusVector:
     return Math.min(1.0, baseTension * 0.9); // Scale to ensure it can hit > 0.85
 };
 
+/**
+ * Renders the SymbolicScarTwinningEngine component.
+ * @returns {React.ReactElement} The rendered component.
+ */
 const SymbolicScarTwinningEngine: React.FC = () => {
     const [aiLogicDensity, setAiLogicDensity] = useState<number>(0.95);
     const [humanConsensusVector, setHumanConsensusVector] = useState<number>(0.20);

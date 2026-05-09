@@ -255,6 +255,10 @@ server.registerTool(
     }
   );
 
+/**
+ * Initializes and starts the MCP server over stdio transport.
+ * @returns {Promise<void>}
+ */
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
