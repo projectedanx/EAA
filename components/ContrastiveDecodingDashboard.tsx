@@ -3,6 +3,10 @@ import Card from './Card';
 import ActivityIcon from './icons/ActivityIcon';
 import AlertTriangleIcon from './icons/AlertTriangleIcon';
 
+/**
+ * Renders the ContrastiveDecodingDashboard component.
+ * @returns {React.ReactElement} The rendered component.
+ */
 const ContrastiveDecodingDashboard: React.FC = () => {
   const [alpha, setAlpha] = useState<number>(0.5);
   const [expertLogProb, setExpertLogProb] = useState<number>(-0.1);

@@ -13,6 +13,10 @@ const formatVector = (vec: number[]): string => {
   return vec.map(n => n.toFixed(2)).join(', ');
 };
 
+/**
+ * Renders the PluriversalFeatureDiscovery component.
+ * @returns {React.ReactElement} The rendered component.
+ */
 const PluriversalFeatureDiscovery: React.FC = () => {
   const [z0StarInput, setZ0StarInput] = useState<string>('1.0, 0.0, 0.0');
   const [zPrimeInput, setZPrimeInput] = useState<string>('0.95, 1.0, 1.2');

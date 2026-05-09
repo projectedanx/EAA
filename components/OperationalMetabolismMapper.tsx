@@ -19,6 +19,10 @@ const magnitude = (v: number[]): number => {
     return Math.sqrt(v.reduce((sum, a) => sum + a * a, 0));
 };
 
+/**
+ * Renders the OperationalMetabolismMapper component.
+ * @returns {React.ReactElement} The rendered component.
+ */
 const OperationalMetabolismMapper: React.FC = () => {
   const [vectorAInput, setVectorAInput] = useState<string>('0.9, 0.1, 0.0');
   const [vectorBInput, setVectorBInput] = useState<string>('0.8, 0.2, 0.0');

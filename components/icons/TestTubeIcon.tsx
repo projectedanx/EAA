@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * TestTubeIcon component renders an SVG icon.
+ * @param {Object} props - The component props.
+ * @param {string} [props.className] - Optional CSS class names to apply to the SVG element.
+ * @returns {React.ReactElement} The SVG icon element.
+ */
 const TestTubeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
