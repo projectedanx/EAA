@@ -71,6 +71,7 @@ Ensure that `npm` or `bun` are correctly installed. Project configuration dictat
 - **Operational Metabolism Mapper**: Maps structural velocity of AI agents over time.
 - **Symbolic Scar Twinning Engine**: A tool to stabilize highly complex logical structures through the Golden Scar Protocol.
 - **Agentic Inversion Engine**: Provides a dashboard to harvest cognitive contradictions.
+- **Feishu Bot Emergence Module**: Enforces deterministic API execution and webhook sovereignty via the KIRA-7 persona and SCAR registry.
 
 ## Testing Protocols
 
