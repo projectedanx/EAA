@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from './Card';
 import Modal from './Modal';
-import { downloadJSON } from '../exportUtils';
+import { downloadJSON } from '../src/utils/exportUtils';
 import { AgentConfig } from '../types';
 import Settings2Icon from './icons/Settings2Icon';
 

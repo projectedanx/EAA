@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { escapeCSV, downloadCSV, downloadJSON } from '../../exportUtils';
+import { escapeCSV, downloadCSV, downloadJSON } from '../utils/exportUtils';
 
 describe('exportUtils', () => {
   describe('escapeCSV', () => {

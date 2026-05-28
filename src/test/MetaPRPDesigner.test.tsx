@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import MetaPRPDesigner from '../../components/MetaPRPDesigner';
 import { vi } from 'vitest';
-import { downloadJSON } from '../../exportUtils';
+import { downloadJSON } from '../utils/exportUtils';
 
-vi.mock('../../exportUtils', () => ({
+vi.mock('../utils/exportUtils', () => ({
   downloadJSON: vi.fn(),
 }));
 

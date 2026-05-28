@@ -3,8 +3,8 @@ import { render, screen, fireEvent, act, within } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import SymbolicScarManager from '../../components/SymbolicScarManager';
 
-import * as exportUtils from '../../exportUtils';
-vi.mock('../../exportUtils', () => ({
+import * as exportUtils from '../utils/exportUtils';
+vi.mock('../utils/exportUtils', () => ({
   downloadCSV: vi.fn(),
 }));
 

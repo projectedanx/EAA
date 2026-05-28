@@ -2,7 +2,7 @@
 import React from 'react';
 import { ReasoningStep } from '../types';
 import Card from './Card';
-import { downloadJSON } from '../exportUtils';
+import { downloadJSON } from '../src/utils/exportUtils';
 
 const mockTrace: ReasoningStep = {
   id: 'root',
