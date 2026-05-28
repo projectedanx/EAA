@@ -2,7 +2,7 @@
 import React from 'react';
 import { UncertaintyReport } from '../types';
 import Card from './Card';
-import { downloadCSV } from '../exportUtils';
+import { downloadCSV } from '../src/utils/exportUtils';
 
 const mockReports: UncertaintyReport[] = [
     {

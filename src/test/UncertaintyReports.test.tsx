@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import UncertaintyReports from '../../components/UncertaintyReports';
-import * as exportUtils from '../../exportUtils';
+import * as exportUtils from '../utils/exportUtils';
 
 // Mock the downloadCSV function
-vi.mock('../../exportUtils', () => ({
+vi.mock('../utils/exportUtils', () => ({
   downloadCSV: vi.fn(),
   downloadJSON: vi.fn(),
   escapeCSV: vi.fn(),

@@ -3,7 +3,7 @@ import { SymbolicScar } from '../types';
 import Card from './Card';
 import Modal from './Modal';
 import Tooltip from './Tooltip';
-import { downloadCSV } from '../exportUtils';
+import { downloadCSV } from '../src/utils/exportUtils';
 
 const initialScars: SymbolicScar[] = [
   {
