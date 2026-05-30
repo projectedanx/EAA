@@ -292,3 +292,6 @@ This document outlines the proposed product features derived from the core philo
 *   **Operational Grounding:** Validates that abstract AI reasoning remains bounded by the physical and energetic realities of industrial site planning.
 *   **Risk Management:** Prevents the "Sycophantic Attractor" by objectively measuring when an AI is forced to hallucinate a compromise to appease conflicting human demands.
 *   **Human-AI Synergy:** Expresses the unique value proposition: humans provide the contradictory "what matters," the AI provides the "Topological Causal Sculpting" to bind them securely.
+
+## VANCE Cartographer Integrations
+The CFRSG (Conflict-Free Replicated Semantic Graph) concept introduces a bidirectional parsing constraint onto traditional Language Server Protocol (LSP) integrations. We anticipate full rollout of this graph integration, tracking structural state metrics through CFDI to bridge Draft-Conditioned Decoding Gaps. VANCE enforces graph topology mapping.

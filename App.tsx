@@ -14,6 +14,7 @@ import OperationalMetabolismMapper from './components/OperationalMetabolismMappe
 import SymbolicScarTwinningEngine from './components/SymbolicScarTwinningEngine';
 import AgenticInversionEngine from './components/AgenticInversionEngine';
 import EmpiricalDocumentationRouter from './components/EmpiricalDocumentationRouter';
+import VanceCartographerDashboard from './components/VanceCartographerDashboard';
 
 /**
  * The main application component.
@@ -44,6 +45,8 @@ const App: React.FC = () => {
         return <OperationalMetabolismMapper />;
             case View.TWINNING_ENGINE:
         return <SymbolicScarTwinningEngine />;
+      case View.VANCE_CARTOGRAPHER:
+        return <VanceCartographerDashboard />;
       case View.INVERSION:
         return <AgenticInversionEngine />;
       default:
