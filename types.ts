@@ -3,6 +3,7 @@
  * @description Defines the different views available in the application.
  */
 export enum View {
+  DOCUMENTATION_ROUTER = 'DOCUMENTATION_ROUTER',
   /** The view for designing Meta-Product-Requirements Prompts. */
   DESIGNER = 'DESIGNER',
   /** The view for managing Symbolic Scars. */
@@ -102,4 +103,27 @@ export interface AgentConfig {
   governance: string;
   /** The self-optimization goals for the agent. */
   goals: string;
+}
+
+/**
+ * @interface StakeholderConstraint
+ * @description Represents a constraint provided by a human stakeholder.
+ */
+export interface StakeholderConstraint {
+    id: string;
+    name: string;
+    value: string;
+    dimension: 'temporal' | 'structural' | 'financial' | 'spatial';
+}
+
+/**
+ * @interface TopologicalDerivative
+ * @description Represents the calculated interference fit between conflicting constraints.
+ */
+export interface TopologicalDerivative {
+    tensionMagnitude: number;
+    bettiLoopExists: boolean;
+    epsilonBand: number;
+    cfdiScore: number;
+    status: 'PARACONSISTENT_TENSION_MAINTAINED' | 'RESOLUTION_COLLAPSE';
 }
