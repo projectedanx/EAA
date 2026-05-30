@@ -93,3 +93,6 @@ The Superintendent persona enforced strict repository discipline by sweeping hal
 The attempt to manage conflicting stakeholder constraints often results in a homogenized compromise that sacrifices core functionality.
 *   **Insight:** Averaging conflicting human requirements destroys structural fidelity and introduces "Resolution Collapse". Contradictory requirements should instead be mapped as intersecting influence zones within an epsilon-tolerance boundary.
 *   **Action Taken:** Implemented a Chain-of-Code (CoC) simulation (`stakeholder_dissonance_sim.py`) demonstrating DE-9IM SDF mapping and topological derivatives. This ensures that tension between constraints (e.g., Fast Delivery vs High Reliability) is maintained structurally without semantic annihilation. This proves the system can treat technical debt as a mathematically bound "Transition Fit" and validates the operation of the `EmpiricalDocumentationRouter`.
+
+## Reversal Curse and LSP Isomorphisms
+The "Reversal Curse" described in LLM associative memories directly mirrors the causal asymmetry in resolving `textDocument/definition` vs `textDocument/references` within language servers. Creating bidirectional Neo4j-style property edges within VANCE completely negates this issue, proving topological structures can supersede purely parametric knowledge gaps.

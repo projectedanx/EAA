@@ -126,6 +126,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           label="Twinning Engine"
         />
         <NavItem
+          view={View.VANCE_CARTOGRAPHER}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<NetworkIcon className="h-5 w-5" />}
+          label="VANCE Cartographer"
+        />
+        <NavItem
           view={View.INVERSION}
           activeView={activeView}
           setActiveView={setActiveView}
