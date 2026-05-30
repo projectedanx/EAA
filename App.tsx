@@ -13,6 +13,7 @@ import ContrastiveDecodingDashboard from './components/ContrastiveDecodingDashbo
 import OperationalMetabolismMapper from './components/OperationalMetabolismMapper';
 import SymbolicScarTwinningEngine from './components/SymbolicScarTwinningEngine';
 import AgenticInversionEngine from './components/AgenticInversionEngine';
+import EmpiricalDocumentationRouter from './components/EmpiricalDocumentationRouter';
 
 /**
  * The main application component.

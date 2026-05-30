@@ -47,6 +47,8 @@ Ensure that `npm` or `bun` are correctly installed. Project configuration dictat
 
 ## Operational Usage
 
+The repository operates under the persona **DRP-SCOS-PERSONA-METROLOGY-2026-v6.1**, ensuring rigorous adherence to the Prompt Dimensioning & Tolerancing framework.
+
 ### Starting the Development Server
    ```sh
    bun run dev
@@ -71,6 +73,7 @@ Ensure that `npm` or `bun` are correctly installed. Project configuration dictat
 - **Operational Metabolism Mapper**: Maps structural velocity of AI agents over time.
 - **Symbolic Scar Twinning Engine**: A tool to stabilize highly complex logical structures through the Golden Scar Protocol.
 - **Agentic Inversion Engine**: Provides a dashboard to harvest cognitive contradictions.
+- **Empirical Documentation Router**: Enforces deterministic codebase structures through Prompt Dimensioning & Tolerancing (PD&T) and calculates the S5-Modal Attention topological derivative between stakeholder constraints.
 - **Feishu Bot Emergence Module**: Enforces deterministic API execution and webhook sovereignty via the KIRA-7 persona and SCAR registry.
 
 ## Testing Protocols
