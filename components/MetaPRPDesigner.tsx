@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Card from './Card';
 import Modal from './Modal';
 import { downloadJSON } from '../src/utils/exportUtils';
@@ -82,7 +82,9 @@ const MetaPRPDesigner: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const activeConfig = configs.find(c => c.id === activeConfigId);
+  const activeConfig = useMemo(() => {
+    return configs.find(c => c.id === activeConfigId);
+  }, [configs, activeConfigId]);
 
   const handleManualSave = () => {
     if (configs.length > 0) {
