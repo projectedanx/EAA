@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Card from './Card';
 import Tooltip from './Tooltip';
 import BrainCircuitIcon from './icons/BrainCircuitIcon';
@@ -25,8 +25,8 @@ const PluriversalFeatureDiscovery: React.FC = () => {
   const [simulationStatus, setSimulationStatus] = useState<string | null>(null);
   const [phantomDimension, setPhantomDimension] = useState<boolean>(false);
 
-  const z0Star = parseVector(z0StarInput);
-  const zPrime = parseVector(zPrimeInput);
+  const z0Star = useMemo(() => parseVector(z0StarInput), [z0StarInput]);
+  const zPrime = useMemo(() => parseVector(zPrimeInput), [zPrimeInput]);
 
   const isValid = z0Star.length === 3 && zPrime.length === 3;
 
