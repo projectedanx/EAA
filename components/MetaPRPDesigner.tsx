@@ -37,16 +37,15 @@ const MetaPRPDesigner: React.FC = () => {
       if (savedConfigsRaw) {
         const parsed = JSON.parse(savedConfigsRaw);
         if (Array.isArray(parsed)) {
-          loadedConfigs = parsed.filter(
-            (item: any) =>
-              item &&
-              typeof item === 'object' &&
-              typeof item.id === 'string' &&
-              typeof item.name === 'string' &&
-              typeof item.mission === 'string' &&
-              typeof item.governance === 'string' &&
-              typeof item.goals === 'string'
-          ) as AgentConfig[];
+          loadedConfigs = parsed.filter((item: unknown) => {
+            if (!item || typeof item !== 'object') return false;
+            const obj = item as Record<string, unknown>;
+            return typeof obj.id === 'string' &&
+              typeof obj.name === 'string' &&
+              typeof obj.mission === 'string' &&
+              typeof obj.governance === 'string' &&
+              typeof obj.goals === 'string';
+          }) as AgentConfig[];
         }
       }
     } catch (error) {
