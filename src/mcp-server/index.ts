@@ -68,9 +68,9 @@ server.registerTool(
     try {
         let filteredScars = symbolicScars;
         if (min_severity) {
-             const severityLevels = ["Low", "Medium", "High"];
-             const minIndex = severityLevels.indexOf(min_severity);
-             filteredScars = symbolicScars.filter(scar => severityLevels.indexOf(scar.severity) >= minIndex);
+             const severityMap: Record<string, number> = { "Low": 0, "Medium": 1, "High": 2 };
+             const minIndex = severityMap[min_severity] ?? 0;
+             filteredScars = symbolicScars.filter(scar => (severityMap[scar.severity] ?? 0) >= minIndex);
         }
 
         return {
