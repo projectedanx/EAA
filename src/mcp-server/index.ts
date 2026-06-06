@@ -76,7 +76,7 @@ server.registerTool(
         return {
         content: [{ type: "text", text: JSON.stringify(filteredScars, null, 2) }],
         };
-    } catch (error) {
+    } catch {
          return {
             content: [{
               type: "text",
@@ -85,7 +85,7 @@ server.registerTool(
                 fault_category: "GENERAL_PROGRAMMING",
                 structured_detail: {
                   violation: "UNEXPECTED_ERROR",
-                  message: String(error)
+                  message: "An unexpected error occurred"
                 },
                 retry_viable: true,
                 suggested_decomposition: null,
@@ -136,7 +136,7 @@ server.registerTool(
              return {
                  content: [{ type: "text", text: JSON.stringify({ status: "RECORDED", id: newScar.id }) }],
              };
-        } catch (error) {
+        } catch {
               return {
                  content: [{
                    type: "text",
@@ -145,7 +145,7 @@ server.registerTool(
                      fault_category: "GENERAL_PROGRAMMING",
                      structured_detail: {
                        violation: "RECORD_FAILED",
-                       message: String(error)
+                       message: "An unexpected error occurred"
                      },
                      retry_viable: true,
                      suggested_decomposition: null,
@@ -174,7 +174,7 @@ server.registerTool(
             return {
                 content: [{ type: "text", text: JSON.stringify(uncertaintyReports, null, 2) }],
             };
-         } catch (error) {
+         } catch {
             return {
                 content: [{
                   type: "text",
@@ -183,7 +183,7 @@ server.registerTool(
                     fault_category: "GENERAL_PROGRAMMING",
                     structured_detail: {
                       violation: "RETRIEVAL_FAILED",
-                      message: String(error)
+                      message: "An unexpected error occurred"
                     },
                     retry_viable: true,
                     suggested_decomposition: null,
@@ -234,7 +234,7 @@ server.registerTool(
              return {
                  content: [{ type: "text", text: JSON.stringify({ status: "RECORDED", id: newReport.id }) }],
              };
-        } catch (error) {
+        } catch {
               return {
                  content: [{
                    type: "text",
@@ -243,7 +243,7 @@ server.registerTool(
                      fault_category: "GENERAL_PROGRAMMING",
                      structured_detail: {
                        violation: "RECORD_FAILED",
-                       message: String(error)
+                       message: "An unexpected error occurred"
                      },
                      retry_viable: true,
                      suggested_decomposition: null,
