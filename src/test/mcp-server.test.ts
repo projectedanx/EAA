@@ -70,6 +70,52 @@ describe('MCP Server', () => {
         });
     });
 
+    describe('record_symbolic_scar tool', () => {
+        test('should record a symbolic scar successfully', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'record_symbolic_scar');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+             // Test happy path
+             const result = await handler({
+                description: "test failure",
+                severity: "High",
+                details: "test details"
+             });
+
+             expect(result.content[0].text).toContain("RECORDED");
+        });
+
+        test('should handle errors in record_symbolic_scar correctly', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'record_symbolic_scar');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+             // Mock an error by spying on Date.prototype.toISOString
+             const spy = vi.spyOn(Date.prototype, 'toISOString').mockImplementation(() => {
+                throw new Error("Simulated Error");
+             });
+
+             const result = await handler({
+                description: "test error failure",
+                severity: "Medium",
+                details: "test error details"
+             });
+
+             expect(result.isError).toBe(true);
+             expect(result.content[0].text).toContain("Simulated Error");
+             expect(result.content[0].text).toContain("RECORD_FAILED");
+
+             spy.mockRestore();
+        });
+    });
+
     describe('get_symbolic_scars tool', () => {
         test('should return symbolic scars successfully', async () => {
              await import('../mcp-server/index.js');
