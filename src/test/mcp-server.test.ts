@@ -163,4 +163,47 @@ describe('MCP Server', () => {
              spy.mockRestore();
         });
     });
+
+    describe('get_uncertainty_reports tool', () => {
+        test('should return uncertainty reports successfully', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'get_uncertainty_reports');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+             // Test happy path
+             const result = await handler({});
+
+             expect(result.isError).toBeFalsy();
+             // Just verifying it returns a string output
+             expect(typeof result.content[0].text).toBe('string');
+        });
+
+        test('should handle errors in get_uncertainty_reports correctly', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'get_uncertainty_reports');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+
+             // Mock an error by spying on JSON.stringify
+             const spy = vi.spyOn(JSON, 'stringify').mockImplementationOnce(() => {
+                throw new Error("Simulated Stringify Error");
+             });
+
+
+             const result = await handler({});
+
+             expect(result.isError).toBe(true);
+             expect(result.content[0].text).toContain("Simulated Stringify Error");
+             expect(result.content[0].text).toContain("RETRIEVAL_FAILED");
+             expect(result.content[0].text).toContain("TOOL_FAULT_GENERAL_PROGRAMMING");
+
+             spy.mockRestore();
+        });
+    });
 });
