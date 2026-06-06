@@ -69,4 +69,52 @@ describe('MCP Server', () => {
              spy.mockRestore();
         });
     });
+
+    describe('get_symbolic_scars tool', () => {
+        test('should return symbolic scars successfully', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'get_symbolic_scars');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+             // Test happy path with min_severity
+             const result = await handler({
+                min_severity: "High"
+             });
+
+             expect(result.isError).toBeFalsy();
+             expect(result.content[0].text).toContain("High");
+
+             // Test without min_severity
+             const resultAll = await handler({});
+             expect(resultAll.isError).toBeFalsy();
+             expect(resultAll.content[0].text).toContain("SCAR-0001");
+        });
+
+        test('should handle errors in get_symbolic_scars correctly', async () => {
+             await import('../mcp-server/index.js');
+
+             const call = mockRegisterTool.mock.calls.find(call => call[0] === 'get_symbolic_scars');
+             expect(call).toBeDefined();
+
+             const handler = call[2];
+
+             // Mock an error by spying on Array.prototype.filter
+             const spy = vi.spyOn(Array.prototype, 'filter').mockImplementation(() => {
+                throw new Error("Simulated Filter Error");
+             });
+
+             const result = await handler({
+                min_severity: "High"
+             });
+
+             expect(result.isError).toBe(true);
+             expect(result.content[0].text).toContain("Simulated Filter Error");
+             expect(result.content[0].text).toContain("TOOL_FAULT_GENERAL_PROGRAMMING");
+
+             spy.mockRestore();
+        });
+    });
 });
