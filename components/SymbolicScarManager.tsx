@@ -86,10 +86,17 @@ const formatDuration = (ms: number): string => {
 
 /**
  * A component that displays the decay progress of a symbolic scar.
- * @param {{ scar: SymbolicScar; now: number; onClear: () => void }} props - The props for the component.
+ * @param {{ scar: SymbolicScar; onClear: () => void }} props - The props for the component.
  * @returns {React.FC | null} The rendered component, or null if the scar is not decaying.
  */
-const DecayProgress: React.FC<{ scar: SymbolicScar; now: number; onClear: () => void }> = ({ scar, now, onClear }) => {
+const DecayProgress: React.FC<{ scar: SymbolicScar; onClear: () => void }> = ({ scar, onClear }) => {
+    const [now, setNow] = useState(Date.now());
+
+    useEffect(() => {
+        const timer = setInterval(() => setNow(Date.now()), 1000);
+        return () => clearInterval(timer);
+    }, []);
+
     if (!scar.decayDays || !scar.decaySetAt) return null;
 
     const totalDuration = scar.decayDays * 24 * 60 * 60 * 1000;
@@ -133,15 +140,9 @@ const DecayProgress: React.FC<{ scar: SymbolicScar; now: number; onClear: () => 
 const SymbolicScarManager: React.FC = () => {
     const [scars, setScars] = useState<SymbolicScar[]>(initialScars);
     const [decayInputs, setDecayInputs] = useState<{ [key: string]: string }>({});
-    const [now, setNow] = useState(Date.now());
     
     type ModalAction = { type: 'clearTimer', scarId: string } | { type: 'override', scarId: string };
     const [modal, setModal] = useState<{ isOpen: boolean; action: ModalAction | null }>({ isOpen: false, action: null });
-
-    useEffect(() => {
-        const timer = setInterval(() => setNow(Date.now()), 1000);
-        return () => clearInterval(timer);
-    }, []);
 
     const handleDecayInputChange = (scarId: string, value: string) => {
         setDecayInputs(prev => ({ ...prev, [scarId]: value }));
@@ -217,7 +218,7 @@ const SymbolicScarManager: React.FC = () => {
                             <p className="text-sm text-slate-400 mt-2 p-3 bg-slate-800 rounded-md">{scar.details}</p>
                             
                             {scar.decaySetAt && scar.decayDays ? (
-                                <DecayProgress scar={scar} now={now} onClear={() => setModal({ isOpen: true, action: { type: 'clearTimer', scarId: scar.id } })} />
+                                <DecayProgress scar={scar} onClear={() => setModal({ isOpen: true, action: { type: 'clearTimer', scarId: scar.id } })} />
                             ) : (
                                 <div className="flex items-center space-x-2 mt-4">
                                     <Tooltip content="Manually bypass this scar's influence for a specific task. This is a high-risk action that should be logged and justified.">
