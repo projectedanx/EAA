@@ -241,4 +241,27 @@ describe('MetaPRPDesigner', () => {
 
     expect(screen.getByText('Default Profile')).toBeInTheDocument();
   });
+
+  it('handles localStorage.getItem throwing an error gracefully', () => {
+    const originalGetItem = Storage.prototype.getItem;
+    const getItemSpy = vi.spyOn(Storage.prototype, 'getItem').mockImplementation((key) => {
+      if (key === LOCAL_STORAGE_KEY_LIST) {
+        throw new Error('Access denied');
+      }
+      return originalGetItem.call(localStorage, key);
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    render(<MetaPRPDesigner />);
+
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      "Failed to parse MetaPRP configs from localStorage",
+      expect.any(Error)
+    );
+    expect(screen.getByText('Default Profile')).toBeInTheDocument();
+
+    getItemSpy.mockRestore();
+    consoleErrorSpy.mockRestore();
+  });
+
 });
