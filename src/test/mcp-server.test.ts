@@ -63,7 +63,7 @@ describe('MCP Server', () => {
              });
 
              expect(result.isError).toBe(true);
-             expect(result.content[0].text).toContain("Simulated Error");
+             expect(result.content[0].text).toContain("An unexpected error occurred");
              expect(result.content[0].text).toContain("RECORD_FAILED");
 
              spy.mockRestore();
@@ -109,7 +109,7 @@ describe('MCP Server', () => {
              });
 
              expect(result.isError).toBe(true);
-             expect(result.content[0].text).toContain("Simulated Error");
+             expect(result.content[0].text).toContain("An unexpected error occurred");
              expect(result.content[0].text).toContain("RECORD_FAILED");
 
              spy.mockRestore();
@@ -157,7 +157,7 @@ describe('MCP Server', () => {
              });
 
              expect(result.isError).toBe(true);
-             expect(result.content[0].text).toContain("Simulated Filter Error");
+             expect(result.content[0].text).toContain("An unexpected error occurred");
              expect(result.content[0].text).toContain("TOOL_FAULT_GENERAL_PROGRAMMING");
 
              spy.mockRestore();
@@ -199,7 +199,7 @@ describe('MCP Server', () => {
              const result = await handler({});
 
              expect(result.isError).toBe(true);
-             expect(result.content[0].text).toContain("Simulated Stringify Error");
+             expect(result.content[0].text).toContain("An unexpected error occurred");
              expect(result.content[0].text).toContain("RETRIEVAL_FAILED");
              expect(result.content[0].text).toContain("TOOL_FAULT_GENERAL_PROGRAMMING");
 
