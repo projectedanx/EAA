@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Card from './Card';
 import ActivityIcon from './icons/ActivityIcon';
 import AlertTriangleIcon from './icons/AlertTriangleIcon';
@@ -28,8 +28,8 @@ const OperationalMetabolismMapper: React.FC = () => {
   const [vectorBInput, setVectorBInput] = useState<string>('0.8, 0.2, 0.0');
   const [epsilonInput, setEpsilonInput] = useState<number>(1e-6);
 
-  const vectorA = parseVector(vectorAInput);
-  const vectorB = parseVector(vectorBInput);
+  const vectorA = useMemo(() => parseVector(vectorAInput), [vectorAInput]);
+  const vectorB = useMemo(() => parseVector(vectorBInput), [vectorBInput]);
 
   const isValid = vectorA.length > 0 && vectorA.length === vectorB.length;
 
