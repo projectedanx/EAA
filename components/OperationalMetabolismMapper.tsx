@@ -5,8 +5,6 @@ import AlertTriangleIcon from './icons/AlertTriangleIcon';
 import ShieldIcon from './icons/ShieldIcon';
 
 // +++DCCDSchemaGuard
-// [OMISSION: High-dimensional non-linear scaling omitted for computational efficiency in the UI. Assumes Euclidean properties of topological space to approximate DE-9IM.]
-
 const parseVector = (str: string): number[] => {
   return str.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
 };
@@ -19,8 +17,14 @@ const magnitude = (v: number[]): number => {
     return Math.sqrt(v.reduce((sum, a) => sum + a * a, 0));
 };
 
+
+const applyNonLinearScaling = (v: number[]): number[] => {
+    return v.map(x => Math.tanh(x));
+};
+
 /**
  * Renders the OperationalMetabolismMapper component.
+
  * @returns {React.ReactElement} The rendered component.
  */
 const OperationalMetabolismMapper: React.FC = () => {
@@ -40,11 +44,14 @@ const OperationalMetabolismMapper: React.FC = () => {
   let betti_1 = 0; // [∇] Paraconsistent Betti Loop Detection
 
   if (isValid) {
-      const normA = magnitude(vectorA);
-      const normB = magnitude(vectorB);
+      const scaledA = applyNonLinearScaling(vectorA);
+      const scaledB = applyNonLinearScaling(vectorB);
+
+      const normA = magnitude(scaledA);
+      const normB = magnitude(scaledB);
 
       if (normA > 0 && normB > 0) {
-          cosineAlignment = dotProduct(vectorA, vectorB) / (normA * normB);
+          cosineAlignment = dotProduct(scaledA, scaledB) / (normA * normB);
           topologicalStrain = 1.0 - cosineAlignment;
           metabolicCost = Math.pow(topologicalStrain, 2) * 850.0;
 
