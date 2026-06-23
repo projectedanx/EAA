@@ -69,12 +69,25 @@ const MetaPRPDesigner: React.FC = () => {
       setActiveConfigId(loadedConfigs[0].id);
     }
 
+    let lastSavedConfigsRef: AgentConfig[] | null = null;
+    let lastSavedConfigsString: string | null = null;
+    let lastSavedActiveId: string | null = null;
+
     const intervalId = setInterval(() => {
-      if (stateRef.current.configs.length > 0) {
-        localStorage.setItem(LOCAL_STORAGE_KEY_LIST, JSON.stringify(stateRef.current.configs));
+      const currentConfigs = stateRef.current.configs;
+      const currentActiveId = stateRef.current.activeConfigId;
+
+      if (currentConfigs.length > 0 && currentConfigs !== lastSavedConfigsRef) {
+        const configsString = JSON.stringify(currentConfigs);
+        if (configsString !== lastSavedConfigsString) {
+          localStorage.setItem(LOCAL_STORAGE_KEY_LIST, configsString);
+          lastSavedConfigsString = configsString;
+        }
+        lastSavedConfigsRef = currentConfigs;
       }
-      if (stateRef.current.activeConfigId) {
-        localStorage.setItem(LOCAL_STORAGE_KEY_ACTIVE, stateRef.current.activeConfigId);
+      if (currentActiveId && currentActiveId !== lastSavedActiveId) {
+        localStorage.setItem(LOCAL_STORAGE_KEY_ACTIVE, currentActiveId);
+        lastSavedActiveId = currentActiveId;
       }
     }, 5000); // Auto-save every 5 seconds
 
