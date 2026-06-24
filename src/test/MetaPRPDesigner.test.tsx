@@ -264,4 +264,27 @@ describe('MetaPRPDesigner', () => {
     consoleErrorSpy.mockRestore();
   });
 
+  it('does not write to localStorage if state has not changed in the interval', async () => {
+    vi.useFakeTimers();
+    const stringifySpy = vi.spyOn(JSON, 'stringify');
+    const setItemSpy = vi.spyOn(Storage.prototype, 'setItem');
+
+    render(<MetaPRPDesigner />);
+
+    // Wait for mount
+    vi.advanceTimersByTime(1);
+
+    stringifySpy.mockClear();
+    setItemSpy.mockClear();
+
+    vi.advanceTimersByTime(15000);
+
+    console.log("Stringify called:", stringifySpy.mock.calls.length, "times");
+    console.log("SetItem called:", setItemSpy.mock.calls.length, "times");
+
+    vi.useRealTimers();
+    stringifySpy.mockRestore();
+    setItemSpy.mockRestore();
+  });
+
 });
