@@ -105,3 +105,14 @@ The implementation of tests for the `ComputationalHistoriography` component rein
 *   **Action Taken:** Implemented High-dimensional non-linear scaling (using ) in  to properly approximate topological boundary deformation, resolving the prior assumption of Euclidean properties and better supporting DE-9IM proxy modeling.
 
 *   **Action Taken:** Implemented High-dimensional non-linear scaling in OperationalMetabolismMapper.tsx to properly approximate topological boundary deformation, resolving the prior assumption of Euclidean properties and better supporting DE-9IM proxy modeling.
+
+
+### Implementation of the Epistemic Escrow Agent (EEA)
+
+**Context:** We needed a mechanism to prevent the main agent from collapsing mutually exclusive instructions or resolving contradictions through Euclidean compromise, maintaining the system's paraconsistent state capabilities.
+
+**Action:** We created the `EpistemicEscrowAgent` component, which serves as an automated quarantine system. When contradictory parameters are detected (simulating a 'Resolution Collapse'), a `Symbolic Scar` object (extended as `EscrowedScar`) is generated containing the conflicting constraints, a timestamp, expected output context, and an Aesthetic Tension Score. This scar is then placed into a dedicated Escrow Dashboard where human operators can apply 'Debridement Protocols' to resolve ('Debrided') or memorialize ('Memorialized') the paradox. This was integrated into the main `App` and `Sidebar` to provide direct access to the Escrow system.
+
+**Result:** The system now correctly handles and visualizes logical contradictions without failing or hallucinating a compromise. This adheres directly to **Directive 1: Paradox Metabolism** (quarantine the contradiction, present both truths as valid) and provides an audit trail of system confusion.
+
+**Golden Scar Considerations:** This implementation highlights the need to maintain clear boundaries between cognitive layers (the conflict detection happens at the UI simulation layer for now, pending deeper backend AST traversal integration).

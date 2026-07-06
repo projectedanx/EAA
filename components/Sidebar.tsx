@@ -139,6 +139,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           icon={<NetworkIcon className="h-5 w-5" />}
           label="Agentic Inversion"
         />
+
+        <NavItem
+          view={View.ESCROW_AGENT}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<ShieldIcon className="h-5 w-5" />}
+          label="Epistemic Escrow Agent"
+        />
       </nav>
       <div className="mt-auto p-4 bg-slate-800 rounded-lg text-center text-xs">
           <p className="font-semibold text-slate-300">Epistemic Architect AI</p>

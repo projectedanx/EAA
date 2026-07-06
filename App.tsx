@@ -15,6 +15,8 @@ import SymbolicScarTwinningEngine from './components/SymbolicScarTwinningEngine'
 import AgenticInversionEngine from './components/AgenticInversionEngine';
 import EmpiricalDocumentationRouter from './components/EmpiricalDocumentationRouter';
 import VanceCartographerDashboard from './components/VanceCartographerDashboard';
+import EpistemicEscrowAgent from './components/EpistemicEscrowAgent';
+
 
 /**
  * The main application component.
@@ -49,6 +51,8 @@ const App: React.FC = () => {
         return <VanceCartographerDashboard />;
       case View.INVERSION:
         return <AgenticInversionEngine />;
+      case View.ESCROW_AGENT:
+        return <EpistemicEscrowAgent />;
       default:
         return <MetaPRPDesigner />;
     }

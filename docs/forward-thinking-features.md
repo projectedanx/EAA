@@ -4,6 +4,8 @@ This document outlines the proposed product features derived from the core philo
 
 ## 1. The Epistemic Escrow Agent (EEA)
 
+**STATUS:** Implemented (`EpistemicEscrowAgent` component and integrated into core UI).
+
 **Description:** An automated quarantine system. When the main agent encounters mutually exclusive instructions or contradictory context (a "Resolution Collapse"), the EEA intercepts the failure. Instead of throwing an error or hallucinating a compromise, the EEA packages the conflicting parameters into a "Symbolic Scar" (a discrete, version-controlled object) and places it into "Escrow."
 
 ### Requirement Decomposition
