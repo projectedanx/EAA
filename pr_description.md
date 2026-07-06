@@ -1,9 +1,12 @@
-# Implemented High-dimensional non-linear scaling for DE-9IM Proxy
+# Implement Epistemic Escrow Agent (EEA)
 
 **Rationale:**
-The `[OMISSION: High-dimensional non-linear scaling omitted for computational efficiency in the UI. Assumes Euclidean properties of topological space to approximate DE-9IM.]` has been formally addressed. The previously assumed Euclidean properties failed to account for non-linear bounding in edge cases. By implementing a `Math.tanh` scaling layer before executing cosine alignment calculations, the Operational Metabolism Mapper correctly bounds vector operations in a non-linear field without violating topological coherence. The CoC simulation and Paraconsistent Betti Loop detection logic remains structurally sound, while providing more robust modeling for mathematical edge conditions.
+The main agent previously lacked a formal mechanism to handle mutually exclusive instructions or contradictory context without collapsing logic (Euclidean compromise) or halting abruptly. To enforce the "Inversion for Emergence" strategy mapped to a Paraconsistent framework, we implemented the Epistemic Escrow Agent. When the system encounters contradiction ("Resolution Collapse"), it now packages the conflicting parameters into a "Symbolic Scar" (EscrowedScar object) containing a timestamp, the constraints, expected output, and a calculated Aesthetic Tension Score. This allows the system to hold contradictory constraints safely (Directive 1: Paradox Metabolism) and provides an explicit interface for operators to untangle logic without boolean collapse.
 
 **Changes:**
-* Replaced Euclidean norm calculation directly on `vectorA` and `vectorB` by introducing `applyNonLinearScaling` (utilizing `Math.tanh`).
-* Removed the omission comment in `components/OperationalMetabolismMapper.tsx`.
-* Verified regression safety across all components using Vitest.
+* Created `components/EpistemicEscrowAgent.tsx` dashboard to input contradictions, trigger Resolution Collapses, and apply Debridement Protocols.
+* Extended `types.ts` with `EscrowedScar` interface and `ESCROW_AGENT` View enum.
+* Updated `components/Sidebar.tsx` and `App.tsx` to integrate the EEA into the core layout.
+* Created deterministic JSDOM test coverage (`src/test/EpistemicEscrowAgent.test.tsx`) for contradiction capture and debridement workflows.
+* Updated `docs/lessons-learned.md` and `docs/forward-thinking-features.md` to reflect the completed implementation and mapping to Epistemic Directives.
+* Verified visual integration using Playwright.
