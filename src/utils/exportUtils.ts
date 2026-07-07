@@ -45,9 +45,8 @@ export const downloadCSV = <T extends object>(data: T[], filename: string): void
     ];
 
     const csvString = csvRows.join('\n');
-    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+    const url = `data:text/csv;charset=utf-8,${encodeURIComponent(csvString)}`;
     const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
     link.setAttribute('href', url);
     link.setAttribute('download', filename);
     link.style.visibility = 'hidden';
@@ -64,9 +63,8 @@ export const downloadCSV = <T extends object>(data: T[], filename: string): void
  */
 export const downloadJSON = (data: object, filename: string): void => {
   const jsonString = JSON.stringify(data, null, 2);
-  const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8;' });
+  const url = `data:application/json;charset=utf-8,${encodeURIComponent(jsonString)}`;
   const link = document.createElement('a');
-  const url = URL.createObjectURL(blob);
   link.setAttribute('href', url);
   link.setAttribute('download', filename);
   link.style.visibility = 'hidden';

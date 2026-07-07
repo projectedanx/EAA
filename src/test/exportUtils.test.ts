@@ -63,12 +63,10 @@ describe('exportUtils', () => {
       const createElementSpy = vi.spyOn(document, 'createElement').mockReturnValue(link);
       const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => null as any);
       const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => null as any);
-      const createObjectURLSpy = vi.spyOn(window.URL, 'createObjectURL').mockReturnValue('blob:mock');
-
       downloadCSV(data, 'test.csv');
 
       expect(createElementSpy).toHaveBeenCalledWith('a');
-      expect(link.href).toContain('blob:mock');
+      expect(link.href).toContain('data:text/csv');
       expect(link.download).toBe('test.csv');
       expect(link.style.visibility).toBe('hidden');
       expect(appendChildSpy).toHaveBeenCalledWith(link);
@@ -85,12 +83,10 @@ describe('exportUtils', () => {
       const createElementSpy = vi.spyOn(document, 'createElement').mockReturnValue(link);
       const appendChildSpy = vi.spyOn(document.body, 'appendChild').mockImplementation(() => null as any);
       const removeChildSpy = vi.spyOn(document.body, 'removeChild').mockImplementation(() => null as any);
-      const createObjectURLSpy = vi.spyOn(window.URL, 'createObjectURL').mockReturnValue('blob:mock');
-
       downloadJSON(data, 'test.json');
 
       expect(createElementSpy).toHaveBeenCalledWith('a');
-      expect(link.href).toContain('blob:mock');
+      expect(link.href).toContain('data:application/json');
       expect(link.download).toBe('test.json');
       expect(link.style.visibility).toBe('hidden');
       expect(appendChildSpy).toHaveBeenCalledWith(link);
