@@ -224,14 +224,14 @@ describe('MetaPRPDesigner', () => {
   it('ignores completely invalid JSON format and loads default config', () => {
     localStorage.setItem(LOCAL_STORAGE_KEY_LIST, "invalid json {");
 
-    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     render(<MetaPRPDesigner />);
 
-    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleWarnSpy).toHaveBeenCalled();
     expect(screen.getByText('Default Profile')).toBeInTheDocument();
 
-    consoleErrorSpy.mockRestore();
+    consoleWarnSpy.mockRestore();
   });
 
   it('ignores data that is an object instead of array and loads default config', () => {
@@ -250,18 +250,18 @@ describe('MetaPRPDesigner', () => {
       }
       return originalGetItem.call(localStorage, key);
     });
-    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     render(<MetaPRPDesigner />);
 
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      "Failed to parse MetaPRP configs from localStorage",
+    expect(consoleWarnSpy).toHaveBeenCalledWith(
+      "Error parsing configurations from local storage",
       expect.any(Error)
     );
     expect(screen.getByText('Default Profile')).toBeInTheDocument();
 
     getItemSpy.mockRestore();
-    consoleErrorSpy.mockRestore();
+    consoleWarnSpy.mockRestore();
   });
 
   it('does not write to localStorage if state has not changed in the interval', async () => {
