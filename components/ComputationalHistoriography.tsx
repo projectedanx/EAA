@@ -100,7 +100,8 @@ const ReasoningNode: React.FC<{ node: ReasoningStep; level: number }> = ({ node,
  */
 const ComputationalHistoriography: React.FC = () => {
 
-  const handleExport = () => {
+  /**\n * Exports the chronological events to a CSV file.\n * @returns {void}\n */
+const handleExport = () => {
     downloadJSON(mockTrace, 'reasoning-trace.json');
   };
 

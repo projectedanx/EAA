@@ -25,13 +25,15 @@ const MetaPRPDesigner: React.FC = () => {
   const [modalState, setModalState] = useState<{ type: 'new' | 'rename' | 'delete' | null; isOpen: boolean; }>({ type: null, isOpen: false });
   const [configNameInput, setConfigNameInput] = useState('');
 
-  const handleExport = () => {
+  /**\n * Exports the current configuration array to a JSON file.\n * @returns {void}\n */
+const handleExport = () => {
     if (!activeConfig) return;
     const { id, ...exportData } = activeConfig;
     downloadJSON(exportData, `${activeConfig.name.toLowerCase().replace(/\s+/g, '-')}-config.json`);
   };
 
-  const handleModalOpen = (type: 'new' | 'rename' | 'delete') => {
+  /**\n * Opens a modal based on the specified type.\n * @param {'add' | 'rename'} type - The type of modal to open.\n * @returns {void}\n */
+const handleModalOpen = (type: 'new' | 'rename' | 'delete') => {
     if (type === 'rename' && activeConfig) {
       setConfigNameInput(activeConfig.name);
     } else {
@@ -40,7 +42,8 @@ const MetaPRPDesigner: React.FC = () => {
     setModalState({ type, isOpen: true });
   }
 
-  const handleModalConfirm = () => {
+  /**\n * Handles the confirmation action of the currently open modal.\n * @returns {void}\n */
+const handleModalConfirm = () => {
     if (!modalState.type) return;
 
     switch (modalState.type) {

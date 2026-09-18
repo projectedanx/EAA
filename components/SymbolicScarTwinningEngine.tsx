@@ -4,6 +4,7 @@ import NetworkIcon from './icons/NetworkIcon';
 import ShieldIcon from './icons/ShieldIcon';
 import AlertTriangleIcon from './icons/AlertTriangleIcon';
 
+/**\n * Calculates aesthetic tension dynamically based on ID.\n * @param {number} idValue - Intent divergence value.\n * @returns {number} The calculated tension.\n */
 const calculateAestheticTension = (aiLogicDensity: number, humanConsensusVector: number): number => {
     // Simulate topological divergence as described in docs
     const baseTension = Math.sqrt((aiLogicDensity ** 2) + (humanConsensusVector ** 2));
@@ -30,7 +31,8 @@ const SymbolicScarTwinningEngine: React.FC = () => {
         stabilizedTension = Math.max(0.85, tension - concessionWeight);
     }
 
-    const handleApplyTwinning = () => {
+    /**\n * Applies twinning to stabilize high-tension schemas.\n * @returns {void}\n */
+const handleApplyTwinning = () => {
         if (isCritical) {
             setTwinningLogged(true);
         }

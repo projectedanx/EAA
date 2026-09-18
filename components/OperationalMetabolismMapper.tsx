@@ -5,19 +5,23 @@ import AlertTriangleIcon from './icons/AlertTriangleIcon';
 import ShieldIcon from './icons/ShieldIcon';
 
 // +++DCCDSchemaGuard
+/**\n * Parses a comma-separated string into an array of numbers.\n * @param {string} input - The input string.\n * @returns {number[]} The parsed numeric array.\n */
 const parseVector = (str: string): number[] => {
   return str.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
 };
 
+/**\n * Calculates the dot product of two vectors.\n * @param {number[]} v1 - The first vector.\n * @param {number[]} v2 - The second vector.\n * @returns {number} The dot product.\n */
 const dotProduct = (v1: number[], v2: number[]): number => {
     return v1.reduce((sum, a, i) => sum + a * (v2[i] || 0), 0);
 };
 
+/**\n * Calculates the magnitude (length) of a vector.\n * @param {number[]} v - The vector.\n * @returns {number} The magnitude.\n */
 const magnitude = (v: number[]): number => {
     return Math.sqrt(v.reduce((sum, a) => sum + a * a, 0));
 };
 
 
+/**\n * Applies non-linear scaling to an input value based on a given stress factor.\n * @param {number} value - The input value.\n * @param {number} stress - The stress factor.\n * @returns {number} The scaled value.\n */
 const applyNonLinearScaling = (v: number[]): number[] => {
     return v.map(x => Math.tanh(x));
 };

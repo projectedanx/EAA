@@ -16,6 +16,11 @@ const initialScars: EscrowedScar[] = [
   }
 ];
 
+/**
+ * EpistemicEscrowAgent component manages constraints and parameters that are held in escrow due to conflicts.
+ * It allows users to view and resolve these epistemic tensions.
+ * @returns {React.ReactElement} The rendered React component.
+ */
 const EpistemicEscrowAgent: React.FC = () => {
   const [scars, setScars] = useState<EscrowedScar[]>(initialScars);
   const [paramA, setParamA] = useState('');
@@ -23,7 +28,8 @@ const EpistemicEscrowAgent: React.FC = () => {
   const [expectedOutput, setExpectedOutput] = useState('');
   const [selectedScar, setSelectedScar] = useState<EscrowedScar | null>(null);
 
-  const handleSimulateCollapse = () => {
+  /**\n * Simulates a topological collapse when tension cannot be resolved.\n * @returns {void}\n */
+const handleSimulateCollapse = () => {
     if (!paramA || !paramB) return;
 
     const newScar: EscrowedScar = {
@@ -41,7 +47,8 @@ const EpistemicEscrowAgent: React.FC = () => {
     setExpectedOutput('');
   };
 
-  const applyDebridement = (scarId: string, resolution: 'Debrided' | 'Memorialized') => {
+  /**\n * Applies symbolic debridement to resolve an escrowed scar.\n * @returns {void}\n */
+const applyDebridement = (scarId: string, resolution: 'Debrided' | 'Memorialized') => {
     setScars(scars.map(scar =>
       scar.id === scarId ? { ...scar, status: resolution } : scar
     ));

@@ -28,7 +28,8 @@ export function useLocalStorageState<T>(key: string, defaultValue: T): [T, React
   }, [state]);
 
   useEffect(() => {
-    const handleStorageChange = (e: StorageEvent) => {
+    /**\n * Event listener for storage events to synchronize state across tabs.\n * @param {StorageEvent} event - The storage event.\n * @returns {void}\n */
+const handleStorageChange = (e: StorageEvent) => {
       if (e.key === key && e.newValue) {
         try {
           const parsed = JSON.parse(e.newValue);
