@@ -29,6 +29,8 @@ const App: React.FC = () => {
 
   const renderView = () => {
     switch (activeView) {
+      case View.DOCUMENTATION_ROUTER:
+        return <EmpiricalDocumentationRouter />;
       case View.DESIGNER:
         return <MetaPRPDesigner />;
       case View.SCARS:

@@ -63,6 +63,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
       </div>
       <nav className="flex flex-col space-y-2">
         <NavItem
+          view={View.DOCUMENTATION_ROUTER}
+          activeView={activeView}
+          setActiveView={setActiveView}
+          icon={<FileTextIcon className="h-5 w-5" />}
+          label="Empirical Router"
+        />
+        <NavItem
           view={View.DESIGNER}
           activeView={activeView}
           setActiveView={setActiveView}
