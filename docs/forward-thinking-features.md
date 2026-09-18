@@ -212,9 +212,9 @@ This document outlines the proposed product features derived from the core philo
 
 ---
 
-## 8. Agentic Inversion Engine (Z-Axis Sculpting)
+## 8. Pluriversal Codebase Feature Discovery & Agentic Inversion Engine (Z-Axis Sculpting)
 
-**STATUS:** Partially Implemented (UI and Mathematical Simulation layer added via `AgenticInversionEngine` component. Full integration with backend AST traversal pending).
+**STATUS:** Mathematically Grounded via CoC Simulation `pluriversal_discovery_sim.py`.
 
 **Description:** A feature that acts as a "Contradiction Harvester," explicitly taking mutually exclusive human constraints and utilizing Z-Axis Inference to calculate a higher-dimensional emergent node. This prevents standard Boolean collapse and average-seeking behavior, acting as the primary engine for "Topological Causal Sculpting."
 
