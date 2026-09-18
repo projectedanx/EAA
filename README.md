@@ -6,6 +6,54 @@
 **Ground Truth Score**: GDS = 0.95
 **Undocumented Features Detected**: 0
 
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (v18+)
+- Bun (optional, but recommended as it is used heavily as a fallback runner in this repo)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # Or using bun:
+   bun install
+   ```
+
+### Usage
+
+**Starting the Frontend Development Server**
+Run the following command to start the Vite-based React frontend:
+```bash
+npm run dev &
+# Or using bun:
+bun run dev &
+```
+Access the application at `http://localhost:3000`.
+
+**Starting the MCP Server**
+The project includes a Model Context Protocol (MCP) server. To build and start it:
+```bash
+npm run mcp:build && npm run mcp:start &
+# Or using bun:
+bun run mcp:build && bun run mcp:start &
+```
+
+**Running Tests**
+This project uses Vitest. Do NOT use `bun test` as it causes DOM resolution errors. Use the following:
+```bash
+npx vitest run
+# Or using bun:
+bun x vitest run
+```
+
 ### TIER 1: Repository Identity & Ontological Glossary
 
 #### What This Repository Is

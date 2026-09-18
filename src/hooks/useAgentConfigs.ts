@@ -10,6 +10,11 @@ export const DEFAULT_CONFIG: Omit<AgentConfig, 'id' | 'name'> = {
   goals: '- Improve response relevance by 15% quarterly.\n- Reduce instances of justified uncertainty by 10%.\n- Optimize epistemic budget for complex queries.',
 };
 
+/**
+ * Custom hook for managing agent configurations using local storage.
+ * It provides state for multiple configs and the active config ID, along with methods to manipulate them.
+ * @returns {Object} An object containing the current configurations, active config, and methods to update them.
+ */
 export function useAgentConfigs() {
   const [configs, setConfigs] = useState<AgentConfig[]>([]);
   const [activeConfigId, setActiveConfigId] = useState<string | null>(null);
@@ -88,7 +93,8 @@ export function useAgentConfigs() {
     return configs.find(c => c.id === activeConfigId);
   }, [configs, activeConfigId]);
 
-  const handleManualSave = () => {
+  /**\n * Manually saves the current configurations to local storage.\n * @returns {void}\n */
+const handleManualSave = () => {
     if (configs.length > 0) {
       localStorage.setItem(LOCAL_STORAGE_KEY_LIST, JSON.stringify(configs));
     }
@@ -97,12 +103,14 @@ export function useAgentConfigs() {
     }
   };
 
-  const handleConfigChange = (field: keyof Omit<AgentConfig, 'id' | 'name'>, value: string) => {
+  /**\n * Handles changes to a specific field in the active configuration.\n * @param {keyof Omit<AgentConfig, 'id' | 'name'>} field - The field to update.\n * @param {string} value - The new value.\n * @returns {void}\n */
+const handleConfigChange = (field: keyof Omit<AgentConfig, 'id' | 'name'>, value: string) => {
     if (!activeConfigId) return;
     setConfigs(prev => prev.map(c => c.id === activeConfigId ? { ...c, [field]: value } : c));
   };
 
-  const addConfig = (name: string) => {
+  /**\n * Adds a new configuration with default values and sets it as active.\n * @param {string} name - The name for the new profile.\n * @returns {void}\n */
+const addConfig = (name: string) => {
     const newConfig: AgentConfig = {
       id: Date.now().toString(),
       name: name || 'Untitled Profile',
@@ -112,12 +120,14 @@ export function useAgentConfigs() {
     setActiveConfigId(newConfig.id);
   };
 
-  const renameConfig = (newName: string) => {
+  /**\n * Renames the active configuration.\n * @param {string} newName - The new name for the profile.\n * @returns {void}\n */
+const renameConfig = (newName: string) => {
       if (!activeConfigId || !newName) return;
       setConfigs(prev => prev.map(c => c.id === activeConfigId ? { ...c, name: newName } : c));
   };
 
-  const deleteActiveConfig = () => {
+  /**\n * Deletes the active configuration and sets another one as active.\n * @returns {void}\n */
+const deleteActiveConfig = () => {
       if (!activeConfigId || configs.length <= 1) return;
       const newConfigs = configs.filter(c => c.id !== activeConfigId);
       setConfigs(newConfigs);

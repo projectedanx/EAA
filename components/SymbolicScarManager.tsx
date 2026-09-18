@@ -144,11 +144,13 @@ const SymbolicScarManager: React.FC = () => {
     type ModalAction = { type: 'clearTimer', scarId: string } | { type: 'override', scarId: string };
     const [modal, setModal] = useState<{ isOpen: boolean; action: ModalAction | null }>({ isOpen: false, action: null });
 
-    const handleDecayInputChange = (scarId: string, value: string) => {
+    /**\n * Handles changes to the decay input field.\n * @param {React.ChangeEvent<HTMLInputElement>} e - The input change event.\n * @returns {void}\n */
+const handleDecayInputChange = (scarId: string, value: string) => {
         setDecayInputs(prev => ({ ...prev, [scarId]: value }));
     };
 
-    const handleSetTimer = (scarId: string) => {
+    /**\n * Sets a timer for scar decay simulation.\n * @returns {void}\n */
+const handleSetTimer = (scarId: string) => {
         const days = parseInt(decayInputs[scarId] || '0', 10);
         if (isNaN(days) || days <= 0) return;
 
@@ -163,7 +165,8 @@ const SymbolicScarManager: React.FC = () => {
         });
     };
     
-    const handleClearTimer = (scarId: string) => {
+    /**\n * Clears the active decay timer.\n * @returns {void}\n */
+const handleClearTimer = (scarId: string) => {
          setScars(prevScars => prevScars.map(scar => {
             if (scar.id === scarId) {
                 const { decayDays, decaySetAt, ...rest } = scar;
@@ -173,11 +176,13 @@ const SymbolicScarManager: React.FC = () => {
         }));
     };
 
-    const handleExport = () => {
+    /**\n * Exports the scars data to a JSON file.\n * @returns {void}\n */
+const handleExport = () => {
         downloadCSV(scars, 'symbolic-scars.csv');
     };
     
-    const handleConfirmAction = () => {
+    /**\n * Confirms an action (override or acknowledge) and closes the modal.\n * @returns {void}\n */
+const handleConfirmAction = () => {
         if (!modal.action) return;
 
         if (modal.action.type === 'clearTimer') {

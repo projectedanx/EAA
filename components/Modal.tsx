@@ -28,7 +28,8 @@ interface ModalProps {
  */
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onConfirm, title, children, confirmText = 'Confirm', cancelText = 'Cancel' }) => {
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    /**\n * Handles keydown events to close the modal on escape key press.\n * @param {KeyboardEvent} e - The keyboard event.\n * @returns {void}\n */
+const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
       }

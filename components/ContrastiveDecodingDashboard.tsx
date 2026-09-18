@@ -20,7 +20,8 @@ const ContrastiveDecodingDashboard: React.FC = () => {
   }, [alpha, expertLogProb, amateurLogProb]);
 
   // Simulation controls
-  const runSimulationTick = () => {
+  /**\n * Runs a single simulation tick to update the decodings history.\n * @returns {void}\n */
+const runSimulationTick = () => {
     // Generate some random noise for the log probs to simulate real-time telemetry
     setExpertLogProb(prev => Math.min(0, prev + (Math.random() - 0.5) * 0.2));
     setAmateurLogProb(prev => Math.min(0, prev + (Math.random() - 0.5) * 0.4));

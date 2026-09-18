@@ -5,10 +5,12 @@ import BrainCircuitIcon from './icons/BrainCircuitIcon';
 import AlertTriangleIcon from './icons/AlertTriangleIcon';
 import ShieldIcon from './icons/ShieldIcon';
 
+/**\n * Parses a comma-separated string into an array of numbers.\n * @param {string} input - The input string.\n * @returns {number[]} The parsed numeric array.\n */
 const parseVector = (str: string): number[] => {
   return str.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
 };
 
+/**\n * Formats an array of numbers into a comma-separated string.\n * @param {number[]} vector - The vector to format.\n * @returns {string} The formatted string.\n */
 const formatVector = (vec: number[]): string => {
   return vec.map(n => n.toFixed(2)).join(', ');
 };
@@ -40,7 +42,8 @@ const PluriversalFeatureDiscovery: React.FC = () => {
   const beta1 = currentDeltaZ.reduce((sum, val) => sum + Math.abs(val), 0) / Math.max(1, currentDeltaZ.length);
   const beta0 = 1.0 - Math.abs(currentDeltaZ[0]);
 
-  const runSimulation = () => {
+  /**\n * Runs the contract simulation and updates the feature state.\n * @returns {void}\n */
+const runSimulation = () => {
     if (!isValid) {
         setSimulationStatus('Error: Vectors must be 3-dimensional.');
         return;

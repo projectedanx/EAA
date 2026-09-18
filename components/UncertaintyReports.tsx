@@ -53,7 +53,8 @@ const UncertaintyBar: React.FC<{ value: number }> = ({ value }) => (
  */
 const UncertaintyReports: React.FC = () => {
 
-    const handleExport = () => {
+    /**\n * Exports the uncertainty reports to a CSV file.\n * @returns {void}\n */
+const handleExport = () => {
         downloadCSV(mockReports, 'uncertainty-reports.csv');
     };
 

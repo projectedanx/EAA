@@ -2,6 +2,11 @@ import React from 'react';
 import Card from './Card';
 
 
+/**
+ * VanceCartographerDashboard component provides a high-level view of epistemic metrics.
+ * It displays Hickam orientations, Betti-1 loops, and confidence fidelity indices.
+ * @returns {React.ReactElement} The rendered React component.
+ */
 const VanceCartographerDashboard: React.FC = () => {
     return (
         <div className="space-y-6">

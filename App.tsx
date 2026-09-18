@@ -27,7 +27,8 @@ const App: React.FC = () => {
   const [activeView, setActiveView] = useState<View>(View.DESIGNER);
   const [cognitiveMode, setCognitiveMode] = useState<CognitiveMode>(CognitiveMode.AUDIT);
 
-  const renderView = () => {
+  /**\n * Renders the active view based on the current activeView state.\n * @returns {React.ReactElement} The component corresponding to the active view.\n */
+const renderView = () => {
     switch (activeView) {
       case View.DOCUMENTATION_ROUTER:
         return <EmpiricalDocumentationRouter />;

@@ -5,6 +5,11 @@ import Tooltip from './Tooltip';
 
 const DRP_ID = "DRP-SCOS-PERSONA-METROLOGY-2026-v6.1";
 
+/**
+ * EmpiricalDocumentationRouter component visualizes epistemic metrics and constraints.
+ * It calculates the Topological Derivative to manage Stakeholder Dissonance.
+ * @returns {React.ReactElement} The rendered React component.
+ */
 const EmpiricalDocumentationRouter: React.FC = () => {
     // +++DCCDSchemaGuard(schema=ARC42_JSON_LD, enforcement="draft_conditioned")
     const [constraints, setConstraints] = useState<StakeholderConstraint[]>([
@@ -14,7 +19,8 @@ const EmpiricalDocumentationRouter: React.FC = () => {
     const [derivative, setDerivative] = useState<TopologicalDerivative | null>(null);
     const [isSimulating, setIsSimulating] = useState(false);
 
-    const calculateDerivative = () => {
+    /**\n * Calculates the topological derivative for the current constraints and updates state.\n * @returns {void}\n */
+const calculateDerivative = () => {
         setIsSimulating(true);
         // Simulate S5-Modal Attention Continuous SDF Interference
         setTimeout(() => {

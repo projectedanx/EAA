@@ -22,7 +22,8 @@ const AgenticInversionEngine: React.FC = () => {
   const [labelB, setLabelB] = useState<string>('Flexible');
   const [result, setResult] = useState<InversionResult | null>(null);
 
-  const calculateInversion = () => {
+  /**\n * Calculates the inversion outcome and updates the state based on active tension mapping.\n * @returns {void}\n */
+const calculateInversion = () => {
     // 1. Standard Aggregation (Boolean Collapse)
     const collapseX = (constraintA + constraintB) / 2;
     const distCollapse = Math.abs(collapseX - constraintA);

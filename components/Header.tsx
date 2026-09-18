@@ -24,13 +24,15 @@ const Header: React.FC<HeaderProps> = ({ cognitiveMode, setCognitiveMode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    const handleModeChange = (mode: CognitiveMode) => {
+    /**\n * Handles switching the operational mode.\n * @param {OperationalMode} mode - The new mode to set.\n * @returns {void}\n */
+const handleModeChange = (mode: CognitiveMode) => {
         setCognitiveMode(mode);
         setIsOpen(false);
     };
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
+        /**\n * Handles clicking outside the mode selector dropdown to close it.\n * @param {MouseEvent} event - The mouse event.\n * @returns {void}\n */
+const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
             }
