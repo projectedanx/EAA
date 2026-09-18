@@ -297,3 +297,11 @@ This document outlines the proposed product features derived from the core philo
 
 ## VANCE Cartographer Integrations
 The CFRSG (Conflict-Free Replicated Semantic Graph) concept introduces a bidirectional parsing constraint onto traditional Language Server Protocol (LSP) integrations. We anticipate full rollout of this graph integration, tracking structural state metrics through CFDI to bridge Draft-Conditioned Decoding Gaps. VANCE enforces graph topology mapping.
+
+## 2. Automated Flesh-to-Symbol Ingestion Loop
+**STATUS:** Implemented (`scripts/zotero_ingestion_loop.py`).
+**Description:** A background CLI listener that watches for new PDFs in a Zotero attachments folder. It extracts text, generates relationships using a simulated model, and creates new nodes and semantic edges in the PKC Manifest.
+
+## 3. Git-Anchored Context Hashing CLI Pipeline
+**STATUS:** Implemented (`.git/hooks/pre-commit`).
+**Description:** A Git pre-commit hook that automatically updates the Context-diff hashes in the PKC manifest ensuring 'Trust-by-Design' versioning for personal notes.
