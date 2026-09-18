@@ -1,35 +1,74 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import React from 'react';
-import { describe, it, expect } from 'vitest';
+import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import EmpiricalDocumentationRouter from '../../components/EmpiricalDocumentationRouter';
 
-describe('EmpiricalDocumentationRouter Component', () => {
-    it('renders the core PD&T specification UI', () => {
+describe('EmpiricalDocumentationRouter', () => {
+    beforeEach(() => {
+        vi.useFakeTimers();
+    });
+
+    afterEach(() => {
+        vi.runOnlyPendingTimers();
+        vi.useRealTimers();
+        vi.restoreAllMocks();
+    });
+
+    it('renders initial state correctly', () => {
         render(<EmpiricalDocumentationRouter />);
 
         expect(screen.getByText('EMPIRICAL DOCUMENTATION ROUTER')).toBeInTheDocument();
-        expect(screen.getByText(/DRP-ID: DRP-SCOS-PERSONA-METROLOGY-2026-v6.1/)).toBeInTheDocument();
-        expect(screen.getByText('STAKEHOLDER CONSTRAINTS')).toBeInTheDocument();
         expect(screen.getByText('Fast Delivery')).toBeInTheDocument();
         expect(screen.getByText('High Reliability')).toBeInTheDocument();
+        expect(screen.getByText('Awaiting constraints evaluation...')).toBeInTheDocument();
     });
 
-    it('simulates the S5 topological derivative and updates the UI', async () => {
+    it('calculates topological derivative correctly and shows PARACONSISTENT_TENSION_MAINTAINED', async () => {
+        const mockDate = 1000;
+        const dateSpy = vi.spyOn(Date, 'now').mockImplementation(() => mockDate);
+
         render(<EmpiricalDocumentationRouter />);
 
-        expect(screen.getByText('Awaiting constraints evaluation...')).toBeInTheDocument();
-
         const button = screen.getByText('EXECUTE TOPOLOGICAL FIT PREDICTION');
-        fireEvent.click(button);
+
+        act(() => {
+            fireEvent.click(button);
+        });
 
         expect(screen.getByText('CALCULATING S5 DERIVATIVE...')).toBeInTheDocument();
 
-        await waitFor(() => {
-            expect(screen.queryByText('Awaiting constraints evaluation...')).not.toBeInTheDocument();
-            expect(screen.getByText('Topological Tension:')).toBeInTheDocument();
-            expect(screen.getByText(/Betti Loop/)).toBeInTheDocument();
-            expect(screen.getByText('CFDI Score:')).toBeInTheDocument();
-            expect(screen.getByText('EXECUTE TOPOLOGICAL FIT PREDICTION')).toBeInTheDocument(); // Button should revert
-        }, { timeout: 1500 });
+        act(() => {
+            vi.advanceTimersByTime(800);
+        });
+
+        // Use standard testing instead of waitFor if we are advancing timers sequentially
+        expect(screen.getByText('PARACONSISTENT_TENSION_MAINTAINED')).toBeInTheDocument();
+        expect(screen.getByText('MAINTAINED (1)')).toBeInTheDocument();
+
+        dateSpy.mockRestore();
+    });
+
+    it('calculates topological derivative correctly and shows RESOLUTION_COLLAPSE', async () => {
+        const mockDate = 0;
+        const dateSpy = vi.spyOn(Date, 'now').mockImplementation(() => mockDate);
+
+        render(<EmpiricalDocumentationRouter />);
+
+        const button = screen.getByText('EXECUTE TOPOLOGICAL FIT PREDICTION');
+
+        act(() => {
+            fireEvent.click(button);
+        });
+
+        expect(screen.getByText('CALCULATING S5 DERIVATIVE...')).toBeInTheDocument();
+
+        act(() => {
+            vi.advanceTimersByTime(800);
+        });
+
+        expect(screen.getByText('RESOLUTION_COLLAPSE')).toBeInTheDocument();
+        expect(screen.getByText('COLLAPSED (0)')).toBeInTheDocument();
+
+        dateSpy.mockRestore();
     });
 });

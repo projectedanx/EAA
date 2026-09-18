@@ -116,3 +116,8 @@ The implementation of tests for the `ComputationalHistoriography` component rein
 **Result:** The system now correctly handles and visualizes logical contradictions without failing or hallucinating a compromise. This adheres directly to **Directive 1: Paradox Metabolism** (quarantine the contradiction, present both truths as valid) and provides an audit trail of system confusion.
 
 **Golden Scar Considerations:** This implementation highlights the need to maintain clear boundaries between cognitive layers (the conflict detection happens at the UI simulation layer for now, pending deeper backend AST traversal integration).
+
+### Lesson 18: Deterministic Testing of Paraconsistent UI States
+The integration of the `EmpiricalDocumentationRouter` required testing components that simulate complex, time-based topological derivatives.
+*   **Insight:** Relying on standard asynchronous polling (`waitFor`) introduces probabilistic noise into tests, violating the core mandate for deterministic metrology. React state updates simulating mathematical interference fits must be strictly controlled.
+*   **Action Taken:** Implemented robust deterministic tests using `vi.useFakeTimers()` and strict `act()` wrapping in `EmpiricalDocumentationRouter.test.tsx`. By precisely mocking `Date.now()`, we can force the component into specific topological states (e.g., `PARACONSISTENT_TENSION_MAINTAINED` vs. `RESOLUTION_COLLAPSE`) and verify the exact visual markers without race conditions. This aligns with the "Inversion for Emergence" strategy by imposing mathematical rigor onto the UI verification process.
