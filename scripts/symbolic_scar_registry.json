@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitiveos.core/schemas/symbolic-scar-registry.json",
+  "title": "Symbolic Scar Registry Protocol",
+  "description": "Defines the strictly bounded logging mechanics and structure for Firebearer Symbolic Scars to prevent Heuristic Fossilization.",
+  "type": "object",
+  "properties": {
+    "registry_metadata": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string", "const": "1.0.0" },
+        "governance": { "type": "string", "const": "Intent Delta Governance (BICM)" }
+      },
+      "required": ["version", "governance"]
+    },
+    "scars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scar_id": {
+            "type": "string",
+            "pattern": "^SCAR-[A-Z0-9]+-[0-9]{3}$",
+            "description": "Unique identifier enforcing chronological tracking of epistemic failures."
+          },
+          "trigger": {
+            "type": "string",
+            "description": "The threshold breach or execution failure condition (e.g., 'Intent Divergence Score < Vcrit')."
+          },
+          "mechanism": {
+            "type": "string",
+            "description": "The mathematical/computational causal pathway explaining the failure (e.g., mapping E_fric to Delta Intent)."
+          },
+          "consequence": {
+            "type": "string",
+            "description": "The observable outcome enforcing paraconsistency, typically heuristic abandonment."
+          },
+          "e_fric_threshold": {
+            "type": "number",
+            "minimum": 0,
+            "description": "The volume of contradictory error data logged at the point of phase change."
+          },
+          "calculated_miq": {
+            "type": "number",
+            "description": "The Martensite Initiation Quotient evaluated at Vcrit."
+          },
+          "fipi_payload": {
+            "type": "string",
+            "description": "Failure-Informed Prompt Inversion generated for subsequent Actor injection."
+          }
+        },
+        "required": [
+          "scar_id",
+          "trigger",
+          "mechanism",
+          "consequence",
+          "e_fric_threshold",
+          "calculated_miq",
+          "fipi_payload"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["registry_metadata", "scars"],
+  "additionalProperties": false
+}
