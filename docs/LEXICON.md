@@ -175,3 +175,17 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 - If Tier 1 prompt chaining with `+++DCCDSchemaGuard` alone outperforms Tier 3 PAL2v orchestration on complex cross-domain synthesis without triggering β₁ loops → Three-Tier Autonomy hypothesis falsified.
 - If Gemini CLI prioritizes default workspace context over lexicon procedural guidance → Pluriversal premise falsified; model-specific topological deformers required.
 - If esoteric-term entity density decay rate (λ) is measured ≥ 0.15 → Lexical Saponification Paradox boundary condition violated.
+
+### PAT-021 · Ephemeral JIT Instantiation
+**Type**: Architectural Decoupling | **AT Score**: 0.94
+**Definition**: Spawning short-lived (JIT_SPAWN_LATENCY_NS < 3μs) process boundaries to execute zero-entropy syntactic generation (Manifold $\beta$), isolating the Context Rot away from semantic reasoning (Manifold $\alpha$).
+**Mechanism**: Utilizing `JITMicroAgent` closures embedded with schema-specific rigid validation constraints and autophagic self-destruction loops post-resolution.
+**Boundary Condition**: Fails if Tooling Context Consumption Tax exceeds 10% of active tokens.
+**PDL Activators**: `+++Decouple_AST_Execution(memory_limit="6.5KiB")`
+
+### PAT-022 · Failure-Informed Prompt Inversion (F-IPI)
+**Type**: Epistemic Remediation | **AT Score**: 0.97
+**Definition**: Applying mathematically repulsive tensors to attention weights based on historical error serialization housed in the Scar Tissue Archive (STA).
+**Mechanism**: `VerificationCoProcessor.execute_cache_augmentation()` intercepts the KV cache to forcefully insert latent constraints.
+**Measurement**: Efficacy confirmed by SCoRe convergence on Attempt N < 3.
+**Boundary Condition**: Thrashing detected if $CFDI \ge 0.15$ persists across all 3 rework cycles, triggering a `JustifiedUncertaintyReport` generation.
