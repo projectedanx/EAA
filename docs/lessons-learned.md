@@ -153,3 +153,17 @@ Skill Drifting has been identified as a critical failure mode where deep nested 
 The transition from semantic reasoning (Manifold $\alpha$) to actionable sandbox control (Manifold $\beta$) required a structural barrier against bypass attacks from compromised agents.
 *   **Insight:** Relying on user-space prompt filtering or sub-agent rules for security is fundamentally flawed because probabilistic components can be manipulated to "forget" constraints. Security invariants must exist *outside* the agent's executable domain.
 *   **Action Taken:** Developed a Python simulation (`scripts/actplane_ebpf_sim.py`) demonstrating an "ActPlane" eBPF-style Kernel Policy Domain Map. By assigning processes to specific domains, we enforce Hierarchical Policy Domains natively. Parents enforce immutable root invariants (e.g. `BLOCK_WRITE_SYS`) via read-only bitmasks. This proves that we can track monotonic taint accumulation (Information-Flow Control Labels) and prevent downstream nodes from ever weakening, disabling, or bypassing parent-imposed constraints without introducing the high latency of hardware virtualization. This is mapped directly as a paraconsistent structure handling the contradiction of agent freedom vs hard systems security.
+
+## AACH: Purposeful Adaptation and Simulation Overrides
+
+### The Disequilibratory Loop
+* **Tension:** Standard AI feedback loops often optimize for equilibrium (reducing error/discrepancy to zero), leading to stagnation at local fitness peaks.
+* **Resolution (Disequilibratory Production):** Using Internal Model Control principles (IMC), when variance drops below a set threshold, the AACH artificially injects difficulty (a "learning goal" spike). This forces discrepancy creation, driving continuous evolutionary adaptation.
+
+### Active Externalism
+* **Tension:** LLMs typically operate purely sequentially in a closed loop, losing complex structural coherence.
+* **Resolution (Epistemic Matrix):** The AACH designates an output buffer specifically as an epistemic scratchpad. It permits chaotic, "task-irrelevant" outputs into this matrix. The system explicitly relies on constraints (e.g. Coordinate Overlap) to validate output physically before treating it as canonical.
+
+### Paraconsistent Subjectivity
+* **Tension:** Hardcoded programmatic constraints often violate local domain subjectivity (e.g. pushing for 100% organizational decentralization when stakeholder limits mandate 85%).
+* **Resolution:** Hard modifiers mapped mathematically into the objective functions guarantee constraint satisfaction over mathematical idealization, effectively modeling "well-being" inside the execution trace.

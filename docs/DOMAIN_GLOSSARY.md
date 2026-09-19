@@ -19,3 +19,9 @@ This glossary maps the conceptual lexicon to structural components within the Co
 *   **ActPlane:** An eBPF-style Kernel Policy Domain Map simulator ensuring that hierarchical policy boundaries are maintained independently of the probabilistic AI brain.
 *   **Hierarchical Policy Domain:** A core security division where a parent orchestrator imposes immutable root invariants that inherited child processes cannot bypass or weaken, modeled via bitmasks.
 *   **Information-Flow Control (IFC) labels:** Monotonically accumulating taint markers assigned to child domains to trace data provenance dynamically through execution edges.
+| Term | Location | Standard Equivalent | Local Meaning | Preservation Flag |
+|------|----------|---------------------|---------------|-------------------|
+| `AACH` | Documentation / Scripts | AI Harness | Autonomous Adaptive Cognitive Harness; enforces purposeful adaptation via disequilibratory goal production. | `[ARCHITECTURAL_PILLAR]` |
+| `Disequilibratory Production` | IMC Simulator | Noise / Variance Injection | Actively spiking difficulty/variance when the system reaches a local performance peak to prevent stagnation. | `[GOLDEN_SCAR]` |
+| `Present-At-Hand` | Epistemic Orchestrator | Error Catching | The state when an environmental disruption causes a tool to break, forcing a shift from transparent execution to explicit modeling. | `[CULTURAL_ARTIFACT]` |
+| `Algorithmic Reparation` | Epistemic Orchestrator | Error Recovery | A diagnostic loop triggered explicitly by a Present-at-Hand contradiction to repair system state. | `[GOLDEN_SCAR]` |
