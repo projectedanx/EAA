@@ -135,3 +135,16 @@ The standard LLM tool-use paradigm dictates that heavy API schemas and tool conf
 
 *   **Insight:** Context windows act as a shared resource pool for both structural rules and semantic planning. Merging them restricts generative freedom (Manifold $\alpha$) by bogging it down with static schema enforcement.
 *   **Action Taken:** We implemented a "JIT Swarm Orchestrator" model (`jit_swarm_orchestrator_sim.py`). The core LLM execution loop was stripped of rigid schemas, returning only a high-level semantic draft. To execute state-mutating actions, a dynamic, ephemeral JIT Micro-Agent is spawned (memory footprint $\sim 6.5\,\text{KiB}$, initialization latency $\sim 3\,\mu\text{s}$) specifically to constrain the semantic draft into zero-entropy AST formats (Manifold $\beta$). The micro-agent self-destructs upon returning a highly compressed JSON payload to the parent context.
+
+## Extended Epistemic Mapping (DRP-2026-CARTO Update)
+
+### Epistemic Friction and the MIQ (Martensite Initiation Quotient)
+We have formalized the concept of **Epistemic Friction ($E_{fric}$)**—the volume of contradictory error data encountered when an agent is locked in a fossilized heuristic (e.g., Stare Decisis in Legal Precedent) and confronted with an Antagonistic Input Space (e.g., Montage Theory).
+*   **Mechanism:** The Rheological Controller monitors the Behavioral Intent Continuity Model (BICM). As $E_{fric}$ increases, the Intent Divergence Score collapses.
+*   **Trigger:** When the score breaches $V_{crit}$ (forming a 'Rough Chromosome'), the MIQ is evaluated.
+*   **Observable Consequence:** The Firebearer Agent logs a Symbolic Scar and generates a Failure-Informed Prompt Inversion (FIPI), forcing epistemic renewal.
+
+### Skill Drifting in Voyager-Class Architectures
+Skill Drifting has been identified as a critical failure mode where deep nested code primitives accumulate latent errors, exacerbated by Context Saturation Point (CSP).
+*   **Stress-Test Pipeline:** Introduced a pipeline monitoring the Operator Drift Score ($ODS$) across deep dependency graphs (Levels 0-5).
+*   **Epistemic Escrow:** Prevents infinite fallback loops by tracking Semantic Reynolds Number ($Re_s$). If consecutive identical patches fail, the system halts and serializes the state.

@@ -330,3 +330,17 @@ The CFRSG (Conflict-Free Replicated Semantic Graph) concept introduces a bidirec
 ### Stakeholder Perspective Analysis
 *   **Security & Compliance:** Provides machine-readable JURs containing detailed context snapshots of failure states.
 *   **Performance:** Drastically reduces Context Rot by restricting heavy Tool definitions to ephemeral, lightweight wrappers ($\sim 6.5\,\text{KiB}$).
+
+## The Hybrid Dual-Helix Self-Improving Harness
+
+Future architectural iterations will combine the verbal metacognitive loops of **Reflexion** with the executable symbolic skill synthesis of **Voyager**.
+
+### Dual-Helix State Orchestration (LangGraph)
+1.  **THINK (Planner Agent):** Utilizes the DDx Exclusion Protocol to map vulnerabilities and draft implementation plans.
+2.  **WRITE (Architect Agent):** Generates an immutable Linguistic Scaffold representing the Cognitive Contract.
+3.  **CODE (Coder Agent):** Synthesizes logic adhering to the scaffold.
+4.  **EVALUATE (Reflexion-Helix):** Sandboxed Critic evaluates execution. Failures trigger the Self-Reflector to log episodic verbal critiques, which are injected into the next Coder prompt.
+5.  **RE-FORGE (Voyager-Helix):** Upon successful, zero-error execution, the script is converted into a clean, reusable Python primitive and signed (C2PA) into the permanent Skill Library.
+
+### Drift Mitigation
+This harness will be gated by an **Automated Golden Trace Validator**, ensuring long-term execution traces do not suffer from behavioral drift across regression suites.
