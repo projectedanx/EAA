@@ -16,3 +16,6 @@ This glossary maps the conceptual lexicon to structural components within the Co
 *   **STA (Scar Tissue Archive):** The persistent, version-controlled ledger indexing high-dimensional failures (Symbolic Scars) to permanently immunize the JIT Swarm Orchestrator against structural loops.
 *   **F-IPI (Failure-Informed Prompt Inversion):** The mechanism that prepends Symbolic Scars from the STA into the attention matrix, functioning as a mathematically repulsive force against historical error trajectories.
 *   **JUR (Justified Uncertainty Report):** A cryptographically bound, machine-readable JSON-LD structure exported upon entering an Epistemic Escrow halt to securely hand over cognitive load to human operators.
+*   **ActPlane:** An eBPF-style Kernel Policy Domain Map simulator ensuring that hierarchical policy boundaries are maintained independently of the probabilistic AI brain.
+*   **Hierarchical Policy Domain:** A core security division where a parent orchestrator imposes immutable root invariants that inherited child processes cannot bypass or weaken, modeled via bitmasks.
+*   **Information-Flow Control (IFC) labels:** Monotonically accumulating taint markers assigned to child domains to trace data provenance dynamically through execution edges.

@@ -1,12 +1,12 @@
-# Implement Epistemic Escrow Agent (EEA)
+# ActPlane eBPF Kernel Policy Simulator
 
 **Rationale:**
-The main agent previously lacked a formal mechanism to handle mutually exclusive instructions or contradictory context without collapsing logic (Euclidean compromise) or halting abruptly. To enforce the "Inversion for Emergence" strategy mapped to a Paraconsistent framework, we implemented the Epistemic Escrow Agent. When the system encounters contradiction ("Resolution Collapse"), it now packages the conflicting parameters into a "Symbolic Scar" (EscrowedScar object) containing a timestamp, the constraints, expected output, and a calculated Aesthetic Tension Score. This allows the system to hold contradictory constraints safely (Directive 1: Paradox Metabolism) and provides an explicit interface for operators to untangle logic without boolean collapse.
+The transition from semantic reasoning (Manifold $\alpha$) to actionable sandbox control (Manifold $\beta$) requires a structural barrier against bypass attacks from compromised sub-agents. Relying on user-space prompt filtering or sub-agent rules for security is fundamentally flawed, as probabilistic components can be manipulated. To solve this, security invariants must exist *outside* the agent's executable domain.
 
-**Changes:**
-* Created `components/EpistemicEscrowAgent.tsx` dashboard to input contradictions, trigger Resolution Collapses, and apply Debridement Protocols.
-* Extended `types.ts` with `EscrowedScar` interface and `ESCROW_AGENT` View enum.
-* Updated `components/Sidebar.tsx` and `App.tsx` to integrate the EEA into the core layout.
-* Created deterministic JSDOM test coverage (`src/test/EpistemicEscrowAgent.test.tsx`) for contradiction capture and debridement workflows.
-* Updated `docs/lessons-learned.md` and `docs/forward-thinking-features.md` to reflect the completed implementation and mapping to Epistemic Directives.
-* Verified visual integration using Playwright.
+**Implementation:**
+*   Created a Python simulation (`scripts/actplane_ebpf_sim.py`) that models an "ActPlane" eBPF-style Kernel Policy Domain Map.
+*   The script assigns processes to specific domains, enforcing **Hierarchical Policy Domains** natively.
+*   Parent orchestrators impose immutable root invariants (e.g., `BLOCK_WRITE_SYS`, `BLOCK_EXEC_GIT`) via read-only bitmasks.
+*   The simulation tracks monotonic taint accumulation via **Information-Flow Control (IFC) labels**, blocking processes that acquire sensitive data taints (e.g., `DB_SENSITIVE`) from exfiltrating data via the network.
+*   Demonstrated that downstream nodes cannot weaken, disable, or bypass parent-imposed constraints or declassify labels.
+*   Updated `docs/lessons-learned.md` (Lesson 20) and `docs/DOMAIN_GLOSSARY.md` to formally document this paraconsistent security structure and the core vocabulary surrounding the hierarchical policy enforcement without boolean collapse.
