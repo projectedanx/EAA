@@ -1,3 +1,4 @@
+import { logger } from "../utils/logger";
 import { useState, useEffect, useRef } from 'react';
 
 /**
@@ -16,7 +17,7 @@ export function useLocalStorageState<T>(key: string, defaultValue: T): [T, React
         return JSON.parse(stored);
       }
     } catch (e) {
-      console.warn(`Error reading localStorage key "${key}":`, e);
+      logger.warn(`Error reading localStorage key "${key}":`, e);
     }
     return typeof defaultValue === 'function' ? (defaultValue as () => T)() : defaultValue;
   });
@@ -35,7 +36,7 @@ const handleStorageChange = (e: StorageEvent) => {
           const parsed = JSON.parse(e.newValue);
           setState(parsed);
         } catch (e) {
-          console.warn(`Error parsing storage change for key "${key}":`, e);
+          logger.warn(`Error parsing storage change for key "${key}":`, e);
         }
       }
     };
