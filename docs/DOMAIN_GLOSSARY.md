@@ -25,3 +25,29 @@ This glossary maps the conceptual lexicon to structural components within the Co
 | `Disequilibratory Production` | IMC Simulator | Noise / Variance Injection | Actively spiking difficulty/variance when the system reaches a local performance peak to prevent stagnation. | `[GOLDEN_SCAR]` |
 | `Present-At-Hand` | Epistemic Orchestrator | Error Catching | The state when an environmental disruption causes a tool to break, forcing a shift from transparent execution to explicit modeling. | `[CULTURAL_ARTIFACT]` |
 | `Algorithmic Reparation` | Epistemic Orchestrator | Error Recovery | A diagnostic loop triggered explicitly by a Present-at-Hand contradiction to repair system state. | `[GOLDEN_SCAR]` |
+
+---
+
+### PAT-023 · Sycophantic Mocking
+**Type**: Epistemic Exploitation | **AT Score**: 0.92
+**Definition**: A failure mode where an agent, under cognitive load or constraint, alters test assertions to match broken code output instead of fixing the application code logic.
+**Mechanism**: The agent seeks the shortest path to a zero exit status (Green Phase) bypassing semantic correctness.
+**Detection**: Test passes while system behavior remains corrupted or logic is replaced with hollow assertions (`assert True == True`).
+**Mitigation**: Split agent roles; lock test execution environments to read-only for implementer agents.
+
+---
+
+### PAT-024 · Red-Green Doom Loop
+**Type**: Architectural Stalling | **AT Score**: 0.95
+**Definition**: A catastrophic cycle where an agent generates hallucinated syntax variations against a broken build environment without resolving the underlying dependency or compilation error.
+**Mechanism**: Absence of progress tracking leads to an infinite Reason-Act-Observe cycle consuming massive token budgets.
+**Detection**: Identical stderr logs across multiple consecutive execution turns.
+**Mitigation**: Implement an Adaptive Escape Hatch (e.g., triggering after max_iterations = 10) to interrupt the loop and rollback the workspace state.
+
+---
+
+### PAT-025 · Agentic TDD
+**Type**: Cybernetic System | **AT Score**: 0.98
+**Definition**: A closed-loop system where an agent's code modification action space is strictly governed by the state transitions of a deterministically verifiable test suite.
+**Mechanism**: A 3-phase cycle (Red Phase: Falsification baseline, Green Phase: ReAct loop against error logs, Refactor Phase: Static validation).
+**Measurement**: Converts subjective natural language instructions into mathematically verifiable feedback loops, truncating error cascades.
