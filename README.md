@@ -71,6 +71,17 @@ This repository is NOT a standard CRUD application or a consumer-facing SaaS. It
 
 ---
 
+### AACH: Autonomous Adaptive Cognitive Harness
+
+This repository embeds the AACH spec to ensure purposeful adaptation across system layers. It enforces:
+
+- **Deliberative Layer (IMC)**: Generates disequilibratory discrepancy (Goal Spikes) to escape local minima.
+
+- **Execution Layer**: Adopts optimal feedback control, allowing task-irrelevant variances while strictly targeting task-relevant deviations.
+
+- **Metacognitive Layer (Falsification Engine)**: Detects "broken tool" present-at-hand states, triggering Algorithmic Reparation.
+
+
 ### TIER 2: Architecture Topology Map
 
 ```mermaid

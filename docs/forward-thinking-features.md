@@ -344,3 +344,14 @@ Future architectural iterations will combine the verbal metacognitive loops of *
 
 ### Drift Mitigation
 This harness will be gated by an **Automated Golden Trace Validator**, ensuring long-term execution traces do not suffer from behavioral drift across regression suites.
+
+## Autonomous Adaptive Cognitive Harness (AACH)
+
+**Integration Strategy:**
+The repository explicitly adopts the Autonomous Adaptive Cognitive Harness (AACH) mapped across foundational domains: Cybernetics, Relational Data Exchange, Active Externalism, Heideggerian Phenomenology, and Optimal Feedback Control.
+
+### Core Pillars
+1. **Automated Discovery and Constraint Mining:** Hard boundaries (Invariants) mapping source domain to target schema ($\Sigma \to \Omega$) and Soft Targets (Optimizable Goals) minimizing execution overhead while maximizing adaptability.
+2. **Isomorphic Formalization:** Translating vague assumptions into schema verified by homomorphisms ($\chi: J \to J'$), epistemic write-ratios ($\mathcal{A}_{epistemic}$ vs. $\mathcal{A}_{pragmatic}$), and dynamic Stability Indexes.
+3. **Parametric Trade-off Modeling:** Balancing constraints specifically engineered to reside at the "Edge of Chaos", escaping dissipative instability and overcontrolled stagnation.
+4. **Continuous Falsification Engine:** Edge-case stress testing accounting for Perceptual Shift (Raccoon-Dog), Subjective Override (Opera Singer), and Present-at-Hand Broken Tool failures, shifting logic dynamically to an Algorithmic Reparation block.
