@@ -1,0 +1,4 @@
+PyYAML
+watchdog
+pdfplumber
+pytest
