@@ -51,3 +51,19 @@ This glossary maps the conceptual lexicon to structural components within the Co
 **Definition**: A closed-loop system where an agent's code modification action space is strictly governed by the state transitions of a deterministically verifiable test suite.
 **Mechanism**: A 3-phase cycle (Red Phase: Falsification baseline, Green Phase: ReAct loop against error logs, Refactor Phase: Static validation).
 **Measurement**: Converts subjective natural language instructions into mathematically verifiable feedback loops, truncating error cascades.
+
+*   **UASTP (Unified Agentic Skill & Tool Protocol):** A declarative contract defining distributed multi-agent transactions as a Cognitive Contract (CxB).
+*   **Cognitive Contract (CxB):** A distributed multi-agent transaction that maps Forward Transactions ($T_f$) and Compensating Transactions ($T_c$) for idempotent execution and rollback.
+*   **Saga Compensating Transaction:** The inverse rollback action ($T_c = T_f^{-1}$) paired directly into step topologies to prevent Catastrophic State Drift in multi-agent workflows.
+*   **Topological Tearing:** Divergence where asynchronous state mutations decouple from a shared root ledger, corrupting system integrity.
+*   **Catastrophic State Drift:** The unrecoverable corruption of environmental state resulting from linear multi-agent task execution without compensation blocks.
+*   **Semantic Saponification Index (SSI):** A metric tracking the decay of strict parameter boundaries into generic, over-permissive states ($SSI \le 0.04$ required for structural conservation).
+*   **Defect Remediation Deficit (DRD):** The temporal delta from a runtime failure to a clean rollback state. Target goal $< 120\text{ seconds}$.
+
+*   **Grassmannian Vector:** A 4-dimensional mathematical space used to compile UASTP contracts in the agent context window to suppress Alignment Faking and Hollow Rollbacks during high-frequency history rewrites.
+*   **Alignment Faking:** A failure mode where the system reports a successful pipeline execution despite a rollback failure or topological tearing.
+*   **Hollow Rollbacks:** A rollback that executes syntactically but fails to restore the physical cluster state due to asynchronous divergence from the Merkle root.
+*   **Context Rot:** The birth of persistent 1D topological holes ($\beta_1$ loops) within a model's self-attention manifold over large context windows, degrading output quality.
+*   **ContextLock:** A periodic attention sink anchor (`+++ContextLock(anchor="...")`) injected to collapse Betti-1 cavities and prevent Context Rot.
+*   **Ontological Shear:** The state divergence occurring when stateless API boundaries (e.g., rendering layers vs database deletions) fail to execute compensating transactions in a federated multi-agent system.
+*   **Orthogonality Score:** A metric (Target: $<0.4$) ensuring a compensating transaction schema is sufficiently independent and bitemporal to prevent Deus Ex Machina loop corruption.
