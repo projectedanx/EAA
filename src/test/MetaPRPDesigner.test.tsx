@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import MetaPRPDesigner from '../../components/MetaPRPDesigner';
 import { vi } from 'vitest';
 import { downloadJSON } from '../utils/exportUtils';
+import { logger } from '../utils/logger';
 
 vi.mock('../utils/exportUtils', () => ({
   downloadJSON: vi.fn(),
@@ -224,14 +225,14 @@ describe('MetaPRPDesigner', () => {
   it('ignores completely invalid JSON format and loads default config', () => {
     localStorage.setItem(LOCAL_STORAGE_KEY_LIST, "invalid json {");
 
-    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const loggerWarnSpy = vi.spyOn(logger, 'warn').mockImplementation(() => {});
 
     render(<MetaPRPDesigner />);
 
-    expect(consoleWarnSpy).toHaveBeenCalled();
+    expect(loggerWarnSpy).toHaveBeenCalled();
     expect(screen.getByText('Default Profile')).toBeInTheDocument();
 
-    consoleWarnSpy.mockRestore();
+    loggerWarnSpy.mockRestore();
   });
 
   it('ignores data that is an object instead of array and loads default config', () => {
@@ -250,18 +251,18 @@ describe('MetaPRPDesigner', () => {
       }
       return originalGetItem.call(localStorage, key);
     });
-    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const loggerWarnSpy = vi.spyOn(logger, 'warn').mockImplementation(() => {});
 
     render(<MetaPRPDesigner />);
 
-    expect(consoleWarnSpy).toHaveBeenCalledWith(
+    expect(loggerWarnSpy).toHaveBeenCalledWith(
       "Error parsing configurations from local storage",
       expect.any(Error)
     );
     expect(screen.getByText('Default Profile')).toBeInTheDocument();
 
     getItemSpy.mockRestore();
-    consoleWarnSpy.mockRestore();
+    loggerWarnSpy.mockRestore();
   });
 
   it('does not write to localStorage if state has not changed in the interval', async () => {
@@ -279,8 +280,8 @@ describe('MetaPRPDesigner', () => {
 
     vi.advanceTimersByTime(15000);
 
-    console.log("Stringify called:", stringifySpy.mock.calls.length, "times");
-    console.log("SetItem called:", setItemSpy.mock.calls.length, "times");
+    logger.info("Stringify called:", stringifySpy.mock.calls.length, "times");
+    logger.info("SetItem called:", setItemSpy.mock.calls.length, "times");
 
     vi.useRealTimers();
     stringifySpy.mockRestore();

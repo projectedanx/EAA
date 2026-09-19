@@ -1,3 +1,4 @@
+import { logger } from "../utils/logger";
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { AgentConfig } from '../types';
 
@@ -44,7 +45,7 @@ export function useAgentConfigs() {
         }
       }
     } catch (e) {
-      console.warn("Error parsing configurations from local storage", e);
+      logger.warn("Error parsing configurations from local storage", e);
     }
 
     if (loadedConfigs.length === 0) {
