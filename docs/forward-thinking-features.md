@@ -305,3 +305,28 @@ The CFRSG (Conflict-Free Replicated Semantic Graph) concept introduces a bidirec
 ## 3. Git-Anchored Context Hashing CLI Pipeline
 **STATUS:** Implemented (`.git/hooks/pre-commit`).
 **Description:** A Git pre-commit hook that automatically updates the Context-diff hashes in the PKC manifest ensuring 'Trust-by-Design' versioning for personal notes.
+
+## 6. JIT Swarm Orchestrator (Operational & Mathematical Architecture)
+
+**STATUS:** Simulated (`src/utils/jit_swarm_orchestrator_sim.py`).
+
+**Description:** Decouples cognitive workload across distinct Verifiable Cognition Stack (VCS) layers to enforce absolute alignment at runtime. High-entropy semantic planning (Manifold $\alpha$) is separated from zero-entropy syntactic realization (Manifold $\beta$), eliminating the Projection Tax and isolating Tooling Context Consumption Tax.
+
+### Requirement Decomposition
+*   **Epic Breakdown:** Develop Hollow-Core Semantic Planning, ephemeral JIT Micro-Agents, Draft-Conditioned Constrained Decoding (DCCD), CFDI Sensing & Verification Co-Processing (VCP), SCoRe Self-Correction, Failure Metabolism (STA & F-IPI), and Justified Uncertainty Reports (JUR).
+*   **Dependency Mapping:** Relies on the SRE Petzold Sequence DFA Transitions and paraconsistent states management (holding contradictions in the STA).
+*   **Priority Alignment:** High priority; required for efficient, decoupled autonomous operations.
+*   **Complexity Assessment:** High complexity; requires dynamic, ephemeral process spawning and real-time AST/token validation.
+
+### User Stories
+*   *As an Epistemic Auditor, I want the system to cleanly decouple reasoning from syntax generation, so that context windows are not saturated by static schema definitions.*
+*   *As a Human Operator, I want the system to gracefully hand over the cognitive load via a Justified Uncertainty Report (JUR) when it exhausts its SCoRe Self-Correction attempts.*
+
+### Acceptance Criteria
+*   The orchestrator must dynamically instantiate JIT Micro-Agents for state-mutating transactions.
+*   The CFDI threshold must be monitored, engaging the VCP upon breaching the AST threshold ($\ge 0.15$).
+*   Failed trajectories must serialize into the Scar Tissue Archive (STA) for Failure-Informed Prompt Inversion (F-IPI).
+
+### Stakeholder Perspective Analysis
+*   **Security & Compliance:** Provides machine-readable JURs containing detailed context snapshots of failure states.
+*   **Performance:** Drastically reduces Context Rot by restricting heavy Tool definitions to ephemeral, lightweight wrappers ($\sim 6.5\,\text{KiB}$).
