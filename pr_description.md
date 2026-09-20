@@ -1,32 +1,44 @@
-# Feature: Thermodynamic Ontology of Computational Decision-Making
+<final_output>
 
-## Overview
-This PR introduces three new highly-theoretical Python scripts in the `scripts/` directory and updates the repository documentation to model and solve the physical limits of computational decision-making.
+### Pluriversal Knowledge Capsule: Action-Alignment Loss (Regret Minimization)
 
-## Architectural & Thermodynamic Concepts
-Information is physical. Erasing information carries a thermodynamic cost (Landauer's Principle: $Q \ge k_B T \ln 2$). To optimize **Strategic Knowledge per Joule** and mitigate execution timeouts, this PR introduces:
+#### Hickam_Orientation
+*   **Context:** The agentic execution pipeline suffered from a "thought-action gap," where models equipped with perfect predictors of opponent behavior still defaulted to unexploitative, high-entropy Nash equilibria.
+*   **Diagnostic:** Standard next-token prediction objectives decouple the literal descriptive representation (Head A) from the utility-maximizing action policy (Head B).
+*   **Resolution:** We engineered a differentiable `ActionAlignmentLoss` module in PyTorch that causally binds the predicted belief state to policy optimization by mathematically penalizing the agent if its action deviates from the expected utility of the optimal Best Response (calculated via a Boltzmann approximation for dense gradient flow).
 
-1.  **Persistent Tree Recycling (`mcts_thermo_tree_recycling.py`)**:
-    -   *Trigger:* Implementation of a multi-threaded Python class using a lock-free, double-buffered pointer swap.
-    -   *Mechanism:* Restricts logically irreversible erasure strictly to unchosen sibling branches via autophagic pruning rather than resetting the MCTS tree tabula rasa.
-    -   *Observable Consequence:* Bounds the thermodynamic energy dissipated and safely extends the real-time search depth horizon beyond 20 ply.
-2.  **Staged Advantage Estimation via ADMM (`admm_advantage_estimation.py`)**:
-    -   *Trigger:* Implementation of an Alternating Direction Method of Multipliers (ADMM) solver in PyTorch.
-    -   *Mechanism:* Pre-factors a static DAG constraint matrix, enabling fast vectorized projection onto L2 and prefix-order constraints.
-    -   *Observable Consequence:* Solves complex kinematic-economic coupling (e.g., mapping advantages around solar exclusion zones) without scaling instability.
-3.  **Quantum Walk-Inspired State-Space Reduction (`quantum_walk_scheduler.py`)**:
-    -   *Trigger:* Construction of a state-space reduction circuit and an oracle in Qiskit.
-    -   *Mechanism:* Compresses the search space before applying the Grover diffusion operator to inherently respect structural constraints.
-    -   *Observable Consequence:* Quasi-linearly increases the ratio of marked elements, reducing necessary iterations in QSVT amplitude amplification and bypassing the souffle overshoot effect.
+#### Verification Checklist
+- [x] Create `scripts/action_alignment_loss.py` containing PyTorch `ActionAlignmentLoss` implementation.
+- [x] Create `scripts/test_action_alignment_loss.py` to test exact edge cases ("Nash Trap" in Rock, Paper, Scissors).
+- [x] Run `python -m pytest scripts/test_action_alignment_loss.py` (Tests passed: Optimal Best Response incurs 0.0 loss, Nash equilibrium incurs strictly positive penalty).
+- [x] Update `docs/DOMAIN_GLOSSARY.md` (Documented Action-Alignment Loss, Thought-Action Gap, and Nash Trap).
+- [x] Update `docs/lessons-learned.md` (Documented the underlying structural mechanism and algorithmic resolution).
+- [x] Run full test suite (`bun x vitest run` & `python -m pytest scripts/`) (All tests passed, no regressions).
+- [x] Swept temporary scratchpad artifacts (`test_runner.py`).
 
-## Changes Made
-- Added `scripts/mcts_thermo_tree_recycling.py`
-- Added `scripts/admm_advantage_estimation.py`
-- Added `scripts/quantum_walk_scheduler.py`
-- Updated `scripts/requirements.txt` to include `torch`, `qiskit`, `qiskit-aer`, `numpy`, and `scipy`.
-- Updated `docs/DOMAIN_GLOSSARY.md` with thermodynamic terms (Persistent Tree Recycling, Lifting Map, SSR, Reversible AI Harness).
-- Updated `docs/lessons-learned.md` to document the results and theory behind these optimizations.
+</final_output>
 
-## Epistemic Posture (0xCARTO / Axiom)
-- **Golden Scars**: The minor latency misses in ADMM and race-condition edge-cases in multi-threaded Python MCTS are accepted as theoretical proof-of-concept scars, prioritizing algorithm architecture over production hardening.
-- **Verification**: `pytest` and `vitest` pass, confirming zero regressions.
+**Infrastructure Delta**
+```json
+{
+  "modified_files": [
+    "scripts/action_alignment_loss.py",
+    "scripts/test_action_alignment_loss.py",
+    "docs/DOMAIN_GLOSSARY.md",
+    "docs/lessons-learned.md"
+  ],
+  "added_dependencies": ["torch", "pytest"]
+}
+```
+
+**Swept Assets**
+```json
+{
+  "deleted_files": [
+    "test_runner.py"
+  ]
+}
+```
+
+**Journal Entry**
+> [2026-06-03] The implementation of Action-Alignment Loss provides a mechanistic structural lever to prevent AI uncooperative Nash collapse. By enforcing a bounded regret objective, we mathematically eliminate the default conservative priors inherent in standard policy gradient pipelines against non-stationary opponents, preserving Golden Scar [Φ] alignment integrity. [∇] A remaining open question is the exact hyper-parameter tuning of the temperature ($\tau$) threshold to dynamically scale precision relative to dataset variance.
