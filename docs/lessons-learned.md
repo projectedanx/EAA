@@ -230,3 +230,15 @@ To address this, we have developed several diagnostic tools and theoretical fram
 *   **The Solution:** We implemented the `ActionAlignmentLoss` (in `scripts/action_alignment_loss.py`). This differentiable loss function computes the Regret between the focal agent's chosen policy and the oracle Best Response based on its own prediction of the opponent. By mathematically penalizing this regret, the policy is forced to match the optimal best response.
 *   **Smooth Gradient Flow:** To resolve the sparse subgradients caused by a hard `max` operator, we utilize a Boltzmann Best-Response Approximation (LogSumExp) parametrized by temperature $\tau$, allowing stable optimization during early phases of RL.
 *   **Verification:** The module successfully forces an optimal counter-strategy (100% "Paper") against a biased opponent (100% "Rock") in the Rock-Paper-Scissors "Nash Trap" edge case, empirically falsifying the Nash equilibrium default.
+
+### Systems Engineering: Bridging the Thought-Action Gap
+
+**Pattern: The ReCAP & BDI Integration**
+*   **Context:** Sequential prompting models (like ReAct) suffer from "context drift" and get stuck in infinite retry loops when faced with a blocking obstruction (Sussman Anomaly). They also suffer from "mental state decoupling," meaning their predictions don't inform their actions.
+*   **Resolution:** We adopted the **Recursive Context-Aware Planning (ReCAP)** dynamic context tree structure combined with a **BDI (Belief-Desire-Intention) Solver Filter**. When a node fails, it backtracks, and the BDI solver ensures no generated intentions violate the symbolic constraints derived from the current belief state.
+*   **Artifacts:** `scripts/recap_bdi_harness.py`.
+
+**Pattern: Mechanistic Circuit Distillation via CKA**
+*   **Context:** Standard cross-entropy distillation from large models to small models fails to transfer complex Theory of Mind (ToM) tracking (the "thought-action gap" in social games).
+*   **Resolution:** We implement a representational similarity loss using **Centered Kernel Alignment (CKA)** to directly align the activation signatures of specific causal "lookback" attention heads. This forces the student model to mimic the functional mechanism of the teacher, not just the text output.
+*   **Artifacts:** `scripts/circuit_distillation_cka.py`.
