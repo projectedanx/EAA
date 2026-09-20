@@ -106,3 +106,14 @@ The phenomena where an artificial agent's internal cognitive modeling (descripti
 
 ## Nash Trap
 An edge case in game theory environments (e.g., Rock, Paper, Scissors) where standard policy gradients exhibit high variance against non-stationary opponents, causing the focal agent to default to high-entropy, conservative priors (Nash equilibria, like uniform mixing) rather than risk-maximizing exploitation, even when possessing perfect predictive knowledge of the opponent.
+
+### Thought-Action Gap and Cognitive Harnessing
+
+#### ReCAP (Recursive Context-Aware Planning)
+A framework that uses a dynamic context tree rather than a flat sequential prompt to structure long-horizon execution. It supports downward task decomposition and upward backtracking to prevent infinite loops (like the "Sussman Anomaly" deadlock) when primitive actions fail.
+
+#### BDI (Belief-Desire-Intention) Solver Filter
+A System 2 control module that intercepts System 1 provisional outputs, translating them into formal BDI logic. It verifies if the generated intentions (actions) violate any hard constraints based on current beliefs and desires, thereby preventing the "mental state decoupling" problem where a model knows the correct state but acts against it.
+
+#### Mechanistic Lookback Circuit Distillation
+A training alignment method designed to transfer the internal "lookback circuit" of a larger teacher model to a smaller student model. It uses Centered Kernel Alignment (CKA) to ensure the student maps character-object-state triples identically to the teacher, bridging the gap between descriptive prediction and action execution.

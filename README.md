@@ -85,6 +85,21 @@ This repository includes the SCOS-INSIGHT-GAP-v3.0 harness, engineered to captur
 - **PNS5 Logic**: Paraconsistent non-separable attention mechanism using holographic convolution binding in `scripts/pns5_holographic_attention.py`.
 
 
+### PEACE Meta-Architecture
+
+
+
+This repository embeds the PEACE Epistemic Cognitive Harness, preventing the "thought-action gap" in sequential decision making by decoupling associative generation from logical validation:
+
+
+
+- **ReCAP (Recursive Context-Aware Planning)**: Manages dynamic context trees to prevent context drift and deadlock loops (Sussman Anomaly) found in linear ReAct planners.
+
+- **BDI Solver Filter**: Intercepts System 1 outputs, validates Intentions against Beliefs and Desires using symbolic logic, and halts unsafe execution.
+
+- **Mechanistic Circuit Distillation**: Provides a PyTorch Centered Kernel Alignment (CKA) loss to transfer "lookback circuit" weights from teacher to student models.
+
+
 ### AACH: Autonomous Adaptive Cognitive Harness
 
 This repository embeds the AACH spec to ensure purposeful adaptation across system layers. It enforces:
