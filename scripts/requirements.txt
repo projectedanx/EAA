@@ -2,3 +2,8 @@ PyYAML
 watchdog
 pdfplumber
 pytest
+torch
+qiskit
+qiskit-aer
+numpy
+scipy

@@ -67,3 +67,25 @@ This glossary maps the conceptual lexicon to structural components within the Co
 *   **ContextLock:** A periodic attention sink anchor (`+++ContextLock(anchor="...")`) injected to collapse Betti-1 cavities and prevent Context Rot.
 *   **Ontological Shear:** The state divergence occurring when stateless API boundaries (e.g., rendering layers vs database deletions) fail to execute compensating transactions in a federated multi-agent system.
 *   **Orthogonality Score:** A metric (Target: $<0.4$) ensuring a compensating transaction schema is sufficiently independent and bitemporal to prevent Deus Ex Machina loop corruption.
+
+## Thermodynamic Ontology of Computational Decision-Making
+
+### Persistent Tree Recycling
+*   **Definition**: A technique in Monte Carlo Tree Search (MCTS) where the selected child node is promoted to the new root, conserving accumulated ancestral visit counts and action-value estimates instead of resetting the search tree *tabula rasa* at every turn.
+*   **Mechanism**: Implements partially reversible computing, confining the Landauer erasure cost ($k_B T \ln 2$ per node) strictly to unchosen sibling branches (which undergo programmed cellular apoptosis to free physical memory) while carrying the active planning horizon forward.
+*   **Observable Consequence**: Allows agents to execute deeper search depths (e.g., $\ge 20$-ply) within strict real-time constraints ($1.0\text{s}$) while bounding the thermodynamic energy dissipated.
+
+### Lifting Map
+*   **Definition**: A computational strategy to exploit Timescale Separation, performing coarse-grained backward induction along a pseudo-time axis (e.g., battery State of Health) rather than physical real-time.
+*   **Mechanism**: Shifts heavy dimensional scaling (e.g., from PDE modeling) offline.
+*   **Observable Consequence**: Bounds online decision-making to a real-time tractable one-step MPC problem guided by a precomputed value function proxy, limiting active dissipative logic-gate operations.
+
+### State-Space Reduction (SSR)
+*   **Definition**: A quantum computing strategy to divide problem constraints into structured (handled during initial state-superposition construction) and unstructured (handled by the oracle) subsets using a Quantum Walk-Inspired Scheme.
+*   **Mechanism**: Compresses the search space to a fraction of the full basis set, causing the ratio of marked elements to total states to increase quasi-linearly rather than exponentially.
+*   **Observable Consequence**: Reduces the required number of quantum search iterations (e.g., in QSVT amplitude amplification) and avoids the "soufflé overshoot" problem.
+
+### Chrono-Kinematic Reversible AI Harness
+*   **Definition**: A systems-engineering specification designed to optimize Strategic Knowledge per Joule while enforcing strict physical invariants.
+*   **Mechanism**: Consists of four pillars: Automated Discovery & Constraint Mining, Isomorphic Formalization (ADMM solver for Staged Advantage Estimation), Parametric Trade-off Modeling (DCCD), and Continuous Falsification & Stress Testing.
+*   **Observable Consequence**: Prevents context-window saturation and execution timeouts while neutralizing strategic deception through rolling KL-divergence reclassification.
