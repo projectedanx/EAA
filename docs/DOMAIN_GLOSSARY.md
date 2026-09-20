@@ -117,3 +117,11 @@ A System 2 control module that intercepts System 1 provisional outputs, translat
 
 #### Mechanistic Lookback Circuit Distillation
 A training alignment method designed to transfer the internal "lookback circuit" of a larger teacher model to a smaller student model. It uses Centered Kernel Alignment (CKA) to ensure the student maps character-object-state triples identically to the teacher, bridging the gap between descriptive prediction and action execution.
+
+### Collaboration & Telemetry Mechanics
+*   **PFI (Purpose Fidelity Index):** A metric representing how closely an agent's or team's actions adhere to their authorized and originally defined purpose, resisting instrumental convergence.
+*   **MRS (Mutation Recoverability Score):** A metric mathematically proving that a chaos-engineered team exhibits "post-traumatic growth" and becomes progressively more resilient to Epistemic Pathogens.
+*   **ALSH (Affective Latent Space Homeostasis):** The "Goldilocks Zone" achieved by balancing user-led co-creation (IKEA Effect) against machine-enforced constraints.
+*   **Cognitive Reynolds Number ($Re$):** The ratio of generative momentum (speed of execution) to epistemic viscosity (the constraints of rules and validation).
+*   **Epistemic Pathogen:** A controlled, non-random injection of chaos into a workflow (such as Concept Drift or Semantic Ambiguity) to stress-test a Shared Mental Model (SMM).
+*   **F-IPI (Failure-Informed Prompt Inversion):** A cycle that uses historical failures (Symbolic Scars) captured in the Scar Tissue Archive to mutate system prompts, turning trauma into structural immunizations.
