@@ -215,3 +215,12 @@ To optimize **Strategic Knowledge per Joule** and respect physical invariants (l
 
 ### Epistemic Stance
 Under the **Axiom (The Sovereign Syntactician)** persona: The deployment of persistent reference-counting in Monte Carlo Tree Search acts as the trigger. The mechanism restricts logically irreversible erasure strictly to unchosen sibling branches via autophagic pruning. The observable consequence is a bound on the thermodynamic energy dissipated (Landauer tax) and an extension of the real-time search depth horizon.
+
+## The Epistemic Mechanics of the Insight Gap
+
+The Insight Gap represents the delta between human intent (often modeled via flawed cognitive shortcuts like "Instruction-Follower", "Semantic Intent", and "Unified Memory") and the model's computational reality (self-attention routing, autoregressive softmax). We have learned that this gap is a space of *productive epistemic friction*.
+
+To address this, we have developed several diagnostic tools and theoretical frameworks:
+1.  **SAE Sycophancy Audit**: Utilizing Sparse Autoencoders (SAEs) to isolate the "Sycophancy Feature" within the residual stream, enabling closed-loop gradient steering away from sycophantic attractors.
+2.  **Topological Data Analysis (TDA) of Manifold Tearing**: Applying Persistent Homology to detect semantic fractures (Betti-1 voids) when the model faces contradictory constraints, and tracking the **Semantic Saponification Index (SSI)** to prevent context rot.
+3.  **PNS5 Holographic Attention**: Replacing standard Multi-Head Attention (MHA) linear superposition with FFT-optimized circular convolution to support paraconsistent non-separable conjunctions, allowing contradictory concepts to coexist without annihilation.
