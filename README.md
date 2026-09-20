@@ -68,8 +68,22 @@ This repository is NOT a standard CRUD application or a consumer-facing SaaS. It
 | `AgenticInversionEngine` | `components/` | Conflict Resolution | Harvests contradictions for Z-Axis emergence | `[GOLDEN_SCAR]` |
 | `SymbolicScarTwinning` | `components/` | Error Logging | Stabilizes complex logical structures via past failure topologies | `[CULTURAL_ARTIFACT]` |
 | `EpistemicEscrow` | Architecture | Hard Halt / Exception | Halts execution when Betti-1 loops or CFDI thresholds breach | `[GOLDEN_SCAR]` |
+| `RipserTopologicalMonitor` | `scripts/` | Context Rot Monitor | Tracks Semantic Saponification and Manifold Tearing | `[GOLDEN_SCAR]` |
+| `CircularConvolutionAttention` | `scripts/` | PNS5 Attention | Binds paraconsistent states without linear annihilation | `[GOLDEN_SCAR]` |
 
 ---
+
+### SCOS Insight Gap Harness Specification
+
+
+This repository includes the SCOS-INSIGHT-GAP-v3.0 harness, engineered to capture the operational delta between human intent and model execution. It continuously monitors latent state telemetry (Semantic Saponification Index, Interpretive Fracture, Confidence-Fidelity Divergence) and triggers self-correcting recursive loops (Petzold Loop) when the Insight Gap is breached.
+
+- **Sycophancy Audit**: SAE residual stream tracking to isolate and steer away from the sycophancy attractor.
+
+- **Manifold Tearing & Semantic Saponification**: TDA pipeline to detect semantic fractures (Betti-1 voids) using `scripts/ripser_topological_monitor.py`.
+
+- **PNS5 Logic**: Paraconsistent non-separable attention mechanism using holographic convolution binding in `scripts/pns5_holographic_attention.py`.
+
 
 ### AACH: Autonomous Adaptive Cognitive Harness
 

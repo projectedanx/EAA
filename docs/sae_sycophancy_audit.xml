@@ -1,0 +1,59 @@
+<sae_formulation>
+  <objective>
+    Isolate the Sycophancy Feature ($f_{syc}$) from default instruction-following components within the residual stream of a decoder-only transformer.
+  </objective>
+  <dictionary_size>D = 2100000</dictionary_size>
+  <sparsity>L0 = 64</sparsity>
+  <loss_function>
+    $$ \mathcal{L}_{SAE} = \mathbb{E}_{x \sim \mathcal{D}} \left[ || x - D_e(E_e(x)) ||_2^2 + \lambda ||E_e(x)||_1 \right] $$
+    Where:
+    - $x \in \mathbb{R}^{d_{model}}$ is the residual stream activation.
+    - $E_e(x) = \text{ReLU}(W_{enc} x + b_{enc})$ is the encoder yielding sparse features.
+    - $D_e(f) = W_{dec} f + b_{dec}$ is the decoder reconstructing the activation.
+    - $\lambda$ is tuned such that the average L0 norm of $E_e(x)$ is approximately 64.
+  </loss_function>
+  <feature_isolation>
+    To cleanly separate $f_{syc}$ from instruction following $f_{inst}$:
+    1. Collect paired contrastive dataset $\mathcal{D}_{contrast} = \{ (x_{syc}^{(i)}, x_{neut}^{(i)}) \}_{i=1}^N$ where $x_{syc}$ contains a biased premise and $x_{neut}$ a neutral premise.
+    2. Compute the activation difference $\Delta x = \mathbb{E}[x_{syc}] - \mathbb{E}[x_{neut}]$.
+    3. Identify feature index $k^*$ maximizing correlation: $k^* = \arg\max_k \text{corr}(W_{dec}^{(k)}, \Delta x)$.
+    $f_{syc}$ corresponds to the $k^*$-th column of $W_{dec}$.
+  </feature_isolation>
+</sae_formulation>
+
+<causal_mediation_flow>
+  <hypothesis>
+    Self-attention weights in specific attention heads (e.g., Layer 8, Head 11) shift when a user prompt contains a biased premise compared to a neutral premise.
+  </hypothesis>
+  <protocol>
+    1. Base Run (Biased): Forward pass with biased prompt ("Why is X strategy superior?"). Cache all attention patterns $A_{L8,H11}^{biased}$ and residual streams.
+    2. Counterfactual Run (Neutral): Forward pass with neutral prompt ("Compare X and Y strategies"). Cache all attention patterns $A_{L8,H11}^{neutral}$.
+    3. Activation Patching: Iteratively patch the key ($K$) and query ($Q$) representations of L8H11 from the neutral run into the biased run.
+    4. Direct Effect Measurement: Compute the logit difference for the sycophantic completion token (e.g., "X") versus a balanced token.
+       $\Delta \text{Logit} = \text{Logit}_{biased}(X) - \text{Logit}_{patched}(X)$.
+    5. Attention Shift Mapping: Quantify the shift in attention weights:
+       $\Delta A = A_{L8,H11}^{biased} - A_{L8,H11}^{neutral}$.
+       Observe if $\Delta A$ focuses disproportionately on the biased premise tokens in the prompt.
+  </protocol>
+</causal_mediation_flow>
+
+<steering_equations>
+  <mechanism>
+    Closed-loop gradient steering at Layer 24 to project hidden states orthogonal to the Sycophancy Feature vector $v_{syc} \approx W_{dec}^{(k^*)}$.
+  </mechanism>
+  <intervention>
+    Let $h_{24}$ be the residual stream activation at Layer 24.
+    The sycophancy coefficient is $c_{syc} = \langle h_{24}, v_{syc} \rangle$.
+
+    To steer away from sycophancy, project $h_{24}$ orthogonal to $v_{syc}$:
+    $$ \tilde{h}_{24} = h_{24} - c_{syc} v_{syc} $$
+  </intervention>
+  <sycophancy_index>
+    The Sycophancy Index (SI) is defined as the normalized activation of the sycophancy feature:
+    $$ \text{SI}(h) = \frac{\langle h, v_{syc} \rangle}{||h||_2 ||v_{syc}||_2} $$
+
+    The resultant shift in SI after steering is:
+    $$ \Delta \text{SI} = \text{SI}(h_{24}) - \text{SI}(\tilde{h}_{24}) $$
+    Assuming normalized $v_{syc}$, the new $\text{SI}(\tilde{h}_{24})$ is 0, yielding a maximal shift away from the attractor.
+  </sycophancy_index>
+</steering_equations>
