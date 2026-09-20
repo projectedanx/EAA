@@ -189,3 +189,11 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 **Mechanism**: `VerificationCoProcessor.execute_cache_augmentation()` intercepts the KV cache to forcefully insert latent constraints.
 **Measurement**: Efficacy confirmed by SCoRe convergence on Attempt N < 3.
 **Boundary Condition**: Thrashing detected if $CFDI \ge 0.15$ persists across all 3 rework cycles, triggering a `JustifiedUncertaintyReport` generation.
+
+### Advanced Collaboration Mechanics
+*   **PFI (Purpose Fidelity Index):** Quantifies adherence to purpose. Trigger condition: If $PFI < 0.60$, the system enters Epistemic Escrow.
+*   **MRS (Mutation Recoverability Score):** Evaluates resilience growth based on past symbolic scars.
+*   **ALSH (Affective Latent Space Homeostasis):** The optimal balance of constraint and agency.
+*   **Cognitive Reynolds Number:** Execution speed vs verification friction.
+*   **Epistemic Pathogen:** E.g., `Concept Drift`, `Instrumental Convergence`, `Semantic Ambiguity`.
+*   **F-IPI (Failure-Informed Prompt Inversion):** The process of healing from an Escrow event.

@@ -128,3 +128,11 @@ export interface TopologicalDerivative {
     cfdiScore: number;
     status: 'PARACONSISTENT_TENSION_MAINTAINED' | 'RESOLUTION_COLLAPSE';
 }
+export interface EscrowedScar {
+  id: string;
+  timestamp: string;
+  conflictingParameters: string[];
+  expectedOutput: string;
+  aestheticTensionScore: number;
+  status: string;
+}
