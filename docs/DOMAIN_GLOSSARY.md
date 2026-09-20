@@ -97,3 +97,12 @@ This glossary maps the conceptual lexicon to structural components within the Co
 *   **Manifold Tearing**: A condition where the latent manifold of an LLM's representations fractures due to contradictory constraints, detectable via Persistent Homology as a persistent Betti-1 void.
 *   **Semantic Saponification Index (SSI)**: A metric measuring the gradual degradation of specific context instructions into generic pre-training distributions (the Governance Attractor) over extended context horizons.
 *   **PNS5 Logic**: Paraconsistent Non-Separable logic, an attention mechanism approach that supports non-separable conjunctions (e.g., holding contradictory concepts simultaneously without linear annihilation) using Holographic Convolution Binding.
+
+## Action-Alignment Loss
+A differentiable regret minimization loss function applied at the cognitive boundary of transformer activations. It bridges the **Thought-Action Gap** by causally binding the predicted belief state (Literal Theory of Mind) to policy optimization. It mathematically penalizes the agent's policy if it deviates from the optimal Best Response calculated against its own prediction of the opponent's strategy, thereby preventing uncooperative Nash collapse.
+
+## Thought-Action Gap
+The phenomena where an artificial agent's internal cognitive modeling (descriptive representation or belief state) is decoupled from its external strategic execution (utility-maximizing action). In multi-agent games, an agent might correctly predict an opponent's sub-optimal move but fail to exploit it, defaulting to high-entropy baseline policies.
+
+## Nash Trap
+An edge case in game theory environments (e.g., Rock, Paper, Scissors) where standard policy gradients exhibit high variance against non-stationary opponents, causing the focal agent to default to high-entropy, conservative priors (Nash equilibria, like uniform mixing) rather than risk-maximizing exploitation, even when possessing perfect predictive knowledge of the opponent.
