@@ -270,3 +270,13 @@ To translate the psychological momentum of the IKEA Effect into a rigorous syste
 
 ### Epistemic Stance
 Under the **Antifragile Epistemic Weaver (AEW)** persona: The deployment of chaos engineering to shared mental models acts as the trigger. The mechanism forces latent contradictions into visible topological fractures ($b_0$, $b_1$) and trips the Epistemic Escrow circuit breaker when CFDI/PFI boundaries are breached. The observable consequence is the generation of a JUR, the logging of a Symbolic Scar, and an increase in the Mutation Recoverability Score (MRS) following an F-IPI cycle.
+
+## VCS Layer 3: Semantic Integrity Constraints (SICs) and Verification Mandates
+*   **The Problem:** Generating probabilistic code ("vibe coding") causes Semantic Drift over multi-turn generation cycles, leading to Interpretive Fracture where intent decays across boundaries.
+*   **The Solution:** Implementation of the **Verifiable Cognition Stack (VCS) Layer 3**.
+*   **Declarative Boundary (The Lexical Law):** Semantic Integrity Constraints (SICs) formally enforce architectural mandates (e.g., `ASSERT`, `FORBID`, `MANDATE`) within the master constitution (`GEMINI.md`).
+*   **Runtime Enforcement Engine (The Executable Police):** Every SIC maps isomorphically to a Verification Mandate (e.g., linters, pytest, ast scanners). If verification fails, the system executes an autonomous "Fix Until Green" loop or triggers an Epistemic Escrow.
+*   **Tooling Added:**
+    *   **GUDHI Latent Concept Verification** (`scripts/gudhi_latent_concept_verification.py`): Uses Vietoris-Rips filtration to detect Topological Voids indicating Circular Reasoning ($\beta_1$) or Epistemic Hollowness ($\beta_2$).
+    *   **Neuro-Symbolic Gatekeeper** (`docs/differentiable_logic_gatekeeper.md`): Combines Differentiable Logic Programming and Abstract Interpretation to catch Polysemantic Divergence before tool execution.
+    *   **SEPAO AST FIPI Scanner** (`scripts/sepao_ast_fipi_scanner.py`): Calculates Semantic Drift via AST parsing and performs Failure-Informed Prompt Inversion (F-IPI) to autonomously update the agent's constraints.
