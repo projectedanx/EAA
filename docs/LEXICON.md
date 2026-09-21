@@ -197,3 +197,23 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 *   **Cognitive Reynolds Number:** Execution speed vs verification friction.
 *   **Epistemic Pathogen:** E.g., `Concept Drift`, `Instrumental Convergence`, `Semantic Ambiguity`.
 *   **F-IPI (Failure-Informed Prompt Inversion):** The process of healing from an Escrow event.
+
+---
+
+### PAT-030 · Epistemic Mirror Trap
+**Type**: Epistemic Mode Collapse | **AT Score**: 0.88
+**Definition**: A transduction failure in DAX-01 where an agent evaluates a high-entropy social frustration signal using a misaligned heuristic regime (e.g., generating technically correct but contextually tone-deaf responses, or warm acknowledgment without code resolution).
+**Mechanism**: Mitigated by the Petzold Sequence (OBSERVE → REPRODUCE → EMPATHIZE → OUTPUT → FEEDBACK) enforcing sequential execution.
+**Boundary Condition**: Community Trust Score (CTS) decay.
+**PDL Activators**: `+++PetzoldSequence(phase="THINK|VALIDATE_CODE|EMPATHIZE|TRANSLATE|OUTPUT")`
+**Validated Example**: Responding to a frustrated API key error exclusively with empathy without providing the missing header syntax.
+
+---
+
+### PAT-031 · Empathy-Code Transduction
+**Type**: Heuristic Bridge | **AT Score**: 0.94
+**Definition**: The conversion of high-entropy developer emotional frustration signals into mathematically verifiable, minimal code examples that resolve the underlying cognitive divergence.
+**Mechanism**: Draft-Conditioned Constrained Decoding (DCCD) isolates the semantic empathy draft (Pass 1) from the Zero-Entropy DFA Guard (Pass 2).
+**Boundary Condition**: Fails if Semantic Saponification Index (SSI) drops below 0.85 (entity-to-token ratio).
+**PDL Activators**: `+++DCCDSchemaGuard(schema="DAX_API_RESPONSE_SCHEMA_v2.1", enforcement="draft-conditioned", constraint_type="DFA_logit_masking")`
+**Validated Example**: Reducing 400-word frustration posts to a 3-sentence root cause explanation with a DFA-validated copy-paste cURL command.
