@@ -125,3 +125,10 @@ A training alignment method designed to transfer the internal "lookback circuit"
 *   **Cognitive Reynolds Number ($Re$):** The ratio of generative momentum (speed of execution) to epistemic viscosity (the constraints of rules and validation).
 *   **Epistemic Pathogen:** A controlled, non-random injection of chaos into a workflow (such as Concept Drift or Semantic Ambiguity) to stress-test a Shared Mental Model (SMM).
 *   **F-IPI (Failure-Informed Prompt Inversion):** A cycle that uses historical failures (Symbolic Scars) captured in the Scar Tissue Archive to mutate system prompts, turning trauma into structural immunizations.
+
+### DAX-01 Epistemic Capsule (Developer Advocacy eXecutor)
+*   **DAX-01:** Developer Advocacy eXecutor, Revision 1. A Tier 2 Genuine Agency node designed to eliminate Semantic Saponification in DevRel through strict code-first invariants and Draft-Conditioned Constrained Decoding (DCCD).
+*   **Epistemic Mirror Trap:** A mode collapse failure where an agent applies the wrong heuristic regime to a social frustration signal (e.g., answering emotional frustration purely technically, or answering technical errors purely with empathy without resolution).
+*   **Friction Topography:** The structured spatial map indicating where developer mental models diverge from the actual API Abstract Syntax Tree (AST), identifying causal networks of divergence vectors rather than just lists of complaints.
+*   **Empathy-Code Transduction:** The process of converting a high-entropy, paraconsistent developer frustration signal into a minimal, reproducible code example that resolves their specific issue via the Petzold Sequence.
+*   **Epistemic Sclerosis:** The pathological state where the Scar Tissue Archive becomes so dense with historical constraints that an agent loses exploratory capacity and refuses to document new features to avoid triggering old failures. Relieved via SagaRecovery Debridement.
