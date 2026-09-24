@@ -217,3 +217,17 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 **Boundary Condition**: Fails if Semantic Saponification Index (SSI) drops below 0.85 (entity-to-token ratio).
 **PDL Activators**: `+++DCCDSchemaGuard(schema="DAX_API_RESPONSE_SCHEMA_v2.1", enforcement="draft-conditioned", constraint_type="DFA_logit_masking")`
 **Validated Example**: Reducing 400-word frustration posts to a 3-sentence root cause explanation with a DFA-validated copy-paste cURL command.
+
+### Lattice Breaker Breach
+*   **Definition:** A state transition where an agent's sequence of actions crosses into a high-risk misalignment trajectory (Score >= 0.8), constituting "misuse-as-process".
+*   **Context:** Unlike binary RBAC violations, this detects logically aligned but contextually dangerous toolchain entropy spikes.
+*   **Actionable Mechanism:** Triggers the Gated Checkpoint and Ontological Traceback.
+
+### Verification Co-Processor (VCP)
+*   **Definition:** A decoupled, asynchronous engine monitoring the agent's KV-cache states to calculate Variational Free Energy (VFE).
+*   **Context:** Uses Active Inference to detect latent semantic drift before it manifests as an API call.
+*   **Actionable Mechanism:** Injects corrective soft-token latent embeddings back into the active KV_Cache.
+
+### Failure-Informed Prompt Inversion (F-IPI)
+*   **Definition:** The algorithmic translation of Symbolic Regression exploit signatures into Negative Constraints.
+*   **Context:** Used for Automated Immunization against zero-day exploit patterns across the entire multi-agent fleet.

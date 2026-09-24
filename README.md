@@ -100,6 +100,13 @@ This repository embeds the PEACE Epistemic Cognitive Harness, preventing the "th
 - **Mechanistic Circuit Distillation**: Provides a PyTorch Centered Kernel Alignment (CKA) loss to transfer "lookback circuit" weights from teacher to student models.
 
 
+### Lattice Breaker Governance
+
+This repository implements the Lattice Breaker safety harness to detect and prevent "misuse-as-process" boundary transitions.
+- **Geodesic Enforcement:** Projects agent state onto a Poincaré disk (H^2) to apply latent steering and prevent drift past the Lattice Breaker boundary. Simulated in `scripts/hyperbolic_lattice_breaker_sim.py`.
+- **Verification Co-Processor (VCP):** An asynchronous active inference monitor tracking Variational Free Energy (VFE) in KV caches. Simulated in `scripts/vcp_active_inference_sim.py`.
+- **Automated Immunization (F-IPI):** Extracts exploit morphologies using Symbolic Regression to automatically generate Failure-Informed Prompt Inversions. Simulated in `scripts/symbolic_regression_fipi_sim.py`.
+
 ### AACH: Autonomous Adaptive Cognitive Harness
 
 This repository embeds the AACH spec to ensure purposeful adaptation across system layers. It enforces:
