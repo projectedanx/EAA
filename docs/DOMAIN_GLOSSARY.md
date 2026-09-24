@@ -186,3 +186,10 @@ The computational budget allocated to explore low-probability regions of the lat
 ## System Assurance Agent (SAA)
 
 An agent responsible for verifying Causal Path Integrity (CPI) constraints. It calculates the logic score across continuous and discrete paths to prevent cascading logic faults or limit structural anomalies.
+
+### Scientific Epistemology
+
+*   **Occam-Loss Compiler:** A component of the Invariant Verification Harness (IVH) that calculates the Bayesian Information Criterion (BIC) to computationally distinguish between "epicyclic curve-fitting" (over-fitting with high parameter counts) and "parsimonious law discovery" (low parameter counts).
+*   **Fictive Principles:** Idealized assumptions (e.g., zero molecular volume, frictionless surfaces, point masses) used in scientific modeling. They are strictly false at fundamental scales but possess high computational and explanatory utility for generating non-factive understanding.
+*   **De-Idealization Engine:** An automated system that evaluates idealized models as Directed Acyclic Graphs (DAGs) against extreme boundary limits. Upon detecting >3-sigma prediction errors, it locates faulty assumptions and executes a "De-Idealization" routine to re-inject omitted variables, creating a higher-dimensional representation.
+*   **Grasping Metric:** A quantitative evaluation of an agent's capacity for holistic understanding, scoring variable manipulation, causal dependency identification, and domain transferability, distinct from mere propositional fact-gathering.

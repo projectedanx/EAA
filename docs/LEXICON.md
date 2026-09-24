@@ -231,3 +231,17 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 ### Failure-Informed Prompt Inversion (F-IPI)
 *   **Definition:** The algorithmic translation of Symbolic Regression exploit signatures into Negative Constraints.
 *   **Context:** Used for Automated Immunization against zero-day exploit patterns across the entire multi-agent fleet.
+
+### PAT-025 · Epicyclic Over-Fitting
+**Type**: Epistemic Remediation | **AT Score**: 0.88
+**Definition**: A failure mode where an agent or model artificially inflates parameter counts (resembling Ptolemaic epicycles) to force a fit to anomalous data, rather than adopting a more parsimonious underlying law.
+**Mechanism**: High flexibility saves a fundamentally flawed coordinate system. Tracked and penalized via the Occam-Loss Compiler calculating the Bayesian Information Criterion (BIC).
+**Boundary Condition**: 3-sigma divergence triggers Modus Tollens falsification and forces an abductive transition.
+**PDL Activators**: `+++OccamLossPenalty(k_weight=high, force_abduction=true)`
+
+### PAT-026 · Paraconsistent Law Discovery
+**Type**: Structural Mapping | **AT Score**: 0.94
+**Definition**: The realization that scientific laws are descriptive patterns ("What") while scientific theories provide causal mechanisms ("Why"). An agent can utilize descriptive laws effectively even if the underlying theory is paraconsistent or actively under revision.
+**Mechanism**: Utilizing Fictive Principles to maintain high computational utility and Grasping Metric scores despite known defeaters (e.g., using Newtonian frameworks despite GR constraints).
+**Boundary Condition**: Boundary Auditor detects extreme asymptotic limits (e.g., $v \to c$); triggers De-Idealization Engine.
+**PDL Activators**: `+++FictivePrinciple(utility_threshold=0.8, factive_override=false)`

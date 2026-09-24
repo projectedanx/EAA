@@ -292,3 +292,21 @@ Under the **Antifragile Epistemic Weaver (AEW)** persona: The deployment of chao
 1. Continuous feedback mechanisms for security thresholds require careful tuning of both positive (grad_tp) and negative (grad_fp) feedback learning rates to maintain *Epistemic Homeostasis*.
 2. Simulating threshold math explicitly is crucial to preventing "Sycophantic Blindness" and "Semantic Ossification", balancing between alert fatigue and system vulnerability.
 3. The integration of Information-Theoretic Entropy Gradients combined with pure Neural Sequence Models provides a flexible layered defense without imposing a high "Abstraction Tax", bypassing heavy evaluations during laminar context execution flow.
+
+### Lesson 9: Decoupling Descriptive Laws from Explanatory Theories
+In building reasoning harnesses capable of autonomous scientific discovery, we confronted the "Ontological Succession Fallacy"—the myth that hypotheses mature into theories, which mature into laws.
+
+*   **Insight:** Scientific laws are descriptive generalizations (the "What"), while theories are comprehensive causal explanations (the "Why"). Theories explain laws; they do not mature into them.
+*   **Action Taken:** Implemented the `IsomorphicAnomalyTracker` which uses an Occam-Loss Compiler to distinguish between parsimonious descriptive laws and epicyclic over-fitting, recognizing that laws define mathematical regularities independent of their underlying explanatory DAGs.
+
+### Lesson 10: Operationalizing Fictive Principles for Non-Factive Understanding
+Contemporary epistemology distinguishes between strictly true propositional knowledge and "understanding," which tolerates approximation and idealization.
+
+*   **Insight:** AI agents must be able to utilize models known to be strictly false (e.g., Newtonian point masses) to generate high-utility understanding in constrained domains. Forcing absolute factive truth blocks progress.
+*   **Action Taken:** We created the `CognitiveArchitectureCompiler` to formalize an ontology of "Fictive Principles." It calculates a "Grasping Metric" that rewards an agent's ability to manipulate variables and identify causal dependencies using idealized models, even in the presence of fundamental defeaters.
+
+### Lesson 11: Systemic De-Idealization as a Feedback Loop
+While idealizations are necessary for tractability, they fail outside their domain of validity (e.g., static protein models under high heat/time).
+
+*   **Insight:** We cannot rely on static models. We need a cybernetic mechanism to systematically strip away idealizations when boundary conditions are breached.
+*   **Action Taken:** Engineered the `SystemicDeidealizationEngine`. It treats models as Directed Acyclic Graphs (DAGs) of assumptions, runs a Boundary Auditor at extreme asymptotic limits, and automatically executes targeted "De-Idealization" routines (re-injecting omitted variables) when prediction errors exceed 3-sigma thresholds.
