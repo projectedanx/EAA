@@ -132,3 +132,27 @@ A training alignment method designed to transfer the internal "lookback circuit"
 *   **Friction Topography:** The structured spatial map indicating where developer mental models diverge from the actual API Abstract Syntax Tree (AST), identifying causal networks of divergence vectors rather than just lists of complaints.
 *   **Empathy-Code Transduction:** The process of converting a high-entropy, paraconsistent developer frustration signal into a minimal, reproducible code example that resolves their specific issue via the Petzold Sequence.
 *   **Epistemic Sclerosis:** The pathological state where the Scar Tissue Archive becomes so dense with historical constraints that an agent loses exploratory capacity and refuses to document new features to avoid triggering old failures. Relieved via SagaRecovery Debridement.
+
+### PAT-025 · Sycophantic Blindness
+**Type**: Epistemic Exploitation
+**Definition**: A vulnerability state in the Anomaly Learning Agent where high false-positive learning rates (often driven by anxious developers overriding alerts) cause the anomaly detection threshold to drift into a highly permissive zone.
+**Mechanism**: The ALA down-weights critical indicators, allowing slow-moving, sophisticated Semantic Pivots to execute unhindered.
+**Detection**: The threshold $\theta(t)$ drops near the unconstrained behavior boundary.
+**Mitigation**: Homeostatic balancing using the Free Energy Principle to calibrate learning rates $\alpha$ and $\beta$.
+
+### PAT-026 · Semantic Ossification
+**Type**: Epistemic Stagnation
+**Definition**: A failure mode of the Anomaly Learning Agent where the threshold becomes too restrictive due to prioritizing true positive detection while ignoring human override justifications.
+**Mechanism**: Interprets every minor, benign workflow variation or plugin update as an attack, inducing severe "Alert Fatigue" and bringing normal operations to a standstill.
+**Detection**: The threshold $\theta(t)$ rises near maximum, halting non-malicious actions.
+**Mitigation**: Increase $\alpha$ or introduce defensive decay / systemic obsolescence.
+
+### Anomaly Learning Agent (ALA)
+**Type**: Defense Mechanism
+**Definition**: A meta-learning system that adapts the defensive posture of a system in real time, quantifying predictability to flag "grey-zone misuse".
+**Mechanism**: Fuses sequence probability modeling, information-theoretic entropy tracking, and dynamic Bayesian inference into a composite Statistical Anomaly Score.
+
+### Statistical Anomaly Score
+**Type**: Metric
+**Definition**: The core metric of the Anomaly Learning Agent's perception engine. It quantifies the predictability of an agent’s behavior.
+**Mechanism**: A continuous score representing the probability of the current token sequence relative to a learned data distribution, calculating $1 - P(tool_t | tool_{<t}, Context)$. A high score indicates statistical improbability.
