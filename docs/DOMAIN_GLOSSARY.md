@@ -19,6 +19,12 @@ This glossary maps the conceptual lexicon to structural components within the Co
 *   **ActPlane:** An eBPF-style Kernel Policy Domain Map simulator ensuring that hierarchical policy boundaries are maintained independently of the probabilistic AI brain.
 *   **Hierarchical Policy Domain:** A core security division where a parent orchestrator imposes immutable root invariants that inherited child processes cannot bypass or weaken, modeled via bitmasks.
 *   **Information-Flow Control (IFC) labels:** Monotonically accumulating taint markers assigned to child domains to trace data provenance dynamically through execution edges.
+
+*   **Lattice Breaker Breach:** A critical boundary transition where an agent's real-time operational trajectory crosses into the high-risk domain (Score >= 0.8) of the Soft Permission vs. Functional Misuse Lattice.
+*   **Verification Co-Processor (VCP):** An asynchronous monitoring system that tracks the Variational Free Energy (VFE) of active Key-Value caches to predict and preempt Lattice Breaker breaches without degrading inference throughput.
+*   **Failure-Informed Prompt Inversion (F-IPI):** The automated process of translating abstract exploit morphologies (discovered via Symbolic Regression) into explicit Negative Constraints to immunize the agent fleet.
+*   **Containment Surface Index (CSI):** A verification metric measuring the percentage of downstream systems successfully protected (unaffected) when a malicious payload or Lattice Breaker exploit is injected.
+
 | Term | Location | Standard Equivalent | Local Meaning | Preservation Flag |
 |------|----------|---------------------|---------------|-------------------|
 | `AACH` | Documentation / Scripts | AI Harness | Autonomous Adaptive Cognitive Harness; enforces purposeful adaptation via disequilibratory goal production. | `[ARCHITECTURAL_PILLAR]` |

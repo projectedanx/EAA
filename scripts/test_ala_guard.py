@@ -1,5 +1,5 @@
 import pytest
-from ala_guard_sim import AnomalyLearningAgent
+from scripts.ala_guard_sim import AnomalyLearningAgent
 
 def test_ala_threshold_dynamics():
     """
