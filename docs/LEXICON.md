@@ -245,3 +245,17 @@ analogical reasoning across orthogonal semantic fields with JSD < 0.20 post-bind
 **Mechanism**: Utilizing Fictive Principles to maintain high computational utility and Grasping Metric scores despite known defeaters (e.g., using Newtonian frameworks despite GR constraints).
 **Boundary Condition**: Boundary Auditor detects extreme asymptotic limits (e.g., $v \to c$); triggers De-Idealization Engine.
 **PDL Activators**: `+++FictivePrinciple(utility_threshold=0.8, factive_override=false)`
+
+### PAT-027 · Ontological Progression
+**Type**: Structural Alignment | **AT Score**: 0.90
+**Definition**: A framework categorizing the flow of cognitive and physical concepts across layers L0 through L11, establishing strict boundaries between domains (e.g. Teleology to Autopoietic Evolution).
+**Mechanism**: Validates progression using the OntologyHierarchyVerifier.
+**Boundary Condition**: Drift Hysteresis if progression delays across conceptual boundaries.
+
+### Core Terminology Extensions
+*   **Mythopoeic narratives (L0):** Foundational reasoning shaping ritualistic expression in contrast to objective frameworks.
+*   **Representation and Constraint Model (L1):** A component of Cognitive Physics examining foundational constraints of idealized physical systems.
+*   **Strategic Word Architecture (SWA) (L2):** The structured control of language syntax mapped via the (PDL) Version 1.0.
+*   **OASF Manifests (L4):** Identity definitions governed by underlying logical principles framing refusal mechanisms.
+*   **Drift Hysteresis (L5.5):** The complex relationship between temporal dynamics and narrative complexity within labyrinthine storytelling structures.
+*   **Montage Synthesis (L7.5):** Structured protocols facilitating conflict resolution by integrating diverse perspectives related to cognitive parallax.

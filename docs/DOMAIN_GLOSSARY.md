@@ -193,3 +193,15 @@ An agent responsible for verifying Causal Path Integrity (CPI) constraints. It c
 *   **Fictive Principles:** Idealized assumptions (e.g., zero molecular volume, frictionless surfaces, point masses) used in scientific modeling. They are strictly false at fundamental scales but possess high computational and explanatory utility for generating non-factive understanding.
 *   **De-Idealization Engine:** An automated system that evaluates idealized models as Directed Acyclic Graphs (DAGs) against extreme boundary limits. Upon detecting >3-sigma prediction errors, it locates faulty assumptions and executes a "De-Idealization" routine to re-inject omitted variables, creating a higher-dimensional representation.
 *   **Grasping Metric:** A quantitative evaluation of an agent's capacity for holistic understanding, scoring variable manipulation, causal dependency identification, and domain transferability, distinct from mere propositional fact-gathering.
+
+### Ontological Layer Contexts
+*   **Existential Hygiene (L0.5):** The prevention of crises related to meaning, the identification of deviations from intended purposes, and the functioning of the existential immune system. Addresses how coherence is maintained in meaning and how deviations from established norms are recognized.
+*   **Cognitive Physics (L1):** The disciplines exploring the Representation and Constraint Model, Rheology (viscosity of thought processes), and Conceptual Blending, focusing on the concept of the "Idealized Physical System" as a foundational framework.
+*   **Semiotic Umwelt (L2.5):** Sensory translation processes where unprocessed physical or environmental stimuli are converted into symbolic forms of representation.
+*   **Containment Kernel + Thermodynamic Auditor (L3.5):** Interlocking concepts of physics, Trusted Computing Base (TCB), entropy budget management, and firewalls ensuring system security and integrity.
+*   **Co-Mind Triad (L5):** Execution adversarial team structure consisting of: Planner -> Linguist -> Crone.
+*   **Swarm Dynamics (L7):** The orchestration of coordinating multiple agents through the Sovereign Nexus routing system.
+*   **Dialectical Resonance (L7.5):** Conflict resolution protocol addressing cognitive parallax through the Friction Engine, utilizing Montage Synthesis to integrate diverse perspectives.
+*   **Germane Load (L8.5):** Conditioning methods focused on improving the preservation and maintenance of user skills to prevent their decline over time.
+*   **Lattice Liability (L9):** Within the Sovereignty Interface, the framework that maps the interconnected notions of care and obligation alongside dynamic consent and power topography.
+*   **Reproducible Publishing (L10):** The practice ensuring scholarly works can be consistently replicated and verified, alongside Consent-aware syndication and Provenance-preserving replication in the Packaging and Distribution layer.
